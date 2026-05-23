@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #FFB223;
+  --color-secondary: #23AEFF;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Markdown content tweaks */
+.prose h1, .prose h2, .prose h3 {
+  color: #1A1A2E;
+}
+
+.prose a {
+  color: #FFB223;
+  text-decoration: none;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+.prose code {
+  background: #F7F7F9;
+  border: 1px solid #E0E0E6;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.875em;
+  color: #1A1A2E;
+}
+
+.prose pre {
+  background: #1A1A2E !important;
+  border-radius: 10px;
+}
+
+.prose pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #F0F0F6;
+}
+
+.prose table {
+  font-size: 0.9em;
+}
+
+.prose thead th {
+  background: #F7F7F9;
+  font-weight: 600;
+}
+
+.prose blockquote {
+  border-left-color: #FFB223;
+  background: #FFB223/8;
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+}

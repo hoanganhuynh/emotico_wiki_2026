@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+.DS_Store
+
+# Flutter web build — populated by CI from emotico2026 private repo
+public/ds/*
+!public/ds/.gitkeep
