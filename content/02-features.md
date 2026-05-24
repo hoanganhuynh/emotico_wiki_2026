@@ -4,22 +4,104 @@
 
 Chức năng cốt lõi của Emotico. Học sinh check-in tối thiểu 1 lần/ngày để ghi nhận trạng thái cảm xúc hiện tại.
 
-**Luồng check-in đầy đủ:**
-1. Chọn **nguyên tố chính** (Mộc / Hỏa / Thổ / Kim / Thủy)
-2. Chọn **cường độ** (1–5)
-3. Chọn **nguyên tố phụ** (tùy chọn) + cường độ
-4. Chọn **body markers** — vị trí cơ thể cảm nhận cảm xúc
+### Luồng check-in đầy đủ
+
+1. Chọn **cảm xúc chính** từ 5 vibe
+2. Chọn **cường độ** (3 nấc)
+3. Chọn **cảm xúc phụ** (tùy chọn) → kích hoạt Blend Mode
+4. Chọn **body markers** — vị trí cơ thể cảm nhận cảm xúc *(chỉ hiện khi vibe tiêu cực)*
 5. Nhập **context**: Ở đâu · Làm gì · Với ai
 
-**Quick check-in:** Bỏ qua bước 3–5, chỉ cần nguyên tố + cường độ.
+**Quick check-in:** Bỏ qua bước 3–5, chỉ cần cảm xúc chính + cường độ.
 
-| Nguyên tố | Màu | Cảm xúc đặc trưng |
+---
+
+### 5 Vibe Cảm xúc
+
+> **Lưu ý thiết kế quan trọng**: Giao diện người dùng **không dùng tên nguyên tố Ngũ Hành** (Kim, Mộc, Thủy, Hỏa, Thổ). Thay vào đó, mỗi vibe được đặt tên theo cảm xúc trực quan để học sinh dễ nhận diện.
+
+| Vibe | Tên hiển thị | Icon gợi ý | Màu |
+|---|---|---|---|
+| Mộc | Bực dọc & Giận dữ | Gai nhọn / Mầm cây | Xanh lá |
+| Hỏa | Vui tươi & Hào hứng | Ngọn lửa sưởi ấm | Đỏ cam |
+| Thổ | Bài xích & Trầm tư | Khối đất / Đất sét | Vàng nâu |
+| Kim | Buồn bã & U sầu | Quặng đá / Kim loại mờ | Xám bạc |
+| Thủy | Lo âu & Sợ hãi | Giọt nước / Khối băng | Xanh dương |
+
+---
+
+### Cường độ (3 nấc)
+
+| Nấc | Nhãn |
+|---|---|
+| 1 | Nhẹ |
+| 2 | Cơ bản |
+| 3 | Cực độ |
+
+---
+
+### Blend Mode — Cảm xúc phái sinh
+
+Sau khi chọn cảm xúc chính, người dùng có thể chọn thêm **1 cảm xúc phụ**. Hai vibe kết hợp tạo ra một **cảm xúc phái sinh** từ ma trận 5×5 (25 ô, trong đó 5 ô chính đường chéo + 10 ô phái sinh hai chiều = 15 tổ hợp có nghĩa).
+
+**Ví dụ:**
+
+| Cảm xúc chính | Cảm xúc phụ | Cảm xúc phái sinh |
 |---|---|---|
-| 🌿 Mộc (Wood) | Xanh lá | Bình yên, phát triển, sáng tạo |
-| 🔥 Hỏa (Fire) | Đỏ cam | Vui vẻ, hứng khởi, tức giận |
-| 🌍 Thổ (Earth) | Vàng nâu | Biết ơn, lo lắng, ổn định |
-| ⚙️ Kim (Metal) | Xám bạc | Tự hào, ngại ngùng, quyết đoán |
-| 💧 Thủy (Water) | Xanh dương | Buồn bã, cô đơn, sâu lắng |
+| Mộc (Bực dọc) | Hỏa (Vui tươi) | 🌋 Núi lửa — Lạc quan tràn đầy |
+
+Mỗi ô phái sinh có: tên riêng + mô tả ngắn + hình ảnh mascot Gin tương ứng.
+
+---
+
+### Body Markers
+
+5 vùng cơ thể để người dùng đánh dấu nơi cảm nhận cảm xúc:
+
+1. Đầu
+2. Ngực
+3. Bụng
+4. Vai & Tay
+5. Vùng xương chậu
+
+> Body markers **chỉ xuất hiện khi vibe được chọn là tiêu cực** (Mộc / Kim / Thủy, hoặc Thổ ở nấc cao). Vibe tích cực (Hỏa) bỏ qua bước này.
+
+---
+
+### Post Check-in: 3 CTA Cards
+
+Sau khi lưu check-in, hệ thống hiển thị tối đa 3 thẻ hành động:
+
+| Thẻ | Icon | Điều kiện hiển thị |
+|---|---|---|
+| Từ điển | 📖 | Luôn hiện |
+| Trắc nghiệm | 📝 | Kích hoạt khi overload ≥ 5 lần / 7 ngày |
+| CBT 60 giây | ⚡ | Kích hoạt khi tiêu cực ≥ 4 lần / 7 ngày |
+
+---
+
+### Quick Template
+
+Hệ thống tự động lưu **3–5 combo check-in gần nhất** để người dùng có thể re-check-in bằng one-tap mà không cần chọn lại từ đầu.
+
+---
+
+### Mascot Gin
+
+Gin thay đổi hình ảnh theo trạng thái cảm xúc được check-in (swap file `.webp`).
+
+- **Tốc độ swap**: < 100ms
+- **Ví dụ file**: `gin_annoyed.webp`, `gin_volcano_optimistic.webp`
+- Phản hồi text của Gin: Hardcoded text library + `Random()` — **không dùng AI** để đảm bảo tốc độ và kiểm soát nội dung
+
+---
+
+### Lịch sử Check-in
+
+| Phạm vi | Nơi lưu |
+|---|---|
+| 90 ngày gần nhất | Hiển thị trên app |
+| Toàn bộ lịch sử | Backend (lưu vĩnh viễn, ẩn danh) |
 
 ---
 
@@ -35,18 +117,66 @@ Kho từ vựng tâm lý được minh họa sinh động. Mỗi cảm xúc có:
 
 ---
 
-## Trắc nghiệm
+## Trắc nghiệm & Hồ sơ eCV
 
-Bài kiểm tra tâm lý khoa học giúp học sinh tự đánh giá sức khỏe tinh thần.
+### Radar 4 trục eCV
 
-**Hai loại:**
-- **Wellness Score** (8 bài): Carousel ngang, đánh giá tổng thể sức khỏe tâm thần
-- **Personality Tests**: Danh sách dọc, các bài trắc nghiệm tính cách chuyên sâu
+Kết quả trắc nghiệm được tổng hợp thành **biểu đồ radar 4 trục** (eCV — Emotional Competency Vector):
 
-**Cơ chế:**
-- Bài premium: Hiển thị thông tin đầy đủ, khóa khi thực hiện (cần ePoints hoặc nâng cấp)
-- Cool-down: Một số bài có thời gian chờ sau khi hoàn thành để đảm bảo tính khách quan
-- Kết quả: Phân tích chi tiết, lưu lịch sử
+| Trục | Tên đầy đủ | Bộ test cấu thành |
+|---|---|---|
+| MWB | Mental Well-being Baseline | DASS-21, PHQ-A, GAD-7 |
+| CRE | Cognitive Regulation & Execution | Wellness Trí tuệ, SDQ |
+| SBM | Social Boundary Mastery | Wellness Xã hội, SCARED |
+| CAFR | Future Readiness & Career Adaptability | Wellness Nghề nghiệp, Savickas *(trả phí)* |
+
+---
+
+### Cooldown các bộ test
+
+| Bộ test | Cooldown |
+|---|---|
+| PHQ-A / GAD-7 / DASS-21 | 14 ngày |
+| SDQ / SCARED | 30 ngày |
+| Wellness (Trí tuệ / Xã hội / Nghề nghiệp) | 90 ngày |
+
+---
+
+### Anti-cheat
+
+Nếu người dùng check-in tiêu cực **≥ 5 lần / tuần** nhưng kết quả bộ test ra "Bình thường":
+
+1. Hệ thống đặt cờ `is_data_manipulated = TRUE`
+2. eMonster bị khóa
+3. Điểm 4 trục radar bị **cap xuống tối đa 40%**
+
+---
+
+### Hidden Quest
+
+Khi học sinh rơi vào trạng thái **overload** (xác định từ chuỗi check-in), hệ thống tự động hiển thị Hidden Quest:
+
+- Giao diện Gin lo lắng
+- Quest xuất hiện không cần người dùng chủ động tìm
+
+---
+
+## CBT & Life Hacks
+
+Chức năng hỗ trợ sức khỏe tâm thần qua bài tập nhận thức-hành vi và mẹo thực tế.
+
+### 2 Tab
+
+| Tab | Tên | Điều kiện |
+|---|---|---|
+| Bài tập | Bài tập CBT | Kích hoạt khi OVERLOAD |
+| Bí kíp | Life Hacks | Luôn mở |
+
+### Bài tập CBT
+
+- Dạng **micro-step**: mỗi bước 60 giây – 3 phút
+- Có **countdown timer** cho từng bước
+- **Thanh tiến độ**: hình ảnh chiếc bình đang lấp đầy (từ trạng thái âm về 0 = Bình thường)
 
 ---
 
@@ -77,18 +207,18 @@ Phân tích xu hướng cảm xúc dựa trên dữ liệu check-in lịch sử.
 3. Sau đó: 2 lần/tháng cho dữ liệu 30 ngày gần nhất (tính năng premium)
 
 **Nội dung báo cáo:**
-- Xu hướng dịch chuyển năng lượng Ngũ Hành theo thời gian
-- Pattern: nguyên tố nào xuất hiện nhiều ở thời điểm nào / bối cảnh nào
+- Xu hướng dịch chuyển cảm xúc theo thời gian
+- Pattern: vibe nào xuất hiện nhiều ở thời điểm nào / bối cảnh nào
 - Gợi ý liên kết cảm xúc với context
 
-**Nudge premium:** Khi tích tụ năng lượng tiêu cực liên tục, Hổ Gin hiển thị eMonster bị bóng mờ → kích hoạt tâm lý sợ mất mát để chuyển đổi free → premium (~3x conversion rate).
+**Nudge premium:** Khi tích tụ cảm xúc tiêu cực liên tục, Gin hiển thị eMonster bị bóng mờ → kích hoạt tâm lý sợ mất mát để chuyển đổi free → premium.
 
 ---
 
 ## Hồ sơ
 
-- **Wellness Score**: Điểm tổng hợp từ kết quả trắc nghiệm
-- **Tổng quan cảm xúc**: Timeline check-in, phân bố Ngũ Hành
+- **eCV Radar**: Biểu đồ 4 trục tổng hợp từ kết quả trắc nghiệm
+- **Tổng quan cảm xúc**: Timeline check-in, phân bố vibe
 - **Streak**: Chuỗi ngày check-in liên tục
 - **Cài đặt**: Ngôn ngữ (VI/EN), thông báo, sinh trắc học
 - **Liên kết trường học**: Kết nối tài khoản B2C với tài khoản trường (B2B2C)
@@ -96,58 +226,69 @@ Phân tích xu hướng cảm xúc dựa trên dữ liệu check-in lịch sử.
 
 ---
 
-## Emotion Check-in
+## Emotion Check-in (EN)
 
 The core feature of Emotico. Students check in at least once per day to record their current emotional state.
 
 **Full check-in flow:**
-1. Select **primary element** (Wood / Fire / Earth / Metal / Water)
-2. Select **intensity** (1–5)
-3. Select **secondary element** (optional) + intensity
-4. Select **body markers** — where in the body the emotion is felt
+1. Select **primary vibe** from 5 emotion categories
+2. Select **intensity** (3 levels: Light / Moderate / Extreme)
+3. Select **secondary vibe** (optional) → triggers Blend Mode
+4. Select **body markers** *(only shown for negative vibes)*
 5. Enter **context**: Where · Doing what · With whom
 
-**Quick check-in:** Skip steps 3–5, just element + intensity.
+**Quick check-in:** Skip steps 3–5, just vibe + intensity.
 
-## Emotion Dictionary
+### 5 Emotion Vibes
 
-An illustrated psychological vocabulary library. Each emotion includes: Definition · Origin · Examples from literature/film · Chibi illustration.
+> **UI note**: The interface does **not** use the Five Elements names (Kim/Mộc/Thủy/Hỏa/Thổ). Each vibe is labeled with descriptive emotion language for easy student recognition.
 
-- **"New" tab**: Swipe-up poster format, admin can pin featured words
-- **"All" tab**: Grid/List view, alphabetical
-- **Search**: By emotion name or definition
-- **Bookmark**: Save words to personal list
+| Vibe | Display Name | Icon |
+|---|---|---|
+| Wood | Frustration & Anger | Thorns / Sprout |
+| Fire | Joy & Excitement | Warming flame |
+| Earth | Rejection & Brooding | Clay / Earth block |
+| Metal | Sadness & Melancholy | Ore / Dull metal |
+| Water | Anxiety & Fear | Water drop / Ice |
 
-## Quiz
+### Blend Mode
 
-Scientific psychological assessments for students to evaluate their mental health.
+After choosing a primary vibe, users may select one secondary vibe. The combination produces a **derived emotion** from a 5×5 matrix (15 meaningful combinations). Each derived emotion has its own name, short description, and Gin mascot image.
 
-- **Wellness Score** (8 quizzes): Horizontal carousel, overall mental health evaluation
-- **Personality Tests**: Vertical list, in-depth personality assessments
-- Premium quizzes locked (requires ePoints or membership upgrade)
-- Cool-down timer on select quizzes for objectivity
+### Post Check-in CTA Cards
 
-## Quest
+| Card | Icon | Trigger |
+|---|---|---|
+| Dictionary | 📖 | Always shown |
+| Quiz | 📝 | Overload ≥ 5 times / 7 days |
+| 60-sec CBT | ⚡ | Negative ≥ 4 times / 7 days |
 
-CBT (Cognitive Behavioral Therapy) exercises packaged as engaging challenges.
+## Quiz & eCV Profile (EN)
 
-- Choose from Emotico's sample challenges or create custom ones
-- Duration: 7 · 15 · 30 days — share via ID or QR code
-- ePoints reward for completion, penalty for abandonment
+### eCV Radar — 4 Axes
 
-## Insight Report
+| Axis | Full Name | Assessments |
+|---|---|---|
+| MWB | Mental Well-being Baseline | DASS-21, PHQ-A, GAD-7 |
+| CRE | Cognitive Regulation & Execution | Intellectual Wellness, SDQ |
+| SBM | Social Boundary Mastery | Social Wellness, SCARED |
+| CAFR | Future Readiness & Career Adaptability | Career Wellness, Savickas *(paid)* |
 
-Emotional trend analysis based on historical check-in data.
+**Cooldowns:** PHQ-A/GAD-7/DASS-21 = 14 days · SDQ/SCARED = 30 days · Wellness/Career = 90 days
 
-- Unlock after **7 consecutive check-in days** with full context
-- Day 8: first report free; after that 2 reports/month (premium)
-- Shows Five Elements energy shift patterns over time, linked to context
+**Anti-cheat:** Negative check-in ≥ 5/week + "Normal" test result → `is_data_manipulated = TRUE` → eMonster locked, all 4 axes capped at 40%.
 
-## Profile
+## CBT & Life Hacks (EN)
 
-- **Wellness Score**: Composite score from quiz results
-- **Emotion Overview**: Check-in timeline, Five Elements distribution
-- **Streak**: Consecutive check-in days counter
+Two tabs:
+- **Exercises** (activated on OVERLOAD): micro-step CBT tasks, 60s–3min each, with countdown timer and a jar-filling progress bar (from negative state back to Neutral)
+- **Tips** (always open): practical life hack library
+
+## Profile (EN)
+
+- **eCV Radar**: 4-axis composite from quiz results
+- **Emotion Overview**: Check-in timeline, vibe distribution
+- **Streak**: Consecutive check-in days
 - **Settings**: Language (VI/EN), notifications, biometrics
-- **School Link**: Connect B2C account with school (B2B2C) account
+- **School Link**: Connect B2C account with school (B2B2C)
 - **Membership Upgrade**: Free → Premium
