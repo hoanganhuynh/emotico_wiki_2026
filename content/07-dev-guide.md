@@ -22,7 +22,7 @@
 ## Cấu trúc Monorepo
 
 ```
-emotico-2026/                 ← private repo: github.com/hoanganhuynh/emotico2026
+emotico-2026/
 ├── packages/
 │   ├── emotico_core/         ← Domain models + abstract repo interfaces (pure Dart)
 │   ├── emotico_ui/           ← Design system: colors, typography, shared widgets
@@ -37,8 +37,7 @@ emotico-2026/                 ← private repo: github.com/hoanganhuynh/emotico2
 └── docs/
     └── superpowers/          ← Internal specs and implementation plans
 
-emotico_wiki_2026/            ← public repo: github.com/hoanganhuynh/emotico_wiki_2026
-                              ← deployed to emotico.wiki via Vercel
+emotico_wiki_2026/            ← deployed to emotico.wiki via Vercel
 ```
 
 **Nguyên tắc phân tách:**
