@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import TopNav from '@/components/top-nav';
+import ConditionalTopNav from '@/components/conditional-top-nav';
 
 export const metadata: Metadata = {
   title: 'Emotico',
@@ -13,8 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="bg-white text-[#1A1A2E]">
-        <TopNav />
-        {/* Push content below fixed nav */}
+        <ConditionalTopNav />
         <div className="pt-14 h-screen flex flex-col">
           {children}
         </div>
