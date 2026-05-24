@@ -206,19 +206,30 @@ supabase/migrations/
 
 ## Design System
 
-```dart
-// packages/emotico_ui/lib/src/theme/colors.dart
-EmoticoColors.primary    // #FFB223 (cam vàng)
-EmoticoColors.secondary  // #23AEFF (xanh dương)
-EmoticoColors.wood       // Mộc — xanh lá
-EmoticoColors.fire       // Hỏa — đỏ cam
-EmoticoColors.earth      // Thổ — vàng nâu
-EmoticoColors.metal      // Kim — xám bạc
-EmoticoColors.water      // Thủy — xanh dương
+Xem đầy đủ tại [emotico.wiki/design-system](https://emotico.wiki/design-system).
 
-// Fonts
-// MomoTrustDisplay — display/headline
-// PlusJakartaSans — body/label (Regular 400, Medium 500, SemiBold 600, Bold 700)
+```dart
+// packages/emotico_ui/lib/src/theme/colors.dart — canonical names
+EmoticoColors.primary         // #FFB223 (cam vàng — brand)
+EmoticoColors.background      // #FAFAF9 (nền sáng)
+EmoticoColors.surface         // #F5F5F4
+EmoticoColors.textPrimary     // #1C1917
+EmoticoColors.textSecondary   // #57534E
+EmoticoColors.success         // #22C55E
+EmoticoColors.error           // #E53E3E
+EmoticoColors.warning         // #EAB308
+
+// Five Elements — Ngũ Hành (mỗi element có 3 shade: Light / base / Dark)
+EmoticoColors.elementWood     // #22C55E  — Mộc
+EmoticoColors.elementFire     // #F97316  — Hỏa
+EmoticoColors.elementEarth    // #EAB308  — Thổ
+EmoticoColors.elementMetal    // #94A3B8  — Kim
+EmoticoColors.elementWater    // #3B82F6  — Thủy
+
+// packages/emotico_ui/lib/src/theme/typography.dart
+// MomoTrustDisplay  — displayLarge (36px), displayMedium (28px), headlineLarge (22px)
+// PlusJakartaSans   — headlineMedium (18px), bodyLarge (16px), bodyMedium (14px),
+//                     labelLarge (14px w600), labelMedium (12px w600), caption (11px)
 ```
 
 ---
