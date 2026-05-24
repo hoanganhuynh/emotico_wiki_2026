@@ -8,13 +8,13 @@ export default function TopNav() {
   const isDS = pathname.startsWith('/design-system');
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-14 bg-white border-b border-[#E0E0E6] flex items-center px-6 gap-8">
+    <header className="fixed top-0 left-0 right-0 z-50 h-14 bg-white border-b border-[#E0E0E6] flex items-center px-4 sm:px-6 gap-3 sm:gap-8">
       {/* Logo */}
-      <Link href="/wiki" className="flex items-center gap-2 no-underline">
+      <Link href="/wiki" className="flex items-center gap-2 no-underline shrink-0">
         <span className="w-7 h-7 rounded-lg bg-[#FFB223] flex items-center justify-center text-white text-sm font-bold select-none">
           ♥
         </span>
-        <span className="font-semibold text-[#1A1A2E] text-sm tracking-wide">
+        <span className="font-semibold text-[#1A1A2E] text-sm tracking-wide hidden xs:block sm:block">
           emotico
         </span>
       </Link>
@@ -24,7 +24,7 @@ export default function TopNav() {
         <Link
           href="/wiki"
           className={[
-            'px-4 py-1.5 rounded-lg text-sm font-medium transition-colors no-underline',
+            'px-3 sm:px-4 py-1.5 rounded-lg text-sm font-medium transition-colors no-underline whitespace-nowrap',
             !isDS
               ? 'bg-[#FFB223]/15 text-[#FFB223]'
               : 'text-[#6B6B80] hover:text-[#1A1A2E] hover:bg-[#F7F7F9]',
@@ -35,18 +35,19 @@ export default function TopNav() {
         <Link
           href="/design-system"
           className={[
-            'px-4 py-1.5 rounded-lg text-sm font-medium transition-colors no-underline',
+            'px-3 sm:px-4 py-1.5 rounded-lg text-sm font-medium transition-colors no-underline whitespace-nowrap',
             isDS
               ? 'bg-[#FFB223]/15 text-[#FFB223]'
               : 'text-[#6B6B80] hover:text-[#1A1A2E] hover:bg-[#F7F7F9]',
           ].join(' ')}
         >
-          Design System
+          <span className="hidden sm:inline">Design System</span>
+          <span className="sm:hidden">Design</span>
         </Link>
       </nav>
 
-      {/* Right spacer — version badge */}
-      <div className="ml-auto">
+      {/* Version badge — hidden on mobile */}
+      <div className="ml-auto hidden sm:block">
         <span className="text-xs text-[#9B9BB0] font-medium">
           2026 · MVP
         </span>
