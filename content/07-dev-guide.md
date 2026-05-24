@@ -22,7 +22,7 @@
 ## Cấu trúc Monorepo
 
 ```
-emotico-2026/
+emotico-2026/                 ← private repo: github.com/hoanganhuynh/emotico2026
 ├── packages/
 │   ├── emotico_core/         ← Domain models + abstract repo interfaces (pure Dart)
 │   ├── emotico_ui/           ← Design system: colors, typography, shared widgets
@@ -30,17 +30,20 @@ emotico-2026/
 │   └── emotico_sdk/          ← Future: SSO OAuth2 bridge for school apps (skeleton)
 ├── apps/
 │   ├── emotico_app/          ← Main student app
+│   ├── design_system/        ← Flutter web catalog (source → builds to emotico.wiki/design-system)
 │   └── white_label_template/ ← Future: school white-label (skeleton)
 ├── supabase/
 │   └── migrations/           ← SQL migration files
 └── docs/
-    ├── wiki/                 ← This wiki
     └── superpowers/          ← Internal specs and implementation plans
+
+emotico_wiki_2026/            ← public repo: github.com/hoanganhuynh/emotico_wiki_2026
+                              ← deployed to emotico.wiki via Vercel
 ```
 
 **Nguyên tắc phân tách:**
 - `emotico_core` — không import bất kỳ Flutter/Supabase package nào. Pure Dart.
-- `emotico_data` ��� implement các interface từ `emotico_core` bằng Supabase
+- `emotico_data` — implement các interface từ `emotico_core` bằng Supabase
 - `apps/emotico_app` — inject implementations qua `ProviderScope.overrides`
 
 ---
