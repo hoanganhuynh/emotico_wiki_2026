@@ -1,6 +1,6 @@
 # Emotico Wiki
 
-> Nền tảng Hồ sơ Sức khỏe Tâm thần Số dành cho học sinh Việt Nam dưới 18 tuổi
+> Kênh phòng ngừa & nâng đỡ cảm xúc học đường cấp 1 — AI có kiểm soát, không chẩn đoán, luôn có người trong vòng lặp
 
 ---
 

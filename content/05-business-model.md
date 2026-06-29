@@ -1,17 +1,29 @@
 # Mô hình kinh doanh
 
+## Cấu trúc gói dịch vụ
+
+| Gói | Đối tượng | Nội dung | Giá |
+|---|---|---|---|
+| **Pilot** | Trường mới | Trải nghiệm 1 học kỳ + tập huấn cơ bản | Miễn phí (giới hạn thời gian) |
+| **School Core** | Trường | App lõi cho học sinh + Dashboard ẩn danh + Báo cáo phục vụ TT18 | ~60.000 VND/học sinh/năm, chiết khấu theo quy mô |
+| **School Plus** | Trường | Core + Chatbot cho giáo viên & phụ huynh + Tập huấn chuyên sâu | Báo giá theo quy mô |
+| **B2C Miễn phí** | Cá nhân | Check-in, Từ điển, Sổ cấp cứu, Trắc nghiệm Tầng 1 | 0 |
+| **B2C Premium** | Cá nhân | Báo cáo Insight nâng cao, nội dung mở rộng, Trắc nghiệm Tầng 2 có diễn giải | 39.000 VND/tháng · 249.000 VND/năm |
+
+> **Nguyên tắc:** Minh bạch, không lại quả cá nhân, không paywall cảm xúc. Premium bán trên giá trị gia tăng trung tính — không khai thác trạng thái cảm xúc tiêu cực của trẻ.
+
+---
+
 ## B2B2C — Trọng tâm (Nhà trường chi trả)
 
-Phí dịch vụ tính trên **đầu học sinh theo từng năm học**, thu 2 lần/năm vào đầu mỗi học kỳ để khớp dòng tiền học phí của trường.
+**Thông điệp với Ban Giám hiệu:** Thông tư 18/2025 (Điều 18–19) bắt buộc mọi trường phải có kênh tiếp nhận thông tin và hỗ trợ tâm lý học sinh trực tuyến. Emotico là hạ tầng số giúp trường đáp ứng đúng yêu cầu này — bổ trợ tổ tư vấn sẵn có, không thay thế.
 
-| | |
-|---|---|
-| **Giá niêm yết** | 60.000 VND / học sinh / năm học |
-| **Tương đương** | 30.000 VND / học kỳ |
-| **Thanh toán** | 2 lần/năm, đầu mỗi học kỳ |
-| **Deliverable** | Báo cáo Insight theo khối lớp + toàn trường |
+**Deliverable cho trường:**
+- Báo cáo ẩn danh tổng hợp theo khối lớp + toàn trường (phục vụ Mẫu 04 TT18 báo cáo lên Sở GD)
+- Kênh tiếp nhận thông tin trực tuyến theo đúng quy định
+- Gói **tập huấn/đào tạo** cho cán bộ tư vấn học đường (giá trị dịch vụ thật, xuất hóa đơn minh bạch)
 
-**Lợi thế tuân thủ pháp lý:** Thông tư 18/2025/TT-BGDĐT bắt buộc mọi trường phải có kênh tiếp nhận thông tin và hỗ trợ tâm lý học sinh trực tuyến — Emotico là giải pháp giúp trường đáp ứng đúng yêu cầu này, thay vì tự xây dựng từ đầu.
+**Chiết khấu:** Theo quy mô (số học sinh, số năm cam kết) — ghi đúng tên trong hợp đồng với nhà trường, không chi cho cá nhân cán bộ.
 
 ---
 
@@ -28,15 +40,30 @@ Phí dịch vụ tính trên **đầu học sinh theo từng năm học**, thu 2
 
 ## B2C — Freemium (Học sinh cá nhân)
 
-| Gói | Giá | Quyền lợi |
-|---|---|---|
-| **Miễn phí** | 0 | Check-in hàng ngày, Từ điển, Sổ cấp cứu |
-| **Premium tháng** | 39.000 VND/tháng | Báo cáo Insight (2 lần/tháng) + toàn bộ tính năng |
-| **Premium năm** | 249.000 VND/năm | Tiết kiệm 47% so với gói tháng |
-
 **Điều kiện mở khóa Premium:**
 - Check-in tối thiểu **7 ngày liên tục**
 - Ngày thứ 8: nhận báo cáo Insight lần đầu **miễn phí**
 - Sau đó: đăng ký Premium để tiếp tục nhận báo cáo định kỳ
 
-> Premium chỉ mở khóa tính năng bổ sung trung tính (báo cáo nâng cao, nội dung mở rộng). Các tính năng lõi hỗ trợ cảm xúc luôn miễn phí và không bị giới hạn theo trạng thái tâm lý của học sinh.
+> Các tính năng lõi hỗ trợ cảm xúc luôn miễn phí và không bị giới hạn theo trạng thái tâm lý của học sinh.
+
+---
+
+## Nguồn thu bổ sung
+
+- **Blog & SEO:** Nội dung kiến thức tâm lý thu hút lưu lượng tự nhiên — không bán dữ liệu người dùng.
+- **Tài trợ CSR doanh nghiệp:** Phủ sóng trường vùng khó khăn, phù hợp định vị bảo vệ trẻ.
+- **Quỹ tác động xã hội (Impact funds):** Hướng đầu tư phi khai thác, bổ trợ mô hình bền vững.
+
+---
+
+## Phễu chuyển đổi
+
+| Tầng | Hoạt động | Chỉ số |
+|---|---|---|
+| **Awareness** | Blog SEO, contest sáng tạo, PR khoa học | Reach, organic traffic |
+| **Acquisition** | Trường ký Pilot → consent phụ huynh → onboard; B2C qua web miễn phí | Số trường, tài khoản kích hoạt |
+| **Activation** | Check-in đầu tiên + streak 7 ngày | D7 retention |
+| **Retention** | Gamification, quest, Gin, chatbot đồng hành | WAU, streak trung bình |
+| **Conversion** | Free → Premium qua **giá trị** (báo cáo, nội dung), không qua áp lực cảm xúc | Conversion rate, ARPU |
+| **Expansion** | Trường gia hạn/mở rộng khối; B2C giữ lại sau tốt nghiệp | NRR, LTV |

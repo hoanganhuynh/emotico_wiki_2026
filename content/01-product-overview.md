@@ -6,7 +6,16 @@ Sức khỏe tâm thần học sinh đang trong tình trạng báo động tại
 
 ## Giải pháp
 
-Emotico sử dụng hệ thống **5 cảm xúc cơ bản** — Vui, Buồn, Ghê tởm (Tôn trọng), Sợ hãi (Can đảm), Temper (Giận dữ hoặc Sự nhiệt huyết) — với 3 cấp độ cường độ để học sinh gọi tên cảm xúc mà không cần từ vựng tâm lý học phức tạp. Học sinh có thể chọn pha trộn 2 cảm xúc cùng lúc khi cảm thấy trạng thái phức tạp hơn.
+Emotico là **kênh phòng ngừa và nâng đỡ cảm xúc học đường cấp 1**, dùng AI có kiểm soát để đồng hành cùng học sinh, giáo viên và phụ huynh — không chẩn đoán, không thay thế chuyên gia, luôn có người trong vòng lặp.
+
+Ứng dụng sử dụng hệ thống **5 cảm xúc cơ bản** — Vui, Buồn, Ghê tởm (Tôn trọng), Sợ hãi (Can đảm), Temper (Giận dữ hoặc Sự nhiệt huyết) — với 3 cấp độ cường độ để học sinh gọi tên cảm xúc mà không cần từ vựng tâm lý học phức tạp. Học sinh có thể chọn pha trộn 2 cảm xúc cùng lúc khi cảm thấy trạng thái phức tạp hơn.
+
+**Định vị pháp lý:** Thông tư 18/2025 (Điều 18–19) bắt buộc mọi trường phải có hệ thống tiếp nhận thông tin trực tuyến và kênh tư vấn trực tuyến. Emotico định vị chính là hạ tầng số giúp trường đáp ứng yêu cầu này — bổ trợ tổ tư vấn sẵn có, không thay thế.
+
+**Khác biệt với các giải pháp hiện có:**
+- Công cụ case-management (CKCare, BrainCare) phục vụ *tổ tư vấn* — người lớn chuyên môn thao tác.
+- Emotico phục vụ trực tiếp *người dùng cuối* (học sinh, giáo viên, phụ huynh) — mạnh về trải nghiệm và gamification, thứ một công cụ nghiệp vụ không làm được.
+- Emotico không đối đầu ở mảng compliance; chiếm tầng phòng ngừa phổ quát và đồng hành cảm xúc.
 
 ## Triết lý AI
 
@@ -28,7 +37,14 @@ Emotico từng chọn "không AI" như một cách giữ an toàn tuyệt đối
 
 Trong mọi tình huống chạm đến an toàn của người dùng, Emotico **ưu tiên kết nối tới con người thật** — đường dây nóng, người lớn tin cậy, hoặc chuyên gia — thay vì tự xử lý. Đây là lằn ranh giữ cho AI luôn ở đúng vai trò hỗ trợ.
 
-Phần lõi của ứng dụng (check-in cảm xúc, từ điển, báo cáo) vẫn vận hành trên hệ thống quy tắc cố định, minh bạch, tốc độ cao. AI chỉ được dùng cho lớp đồng hành cảm xúc, với đầy đủ cơ chế đồng ý và chuyển tuyến an toàn.
+**Hai lớp công nghệ — tách bạch rõ ràng:**
+
+| Lớp | Công nghệ | Phạm vi |
+|---|---|---|
+| **Lớp lõi** | Quy tắc cố định, tốc độ cao, minh bạch | Check-in cảm xúc, từ điển, báo cáo, quest |
+| **Lớp đồng hành** | AI có kiểm soát, có người trong vòng lặp | Chatbot nâng đỡ cảm xúc |
+
+Việc tách bạch này đảm bảo phần cốt lõi của sản phẩm luôn hoạt động ổn định, minh bạch — trong khi AI chỉ được dùng cho lớp đồng hành cảm xúc, với đầy đủ cơ chế đồng ý và chuyển tuyến an toàn.
 
 **Cam kết bảo vệ dữ liệu:**
 - ✅ Dữ liệu tâm lý ≠ dữ liệu thương mại — không bán, không dùng cho quảng cáo
