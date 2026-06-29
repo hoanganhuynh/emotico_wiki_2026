@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import type { Components } from 'react-markdown';
 
 function slugify(text: string): string {
@@ -23,6 +24,7 @@ export default function MarkdownContent({ content }: { content: string }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw]}
       className="prose prose-slate max-w-none
         prose-headings:text-[#1A1A2E]
         prose-a:text-[#FFB223] prose-a:no-underline hover:prose-a:underline
