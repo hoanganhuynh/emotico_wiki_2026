@@ -14,9 +14,8 @@ Chức năng cốt lõi của Emotico. Học sinh check-in tối thiểu 1 lần
 
 **Bước 2 — Chọn mức độ & Pha trộn cảm xúc:**
 - 3 mức cường độ: Nhẹ – Bình thường – Cực độ
-- Biểu cảm của Gin thay đổi theo mức độ cảm xúc được chọn
-- Nếu cảm xúc đơn lẻ đã đúng → nhấn **Check-in**
-- Nếu cảm thấy phức tạp hơn → chọn thêm cảm xúc phụ để pha trộn — Gin hiển thị trạng thái kết hợp
+- Biểu cảm của Gin phản chiếu lại trạng thái vừa chọn
+- Nếu cảm thấy phức tạp hơn, học sinh có thể pha trộn thêm cảm xúc phụ để diễn đạt chính xác hơn
 
 **Bước 3 — Ghi dấu Cơ thể & Bối cảnh:**
 - Nếu cảm xúc tiêu cực: Gin hiện ra với 5 vùng trên cơ thể nhấp nháy — học sinh chạm vào nơi cảm nhận rõ nhất: Đầu · Ngực · Bụng · Vai & Tay · Hông
@@ -57,10 +56,8 @@ Nhìn lại hành trình cảm xúc của bản thân qua các ngày, tuần, th
 **Bản đồ Cảm xúc Cơ thể:**
 - Hình bóng Gin với 5 vùng sáng dần theo mức độ thường được chạm đến trong kỳ lọc
 
-**Gợi ý tự động khi cảm xúc tiêu cực kéo dài:**
-- Buồn bã nhiều ≥ 40% thời gian: Gin gợi ý bài tập thư giãn + trắc nghiệm trầm cảm
-- Lo âu ≥ 5 lần/tuần: Gợi ý trắc nghiệm lo âu
-- Chán nản ≥ 6 lần/tuần: Gợi ý trắc nghiệm hành vi
+**Hỗ trợ chủ động:**
+Khi hệ thống phát hiện xu hướng cảm xúc cần chú ý, Gin chủ động gợi ý các bước phù hợp — bài tập thư giãn, trắc nghiệm sâu hơn, hoặc trò chuyện với người lớn tin cậy.
 
 > Dữ liệu check-in chi tiết được lưu trong 90 ngày. Sau đó tự động chuyển thành chỉ số tổng hợp ẩn danh phục vụ báo cáo nhà trường và nghiên cứu — không ai có thể truy ngược lại từng lần check-in.
 
@@ -125,36 +122,19 @@ Nếu cảm xúc check-in và kết quả trắc nghiệm không khớp — Emot
 
 **Radar eCV — Hồ sơ năng lực cảm xúc:**
 
-| Trục | Tên | Nguồn dữ liệu |
-|---|---|---|
-| MWB | Ổn định Nội tại | WHO-5, DASS-21, PHQ-A |
-| CRE | Ý chí & Điều tiết Nhận thức | Wellness Trí tuệ, SDQ |
-| SBM | Bản lĩnh & Ranh giới Xã hội | Wellness Xã hội, SCARED |
-| CAFR | Sức bật & Định hướng Tương lai | Wellness Nghề nghiệp, Savickas |
-
-> Điểm Radar eCV được tính từ trung bình các bài test trong 90 ngày gần nhất — không bị ảnh hưởng bởi điểm thưởng hay số lần luyện tập.
+Kết quả các bài trắc nghiệm được tổng hợp thành hồ sơ năng lực cảm xúc 4 trục: Ổn định Nội tại · Ý chí & Điều tiết Nhận thức · Bản lĩnh & Ranh giới Xã hội · Sức bật & Định hướng Tương lai. Hồ sơ này phục vụ học sinh theo dõi sự phát triển cảm xúc theo thời gian và hỗ trợ định hướng nghề nghiệp, học bổng.
 
 ---
 
 ## 5. Bài tập CBT & Bí kíp Tâm lý
 
-Hệ thống bài tập cá nhân hóa, tự động gợi ý phù hợp theo trạng thái sức khỏe cảm xúc hiện tại.
+Hệ thống hỗ trợ tự chăm sóc cảm xúc dựa trên các kỹ thuật Cognitive Behavioral Therapy (CBT) đã được kiểm chứng lâm sàng.
 
-**Tab Bài tập — khi cảm xúc đang trong vùng quá tải:**
-- Hiển thị 1 eMonster đang "ký sinh" cần được giải tỏa
-- Thanh tiến trình phục hồi hiển thị rõ số buổi tập còn lại
-- Mỗi bài tập kéo dài 60 giây – 3 phút với đồng hồ đếm ngược
-- Ba nhóm bài tập:
-  - **Giải tỏa cơ thể:** Thở sâu, giãn cơ (cho trạng thái buồn nhẹ, bực dọc)
-  - **Thở hộp:** Hít 4 giây – Giữ 4 giây – Thở ra 4 giây (cho trạng thái kích động, mất tập trung)
-  - **Hành động nhỏ:** Uống nước ấm, vươn vai, dọn 3 món (cho trạng thái chán nản, trì hoãn)
+**Khi cảm xúc cần được giải tỏa:**
+Hệ thống gợi ý bài tập phù hợp với trạng thái hiện tại — các bài tập ngắn (1–3 phút) bao gồm kỹ thuật thở, thư giãn cơ thể, và các hành động micro-step. Mỗi phiên có đồng hồ đếm ngược để đảm bảo học sinh hoàn thành đúng liều lượng.
 
-**Tab Bí kíp — khi cảm xúc ổn định:**
-- Mở toàn bộ bách khoa eMonster để tự do khám phá
-- Thẻ bí kíp tâm lý với tiêu đề gần gũi, thú vị (ví dụ: *"Bí kíp JOMO — Làm chủ niềm vui bỏ lỡ"*, *"Nạp năng lượng lành mạnh sau giờ học"*)
-- Mỗi thẻ: nguyên lý tâm lý ngắn gọn + hướng dẫn áp dụng ngay
-
-> Mỗi bài tập có thời gian tối thiểu bắt buộc — không thể bấm "Hoàn tất" trước khi đồng hồ kết thúc. Giới hạn tối đa 50 điểm Tự Chủ mỗi ngày để đảm bảo thói quen đều đặn thay vì làm dồn.
+**Khi cảm xúc ổn định:**
+Học sinh tự do khám phá thư viện bí kíp tâm lý thực tiễn — nguyên lý tâm lý học được trình bày gần gũi, có hướng dẫn áp dụng ngay vào đời sống học đường.
 
 ---
 

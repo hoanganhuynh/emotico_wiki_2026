@@ -10,12 +10,7 @@ Emotico là **kênh phòng ngừa và nâng đỡ cảm xúc học đường c�
 
 Ứng dụng sử dụng hệ thống **5 cảm xúc cơ bản** — Vui, Buồn, Ghê tởm (Tôn trọng), Sợ hãi (Can đảm), Temper (Giận dữ hoặc Sự nhiệt huyết) — với 3 cấp độ cường độ để học sinh gọi tên cảm xúc mà không cần từ vựng tâm lý học phức tạp. Học sinh có thể chọn pha trộn 2 cảm xúc cùng lúc khi cảm thấy trạng thái phức tạp hơn.
 
-**Định vị pháp lý:** Thông tư 18/2025 (Điều 18–19) bắt buộc mọi trường phải có hệ thống tiếp nhận thông tin trực tuyến và kênh tư vấn trực tuyến. Emotico định vị chính là hạ tầng số giúp trường đáp ứng yêu cầu này — bổ trợ tổ tư vấn sẵn có, không thay thế.
-
-**Khác biệt với các giải pháp hiện có:**
-- Công cụ case-management (CKCare, BrainCare) phục vụ *tổ tư vấn* — người lớn chuyên môn thao tác.
-- Emotico phục vụ trực tiếp *người dùng cuối* (học sinh, giáo viên, phụ huynh) — mạnh về trải nghiệm và gamification, thứ một công cụ nghiệp vụ không làm được.
-- Emotico không đối đầu ở mảng compliance; chiếm tầng phòng ngừa phổ quát và đồng hành cảm xúc.
+**Định vị pháp lý:** Thông tư 18/2025 (Điều 18–19) bắt buộc mọi trường phải có hệ thống tiếp nhận thông tin trực tuyến và kênh tư vấn trực tuyến. Emotico là hạ tầng số giúp trường đáp ứng đúng yêu cầu này — bổ trợ tổ tư vấn sẵn có, không thay thế.
 
 ## Triết lý AI
 

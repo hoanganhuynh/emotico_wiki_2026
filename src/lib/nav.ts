@@ -13,4 +13,5 @@ export const NAV_ITEMS: NavItem[] = [
   { slug: '04-security',         label: 'Bảo mật & Quyền riêng tư', file: '04-security.md',      icon: 'Shield' },
   { slug: '06-roadmap',          label: 'Lộ trình',               file: '06-roadmap.md',          icon: 'Map1' },
   { slug: '09-chatbot-ai',       label: 'Chatbot AI',             file: '09-chatbot-ai.md',       icon: 'MessageText' },
+  { slug: '10-impact-model',     label: 'Mô hình Đóng góp',      file: '10-impact-model.md',     icon: 'Buildings2' },
 ];
