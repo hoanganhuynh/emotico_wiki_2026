@@ -1,4 +1,4 @@
-# Lộ trình / Roadmap
+# Lộ trình
 
 ## Kế hoạch tăng trưởng 4 năm
 
@@ -38,33 +38,3 @@ List Emotico trên **AWS Marketplace**:
 | **2027** | ePoints system, Social quests, Admin Dashboard cho trường |
 | **2028** | AWS multi-tenant migration, Emotico SDK cho school apps, SSO |
 | **2029** | AWS Marketplace, Mở rộng Đông Nam Á |
-
----
-
-## 4-Year Growth Plan
-
-| Year | Schools (B2B) | Students | AWS Cost/Year | Cost/Student/Year |
-|---|---|---|---|---|
-| **2026** | 30 | 40,000 | $8,400 | $0.21 |
-| **2027** | 120 | 180,000 | $32,000 | $0.17 |
-| **2028** | 400 | 600,000 | $95,000 | $0.15 |
-| **2029** | 1,200 | 2,000,000 | $280,000 | $0.14 |
-
-Cost per student decreases from $0.21 → $0.14 over 4 years through AWS EDP volume commitments and architecture optimization.
-
-## AWS Partnership Strategy
-
-**Phase 1 — AWS EdTech Activate (Year 1):** Apply once 30 schools are onboarded. Provides free cloud credits and technical support for EdTech startups.
-
-**Phase 2 — AWS EDP (Year 2):** When AWS spend reaches ~$32,000/year, negotiate the Enterprise Discount Program for 15–25% discount in exchange for a 3-year spend commitment.
-
-**Phase 3 — AWS Marketplace Co-Sell (Year 3+):** List on AWS Marketplace to enable international schools and education groups to purchase Emotico using their existing AWS credits — unlocking Southeast Asia growth without additional sales headcount.
-
-## Feature Roadmap
-
-| Year | Key Features |
-|---|---|
-| **2026** | MVP: Check-in, Dictionary, Quiz, Quest, Profile — 30 HCMC schools |
-| **2027** | ePoints system, Social quests, School Admin Dashboard |
-| **2028** | AWS multi-tenant migration, Emotico SDK for school apps, SSO |
-| **2029** | AWS Marketplace listing, Southeast Asia expansion |

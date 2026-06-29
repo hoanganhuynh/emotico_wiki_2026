@@ -1,4 +1,4 @@
-# Kiến trúc kỹ thuật / Technical Architecture
+# Kiến trúc kỹ thuật
 
 ## Trạng thái hiện tại — Supabase MVP
 
@@ -103,32 +103,3 @@ Khi học sinh tốt nghiệp hoặc hết hạn hợp đồng trường:
 | **go_router ShellRoute** | 5-tab nav + `/checkin` standalone route không có bottom bar |
 | `--dart-define` cho credentials | Secrets không bao giờ vào code hoặc git |
 | **`gen_random_uuid()`** | Tương thích Supabase Cloud PG15 (không cần extension) |
-
----
-
-## Current State — Supabase MVP
-
-Emotico currently runs on **Supabase** (PostgreSQL + Auth + Storage) with a single database instance, using Row Level Security (RLS) to partition data by `school_id`. The Flutter app communicates through abstract repository interfaces defined in `emotico_core`, implemented in `emotico_data`.
-
-## Target State — AWS Multi-Tenant
-
-When AWS sponsorship is activated, the system migrates to a **Decentralized Multi-Tenant** model on AWS Organizations. Each of the 30 schools gets its own AWS Sub-Account with an isolated VPC, RDS PostgreSQL instance, and Auto Scaling. A Central Hub Lambda job pulls only anonymized, aggregated data weekly for system-wide trend reports — no PII ever leaves the school's account.
-
-## Backend Lifecycle
-
-The abstraction layer in `emotico_core` (abstract repository interfaces) makes the Flutter app fully backend-agnostic. Swapping Supabase for AWS — or reverting back — requires only changing the `ProviderScope.overrides` in `main.dart`, with zero changes to business logic or UI code.
-
-## School-to-Personal Migration
-
-When students graduate or a school contract expires, the Data Migration API clones the full emotional history to the student's personal B2C account, then hard-deletes all PII from the school partition, leaving only anonymous statistics for historical school reports.
-
-## Tech Decisions
-
-| Decision | Reason |
-|---|---|
-| **Riverpod v3** over Provider | Compile-time safety, no BuildContext dependency, better testability |
-| **Freezed v3** (sealed class) | Immutable models + compile-time exhaustive pattern matching |
-| `emotico_core` / `emotico_data` split | Core is pure Dart — zero Supabase dependency, easy to swap |
-| **go_router ShellRoute** | 5-tab navigation + standalone `/checkin` without bottom bar |
-| `--dart-define` for credentials | Secrets never enter code or git history |
-| **`gen_random_uuid()`** | Compatible with Supabase Cloud PG15 (no extension needed) |

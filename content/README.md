@@ -1,6 +1,6 @@
 # Emotico Wiki
 
-> Nền tảng Hồ sơ Sức khỏe Tâm thần Số dành cho học sinh Việt Nam dưới 18 tuổi — Vietnam's largest mental wellness data platform for the next generation
+> Nền tảng Hồ sơ Sức khỏe Tâm thần Số dành cho học sinh Việt Nam dưới 18 tuổi
 
 ---
 
@@ -19,22 +19,7 @@
 
 ---
 
-## What is Emotico?
-
-**Emotico** is a self-directed mental wellness app built exclusively for students under 18 (Gen Z & Gen Alpha). It operates on a philosophy of **recording and analyzing real-world data** from users' own experiences to provide personalized self-regulation solutions.
-
-**Emotico does not integrate AI into any direct counseling feature** — ensuring data purity, safety, and eliminating the risk of AI hallucination when working with minors.
-
-| | |
-|---|---|
-| 🎓 **40,000 students** | Year 1 target |
-| 🏫 **30 schools** | Ho Chi Minh City pilot |
-| ⚡ **<50ms** | Rule-based, no direct LLM |
-| 🐯 **eMascot Tiger Gin** | Companion mascot |
-
----
-
-## Ba trụ cột cốt lõi / Three Core Pillars
+## Ba trụ cột cốt lõi
 
 | Trụ cột | Tính năng | Mục tiêu |
 |---|---|---|
@@ -42,16 +27,3 @@
 | **2. Trắc nghiệm Tâm lý** | 8 bài chuẩn lâm sàng + Radar eCV 4 trục | Đánh giá & theo dõi chỉ số Wellness |
 | **3. Bài tập CBT Tự động** | Cá nhân hóa theo dữ liệu check-in | Phục hồi & phát triển kháng thể tinh thần |
 
----
-
-## Khám phá / Explore
-
-| | |
-|---|---|
-| [📖 Sản phẩm / Product](01-product-overview.md) | Vấn đề, giải pháp, triết lý |
-| [📱 Chức năng / Features](02-features.md) | Toàn bộ tính năng app |
-| [🏗️ Kiến trúc / Architecture](03-architecture.md) | Multi-tenant AWS + Supabase |
-| [🔒 Bảo mật / Security](04-security.md) | Nghị định 13, ISO 27001 |
-| [💰 Mô hình kinh doanh / Business Model](05-business-model.md) | B2B2C + B2C |
-| [🗺️ Lộ trình / Roadmap](06-roadmap.md) | Lộ trình 4 năm |
-| [👩‍💻 Developer Guide](07-dev-guide.md) | Setup + patterns |

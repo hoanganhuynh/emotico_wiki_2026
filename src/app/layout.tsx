@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="vi">
       <body className="bg-white text-[#1A1A2E]">
         <ConditionalTopNav />
         <div className="pt-14 h-screen flex flex-col">

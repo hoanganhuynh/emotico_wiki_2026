@@ -1,4 +1,4 @@
-# Tổng quan sản phẩm / Product Overview
+# Tổng quan sản phẩm
 
 ## Bài toán
 
@@ -41,47 +41,3 @@ Nền tảng học thuật của Emotico được bảo chứng bởi:
 **eMascot Hổ Gin** là người bạn đồng hành trung tâm trong suốt hành trình cảm xúc. Gin phản chiếu trực quan trạng thái cảm xúc của học sinh qua thư viện ảnh `.webp` — khi học sinh dịch chuyển Slider cường độ hoặc pha trộn cảm xúc, Frontend chỉ thực hiện lệnh tráo đổi (swap) ID ảnh tương ứng với tốc độ <100ms.
 
 **eMonster** là đối trọng của eMascot — hình tượng hóa các vấn đề sức khỏe tâm thần thường gặp thành các "Quái vật". Học sinh làm trắc nghiệm, thực hiện các nhiệm vụ EQ để "thu phục" eMonster — chuyển hóa thành eMascot. Đây là cơ chế Gamification cốt lõi thúc đẩy Retention.
-
----
-
-## The Problem
-
-Student mental health is at a critical level in Vietnam. Academic pressure, exams, and social environments leave many students without a safe space to identify and process their emotions. Most existing solutions are either too clinical (therapy), too shallow (meditation apps), or require students to describe emotions in vocabulary they don't yet have.
-
-## The Solution
-
-Emotico uses a system of **5 core emotions** — Joy, Sadness, Disgust (Respect), Fear (Courage), Temper (Anger or Passion) — with 3 intensity levels, allowing students to name their emotional state without complex psychological vocabulary. The system supports blending 2 base emotions (Blend Mode) to create a rich 15×15 emotional state matrix.
-
-**Core philosophy:**
-- ❌ No AI for direct counseling or student-facing interaction
-- ✅ AI is only used in Back-office — to optimize behavioral data analysis and automate school insight reports
-- ✅ Rule-based Deterministic Engine — <50ms processing, zero LLM token cost
-- ✅ Psychological data ≠ commercial data — never sold, never used for ads
-- ✅ Students own their emotional data
-- ✅ Compliant with Decree 13/2023/NĐ-CP on personal data protection for minors
-
-## Scientific Backing
-
-Emotico's academic foundation is backed by:
-- **PhD Thesis**: *"Help-seeking behavior for mental health among high school students"*
-- **Ministry-level Research**: *"Seeking psychological support online in the context of high school students' digital transition"*
-
-## Target Users
-
-| Type | Description | Channel |
-|---|---|---|
-| **Students (B2C)** | Self-registered, personal use — core features free | App Store / Google Play |
-| **Students (B2B2C)** | School-enrolled, school account | Main app |
-| **Schools** | License buyer, receives semester insight dashboard | B2B contract |
-
-## Business Model
-
-**B2C (In-app Purchase):** Users pay to unlock advanced assessments (Career Wellness, Career Adaptability) and receive in-depth personal Insight Reports. This feeds the digital mental health portfolio (eCV) for career counseling and scholarship applications.
-
-**B2B2C (Schools):** Direct partnership with school leadership and parent associations. Schools receive anonymized overview reports on student wellbeing and timely intervention proposals. Billed twice per year per enrolled student.
-
-## Mascot — eMascot Tiger Gin & eMonsters
-
-**eMascot Tiger Gin** is the central companion throughout the emotional journey. Gin visually reflects the student's emotional state through a `.webp` image library — when students move the intensity slider or blend emotions, the Frontend executes an image ID swap at <100ms.
-
-**eMonsters** are Gin's counterparts — personifications of common mental health challenges as "creatures." Students take quizzes and complete EQ tasks to "tame" eMonsters — converting them into eMascots. This is the core Gamification mechanism driving Retention.

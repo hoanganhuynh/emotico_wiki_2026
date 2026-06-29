@@ -1,4 +1,4 @@
-# Bảo mật & Tuân thủ / Security & Compliance
+# Bảo mật & Tuân thủ
 
 ## Khung pháp lý
 
@@ -46,44 +46,3 @@ Emotico tuân thủ nghiêm ngặt:
 - Điều kiện kích hoạt: **Red Alert** (dấu hiệu nguy cơ sức khỏe tâm thần nghiêm trọng)
 
 **Kết quả:** Ngay cả khi hệ thống Emotico bị tấn công, không có tên thật nào bị lộ.
-
----
-
-## Legal Framework
-
-Student psychological data is **extremely sensitive**. A single leak can lead to school bullying, negative labeling, or destroying students' trust in the system.
-
-Emotico complies with:
-
-| Standard | Scope |
-|---|---|
-| **Decree 13/2023/NĐ-CP** | Personal data protection in Vietnam |
-| **Vietnam Children's Law** | Special rules for users under 18 |
-| **ISO/IEC 27001** | Information security management |
-| **ISO/IEC 27701** | Extension of ISO 27001 for personal data protection |
-
-**Responsibility split:**
-- **School = Data Controller** — decides the purpose and manner of processing
-- **Emotico = Data Processor** — processes data as instructed by the school
-- Deployment contract must include a **DPIA** (Data Protection Impact Assessment)
-
-**Consent flow:** Dual consent — Parental Consent + Child Assent — required for users under 18.
-
-## Security Matrix
-
-| Risk point | Defense protocol |
-|---|---|
-| **App → Server transit** | Mandatory TLS 1.3 + SSL Pinning (anti-MitM) |
-| **Database at school** | AES-256 encryption at rest |
-| **Key management** | AWS KMS — automatic rotation every 30 days |
-| **Admin Dashboard access** | Mandatory MFA + IP Whitelist (school intranet only) |
-| **Insider threat** | Pseudonymization — see below |
-
-## Pseudonymization
-
-- **Emotico's server** only sees anonymous UUIDs (e.g., `uuid_9999`)
-- **UUID → Real name mapping** stored on a local server in the school's **counseling room**
-- Only the **authorized counselor** at the school can decrypt UUID → real name
-- Trigger: **Red Alert** (signs of serious mental health risk)
-
-**Result:** Even if Emotico's system is breached, no real names are exposed.

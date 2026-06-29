@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { NAV_ITEMS } from '@/lib/nav';
+import * as Icons from 'iconsax-react';
 
 interface WikiSidebarProps {
   isOpen?: boolean;
@@ -15,7 +16,7 @@ export default function WikiSidebar({ isOpen = false, onClose }: WikiSidebarProp
   const navContent = (
     <nav className="py-6 px-3">
       <p className="px-3 mb-2 text-xs font-semibold text-[#9B9BB0] uppercase tracking-widest">
-        Documentation
+        Tài liệu
       </p>
       <ul className="space-y-0.5">
         {NAV_ITEMS.map((item) => {
@@ -25,18 +26,22 @@ export default function WikiSidebar({ isOpen = false, onClose }: WikiSidebarProp
               ? pathname === '/wiki'
               : pathname === `/wiki/${item.slug}`;
 
+          const IconComponent = (Icons as Record<string, React.ComponentType<{ size?: number; color?: string; variant?: string }>>)[item.icon];
           return (
             <li key={item.slug}>
               <Link
                 href={href}
                 onClick={onClose}
                 className={[
-                  'flex items-center px-3 py-2.5 rounded-lg text-sm no-underline transition-colors',
+                  'flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm no-underline transition-colors',
                   isActive
-                    ? 'bg-[#FFB223]/15 text-[#FFB223] font-semibold'
+                    ? 'bg-[#FFB223] text-[#1A1A2E] font-semibold'
                     : 'text-[#6B6B80] hover:text-[#1A1A2E] hover:bg-white',
                 ].join(' ')}
               >
+                {IconComponent && (
+                  <IconComponent size={16} color="currentColor" variant={isActive ? 'Bold' : 'Linear'} />
+                )}
                 {item.label}
               </Link>
             </li>
@@ -49,13 +54,13 @@ export default function WikiSidebar({ isOpen = false, onClose }: WikiSidebarProp
   return (
     <>
       {/* Desktop sidebar — always visible on md+ */}
-      <aside className="hidden md:block w-56 shrink-0 border-r border-[#E0E0E6] bg-[#F7F7F9] overflow-y-auto">
+      <aside className="hidden md:block w-64 shrink-0 border-r border-[#E0E0E6] bg-[#F7F7F9] overflow-y-auto">
         {navContent}
       </aside>
 
       {/* Mobile drawer overlay */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 z-40 flex">
+        <div className="md:hidden fixed inset-0 z-40 flex justify-end">
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/40"
