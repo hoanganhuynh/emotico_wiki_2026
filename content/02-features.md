@@ -92,9 +92,18 @@ Kho từ vựng tâm lý được minh họa sinh động, giúp học sinh chuy
 
 ## 4. Trắc nghiệm Tâm lý & Hồ sơ eCV
 
-Hệ thống đánh giá tâm lý khoa học, chuẩn hóa lâm sàng quốc tế, hoàn toàn không dùng AI.
+Hệ thống đánh giá tâm lý khoa học, chuẩn hóa lâm sàng quốc tế. Các bài trắc nghiệm được phân thành hai tầng để đảm bảo an toàn cho học sinh.
 
-**Bài trắc nghiệm Miễn phí:**
+**Tầng 1 — Tự do (học sinh tự làm, tự nhận kết quả):**
+
+| Bài test | Đánh giá | Chu kỳ làm lại |
+|---|---|---|
+| Wellness Nghề nghiệp | Định vị bản sắc nghề nghiệp | 90 ngày |
+| Thích ứng nghề nghiệp (Savickas) | Sức bật & Định hướng tương lai | 90 ngày |
+
+Kết quả Tầng 1 được diễn đạt nhẹ nhàng, khuyến khích — không dán nhãn lâm sàng, không gây lo lắng.
+
+**Tầng 2 — Cần chuyên gia (kết quả qua cán bộ tư vấn):**
 
 | Bài test | Đánh giá | Chu kỳ làm lại |
 |---|---|---|
@@ -104,20 +113,15 @@ Hệ thống đánh giá tâm lý khoa học, chuẩn hóa lâm sàng quốc t�
 | SDQ | Hành vi & Tập trung | 30 ngày |
 | SCARED | Lo âu xã hội / Sợ trường học | 30 ngày |
 
-**Bài trắc nghiệm Trả phí (Nâng cao):**
-
-| Bài test | Đánh giá | Chu kỳ làm lại |
-|---|---|---|
-| Wellness Nghề nghiệp | Định vị bản sắc nghề nghiệp | 90 ngày |
-| Thích ứng nghề nghiệp (Savickas) | Sức bật & Định hướng tương lai | 90 ngày |
+Đây là các công cụ sàng lọc lâm sàng quốc tế. Khi kết quả cho thấy dấu hiệu cần chú ý, Emotico **không trả thẳng nhãn lâm sàng cho học sinh**. Thay vào đó, hệ thống hiển thị thông điệp nhẹ nhàng ("nên trò chuyện với người lớn bạn tin tưởng") và chuyển kết quả đầy đủ đến cán bộ tư vấn học đường để diễn giải đúng chuyên môn theo quy trình Thông tư 18/2025.
 
 **Trải nghiệm làm bài:**
 - Mỗi câu hỏi hiện riêng lẻ, không gây áp lực
 - Phương án trả lời dạng thẻ bo góc mềm mại
 - Mascot Hổ Gin đi bộ dần qua màn hình theo tiến độ bài làm
 
-**Hệ thống phát hiện gian lận:**
-Nếu học sinh liên tục ghi nhận cảm xúc tiêu cực nặng nhưng kết quả trắc nghiệm lại cho thấy "bình thường" — Emotico phát hiện sự mâu thuẫn và tạm thời giới hạn một số tính năng nâng cao cho đến khi học sinh check-in trung thực trở lại trong 14 ngày.
+**Phát hiện mâu thuẫn dữ liệu:**
+Nếu cảm xúc check-in và kết quả trắc nghiệm không khớp — Emotico ghi nhận đây là tín hiệu "cần chuyên gia rà soát" và thông báo cho cán bộ tư vấn học đường. Hệ thống không phán xét, không phạt, không khóa tính năng của học sinh.
 
 **Radar eCV — Hồ sơ năng lực cảm xúc:**
 
@@ -165,6 +169,8 @@ Hệ thống bài tập cá nhân hóa, tự động gợi ý phù hợp theo tr
 **Danh bạ Hỗ trợ Tâm lý:**
 - Lọc theo tỉnh/thành phố
 - Danh sách phòng khám, bệnh viện tâm thần nhi uy tín: Tên cơ sở · Địa chỉ · Hotline · Mức chi phí dự kiến
+- Vị trí GPS chỉ được xin khi người dùng chủ động bấm "Tìm gần đây" — không chạy ngầm
+- Không lưu lịch sử vị trí; dữ liệu vị trí chỉ dùng tức thời để lọc danh sách rồi xóa
 
 **Cài đặt:**
 - Bảo mật khu vực Nhật ký Kỷ niệm (vân tay/khuôn mặt/PIN)

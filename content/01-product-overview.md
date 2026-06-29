@@ -8,13 +8,32 @@ Sức khỏe tâm thần học sinh đang trong tình trạng báo động tại
 
 Emotico sử dụng hệ thống **5 cảm xúc cơ bản** — Vui, Buồn, Ghê tởm (Tôn trọng), Sợ hãi (Can đảm), Temper (Giận dữ hoặc Sự nhiệt huyết) — với 3 cấp độ cường độ để học sinh gọi tên cảm xúc mà không cần từ vựng tâm lý học phức tạp. Học sinh có thể chọn pha trộn 2 cảm xúc cùng lúc khi cảm thấy trạng thái phức tạp hơn.
 
-**Triết lý cốt lõi:**
-- ❌ Không sử dụng AI để tư vấn hoặc tương tác trực tiếp với học sinh
-- ✅ AI chỉ được dùng cho công việc nội bộ — phân tích dữ liệu và xuất báo cáo cho nhà trường
-- ✅ Hệ thống hoạt động theo quy tắc cố định, phản hồi tức thì, không phụ thuộc AI
+## Triết lý AI
+
+**Emotico dùng AI để nâng đỡ cảm xúc — không để chẩn đoán, không để thay thế chuyên gia.**
+
+Emotico từng chọn "không AI" như một cách giữ an toàn tuyệt đối cho dữ liệu của trẻ. Khi đưa AI vào sản phẩm, chúng tôi không từ bỏ nguyên tắc đó — chúng tôi siết nó chặt hơn. AI của Emotico được đặt trong một khung giới hạn rõ ràng và có chủ đích: nó là một người bạn biết lắng nghe, không phải bác sĩ, không phải nhà trị liệu.
+
+**Emotico có thể:**
+- Lắng nghe và giúp người dùng gọi tên cảm xúc của mình
+- Gợi ý các kỹ thuật điều hòa cảm xúc đã được kiểm chứng khoa học
+- Đồng hành và hướng người dùng đến sự trợ giúp phù hợp khi cần
+
+**Emotico không làm — và không được phép làm:**
+- Đưa ra chẩn đoán y khoa hay nhận định về bệnh lý
+- Kê đơn, chỉ định điều trị, hay thay thế một liệu trình tư vấn tâm lý chuyên môn
+- Đứng một mình trong các tình huống vượt ngoài phạm vi nâng đỡ cảm xúc
+
+**Nguyên tắc "luôn có con người trong vòng lặp":**
+
+Trong mọi tình huống chạm đến an toàn của người dùng, Emotico **ưu tiên kết nối tới con người thật** — đường dây nóng, người lớn tin cậy, hoặc chuyên gia — thay vì tự xử lý. Đây là lằn ranh giữ cho AI luôn ở đúng vai trò hỗ trợ.
+
+Phần lõi của ứng dụng (check-in cảm xúc, từ điển, báo cáo) vẫn vận hành trên hệ thống quy tắc cố định, minh bạch, tốc độ cao. AI chỉ được dùng cho lớp đồng hành cảm xúc, với đầy đủ cơ chế đồng ý và chuyển tuyến an toàn.
+
+**Cam kết bảo vệ dữ liệu:**
 - ✅ Dữ liệu tâm lý ≠ dữ liệu thương mại — không bán, không dùng cho quảng cáo
 - ✅ Học sinh là chủ sở hữu dữ liệu cảm xúc của mình
-- ✅ Tuân thủ Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân trẻ em
+- ✅ Tuân thủ Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 (hiệu lực 01/01/2026)
 
 ## Bảo chứng khoa học
 
