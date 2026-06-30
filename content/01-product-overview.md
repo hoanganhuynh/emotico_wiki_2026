@@ -1,45 +1,29 @@
 # Tổng quan sản phẩm
 
-## Bài toán
+## Hệ sinh thái sản phẩm
 
-Sức khỏe tâm thần học sinh đang trong tình trạng báo động tại Việt Nam. Áp lực học tập, thi cử và môi trường xã hội khiến nhiều học sinh không có không gian an toàn để nhận diện và xử lý cảm xúc. Hầu hết các giải pháp hiện tại hoặc quá lâm sàng (tâm lý trị liệu), hoặc quá hời hợt (app thiền định), hoặc yêu cầu học sinh tự mô tả cảm xúc bằng ngôn ngữ mà các em chưa có.
+Emotico là **kênh phòng ngừa và nâng đỡ cảm xúc học đường cấp 1**, vận hành qua ba sản phẩm phục vụ ba nhóm người dùng:
 
-## Giải pháp
+**App Emotico — dành cho học sinh (7–18 tuổi)**
+Người bạn nâng đỡ cảm xúc trong túi áo. Ba trụ cột:
+- **Check-in cảm xúc:** Gọi đúng tên cảm xúc và các tác nhân ảnh hưởng, không cần từ vựng tâm lý học
+- **Trắc nghiệm tâm lý:** Công cụ nhận diện các vấn đề của bản thân — phân tầng theo độ tuổi và yêu cầu từ chuyên gia
+- **Bài tập CBT & Mẹo vặt tâm lý:** Kỹ thuật điều hòa cảm xúc đã được kiểm chứng khoa học, hướng dẫn ứng phó căng thẳng và tự tin hơn trong cuộc sống
 
-Emotico là **kênh phòng ngừa và nâng đỡ cảm xúc học đường cấp 1**, dùng AI có kiểm soát để đồng hành cùng học sinh, giáo viên và phụ huynh — không chẩn đoán, không thay thế chuyên gia, luôn có người trong vòng lặp.
+**Web Chatbot — dành cho Giáo viên & Phụ huynh**
+Công cụ đồng hành miễn phí, giúp người lớn được trang bị kiến thức và kỹ thuật để tâm sự, tiếp cận và hỗ trợ học sinh một cách an toàn, không gây thêm căng thẳng.
 
-Ứng dụng sử dụng hệ thống **5 cảm xúc cơ bản** — Vui, Buồn, Ghê tởm (Tôn trọng), Sợ hãi (Can đảm), Temper (Giận dữ hoặc Sự nhiệt huyết) — với 3 cấp độ cường độ để học sinh gọi tên cảm xúc mà không cần từ vựng tâm lý học phức tạp. Học sinh có thể chọn pha trộn 2 cảm xúc cùng lúc khi cảm thấy trạng thái phức tạp hơn.
+**Admin Dashboard — dành cho Nhà trường**
+Theo dõi các chỉ số sức khỏe cảm xúc toàn trường theo thời gian thực. Nhận báo cáo định kỳ và cảnh báo can thiệp khi có học sinh cần hỗ trợ.
 
-**Định vị pháp lý:** Thông tư 18/2025 (Điều 18–19) bắt buộc mọi trường phải có hệ thống tiếp nhận thông tin trực tuyến và kênh tư vấn trực tuyến. Emotico là hạ tầng số giúp trường đáp ứng đúng yêu cầu này — bổ trợ tổ tư vấn sẵn có, không thay thế.
+**Định vị pháp lý:** Thông tư 18/2025 (Điều 18–19) bắt buộc mọi trường phải có hệ thống tiếp nhận thông tin trực tuyến và kênh tư vấn trực tuyến. Emotico là hạ tầng số giúp trường đáp ứng đúng yêu cầu này, đồng thời chủ động nâng cao nhận thức sức khỏe tâm thần và hướng học sinh đến sự trợ giúp phù hợp khi cần.
 
-## Triết lý AI
-
-**Emotico dùng AI để nâng đỡ cảm xúc — không để chẩn đoán, không để thay thế chuyên gia.**
-
-Emotico từng chọn "không AI" như một cách giữ an toàn tuyệt đối cho dữ liệu của trẻ. Khi đưa AI vào sản phẩm, chúng tôi không từ bỏ nguyên tắc đó — chúng tôi siết nó chặt hơn. AI của Emotico được đặt trong một khung giới hạn rõ ràng và có chủ đích: nó là một người bạn biết lắng nghe, không phải bác sĩ, không phải nhà trị liệu.
-
-**Emotico có thể:**
-- Lắng nghe và giúp người dùng gọi tên cảm xúc của mình
-- Gợi ý các kỹ thuật điều hòa cảm xúc đã được kiểm chứng khoa học
-- Đồng hành và hướng người dùng đến sự trợ giúp phù hợp khi cần
-
-**Emotico không làm — và không được phép làm:**
+**Giới hạn rõ ràng — Emotico không làm và không được phép làm:**
 - Đưa ra chẩn đoán y khoa hay nhận định về bệnh lý
-- Kê đơn, chỉ định điều trị, hay thay thế một liệu trình tư vấn tâm lý chuyên môn
+- Kê đơn, chỉ định điều trị, hay thay thế liệu trình tư vấn tâm lý chuyên môn
 - Đứng một mình trong các tình huống vượt ngoài phạm vi nâng đỡ cảm xúc
 
-**Nguyên tắc "luôn có con người trong vòng lặp":**
-
-Trong mọi tình huống chạm đến an toàn của người dùng, Emotico **ưu tiên kết nối tới con người thật** — đường dây nóng, người lớn tin cậy, hoặc chuyên gia — thay vì tự xử lý. Đây là lằn ranh giữ cho AI luôn ở đúng vai trò hỗ trợ.
-
-**Hai lớp công nghệ — tách bạch rõ ràng:**
-
-| Lớp | Công nghệ | Phạm vi |
-|---|---|---|
-| **Lớp lõi** | Quy tắc cố định, tốc độ cao, minh bạch | Check-in cảm xúc, từ điển, báo cáo, quest |
-| **Lớp đồng hành** | AI có kiểm soát, có người trong vòng lặp | Chatbot nâng đỡ cảm xúc |
-
-Việc tách bạch này đảm bảo phần cốt lõi của sản phẩm luôn hoạt động ổn định, minh bạch — trong khi AI chỉ được dùng cho lớp đồng hành cảm xúc, với đầy đủ cơ chế đồng ý và chuyển tuyến an toàn.
+Trong mọi tình huống chạm đến an toàn của người dùng, Emotico ưu tiên kết nối đến đường dây nóng, người lớn tin cậy hoặc chuyên gia thay vì tự xử lý.
 
 **Cam kết bảo vệ dữ liệu:**
 - ✅ Dữ liệu tâm lý ≠ dữ liệu thương mại — không bán, không dùng cho quảng cáo
@@ -54,11 +38,11 @@ Nền tảng học thuật của Emotico được bảo chứng bởi:
 
 ## Đối tượng người dùng
 
-| Loại | Mô tả | Kênh |
+| Nhóm | Sản phẩm | Mô tả |
 |---|---|---|
-| **Học sinh (cá nhân)** | Tự đăng ký, dùng cá nhân — miễn phí tính năng cốt lõi | App Store / Google Play |
-| **Học sinh (qua trường)** | Đăng ký qua trường học, tài khoản học đường | App chính |
-| **Trường học** | Mua gói dịch vụ, nhận báo cáo tổng quan học kỳ | Hợp đồng trực tiếp |
+| **Học sinh 7–18 tuổi** | App Emotico | Miễn phí — check-in, từ điển, CBT, trắc nghiệm phù hợp độ tuổi |
+| **Giáo viên & Phụ huynh** | Web Chatbot | Miễn phí — đồng hành, gợi ý phương án hỗ trợ học sinh |
+| **Nhà trường** | Admin Dashboard + App | Gói dịch vụ — báo cáo, dashboard, trắc nghiệm lâm sàng có chuyên gia |
 
 ## Mô hình kinh doanh
 

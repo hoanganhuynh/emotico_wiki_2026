@@ -6,9 +6,15 @@
 
 ## Emotico là gì?
 
-**Emotico** là ứng dụng chăm sóc sức khỏe tâm thần tự thân, được thiết kế chuyên biệt cho học sinh dưới 18 tuổi (Thế hệ Gen Z và Gen Alpha). Ứng dụng vận hành trên triết lý **ghi nhận và phân tích dữ liệu thực tế** từ chính trải nghiệm của người dùng để đưa ra giải pháp tự điều chỉnh phù hợp.
+**Emotico** là hệ sinh thái sản phẩm số chăm sóc sức khỏe tâm thần học đường, gồm ba thành phần phục vụ ba nhóm người dùng riêng biệt:
 
-**Emotico dùng AI để nâng đỡ cảm xúc — không để chẩn đoán, không để thay thế chuyên gia.** AI chỉ đóng vai người bạn biết lắng nghe, với giới hạn rõ ràng và cơ chế chuyển tuyến an toàn đến con người thật khi cần.
+| Sản phẩm | Người dùng | Vai trò |
+|---|---|---|
+| **App Emotico** | Học sinh 7–18 tuổi | Người bạn nâng đỡ cảm xúc — ghi nhận, phân tích, hỗ trợ tự điều chỉnh |
+| **Web Chatbot** | Giáo viên & Phụ huynh | Đồng hành — gợi ý phương án tâm sự, tiếp cận và hỗ trợ học sinh |
+| **Admin Dashboard** | Nhà trường | Theo dõi chỉ số sức khỏe cảm xúc toàn trường, can thiệp kịp thời |
+
+Emotico dùng AI để nâng đỡ cảm xúc — không để chẩn đoán, không để thay thế chuyên gia. Trong mọi tình huống chạm đến an toàn, hệ thống ưu tiên kết nối đến chuyên gia thật thay vì tự xử lý.
 
 | | |
 |---|---|
@@ -19,11 +25,11 @@
 
 ---
 
-## Ba trụ cột cốt lõi
+## Ba trụ cột cốt lõi (App học sinh)
 
 | Trụ cột | Tính năng | Mục tiêu |
 |---|---|---|
-| **1. Check-in Cảm xúc** | Hệ thống Blended Cảm xúc + eMascot Gin | Nhận diện & ghi nhận cảm xúc hằng ngày |
-| **2. Trắc nghiệm Tâm lý** | 8 bài chuẩn lâm sàng + Radar eCV 4 trục | Đánh giá & theo dõi chỉ số Wellness |
-| **3. Bài tập CBT Tự động** | Cá nhân hóa theo dữ liệu check-in | Phục hồi & phát triển kháng thể tinh thần |
+| **1. Check-in Cảm xúc** | Hệ thống Blended Cảm xúc + eMascot Gin | Gọi đúng tên cảm xúc và nhận diện các tác nhân ảnh hưởng |
+| **2. Trắc nghiệm Tâm lý** | Phân tầng theo độ tuổi & chỉ định chuyên gia | Nhận diện các vấn đề của bản thân trong giới hạn an toàn |
+| **3. Bài tập CBT & Mẹo vặt** | Cá nhân hóa theo cảm xúc & kết quả trắc nghiệm | Kỹ thuật điều hòa cảm xúc đã được kiểm chứng khoa học |
 

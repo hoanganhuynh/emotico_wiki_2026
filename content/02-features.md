@@ -91,10 +91,16 @@ Kho từ vựng tâm lý được minh họa sinh động, giúp học sinh chuy
 
 Hệ thống đánh giá tâm lý khoa học, chuẩn hóa lâm sàng quốc tế. Các bài trắc nghiệm được phân thành hai tầng để đảm bảo an toàn cho học sinh.
 
+**Hiển thị theo độ tuổi:**
+Ứng dụng chỉ hiển thị các bài trắc nghiệm phù hợp với độ tuổi đã đăng ký. Khi tìm kiếm, toàn bộ nội dung liên quan đều hiện ra — nhưng bài không phù hợp độ tuổi hoặc cần chỉ định chuyên gia sẽ kèm thông báo rõ thay vì bị ẩn.
+
 **Tầng 1 — Tự do (học sinh tự làm, tự nhận kết quả):**
+
+Bao gồm các bài trắc nghiệm vui giải tỏa căng thẳng, khám phá bản thân phù hợp lứa tuổi, định hướng nghề nghiệp, và các khảo sát ngắn ghi nhận thực trạng học đường.
 
 | Bài test | Đánh giá | Chu kỳ làm lại |
 |---|---|---|
+| Trắc nghiệm vui theo chủ đề | Giải tỏa, khám phá bản thân | Tự do |
 | Wellness Nghề nghiệp | Định vị bản sắc nghề nghiệp | 90 ngày |
 | Thích ứng nghề nghiệp (Savickas) | Sức bật & Định hướng tương lai | 90 ngày |
 
@@ -132,13 +138,13 @@ Kết quả các bài trắc nghiệm được tổng hợp thành hồ sơ năn
 
 ## 5. Bài tập CBT & Bí kíp Tâm lý
 
-Hệ thống hỗ trợ tự chăm sóc cảm xúc dựa trên các kỹ thuật Cognitive Behavioral Therapy (CBT) đã được kiểm chứng lâm sàng.
+Hệ thống hỗ trợ tự chăm sóc cảm xúc dựa trên các kỹ thuật Cognitive Behavioral Therapy (CBT) đã được kiểm chứng lâm sàng. Bài tập được gợi ý dựa trên những gì học sinh đã ghi nhận — cảm xúc check-in và kết quả trắc nghiệm — để đảm bảo hỗ trợ đúng nhu cầu thực tế.
 
-**Khi cảm xúc cần được giải tỏa:**
-Hệ thống gợi ý bài tập phù hợp với trạng thái hiện tại — các bài tập ngắn (1–3 phút) bao gồm kỹ thuật thở, thư giãn cơ thể, và các hành động micro-step. Mỗi phiên có đồng hồ đếm ngược để đảm bảo học sinh hoàn thành đúng liều lượng.
+**Khi có vấn đề cần hỗ trợ:**
+Hệ thống gợi ý bài tập phù hợp với trạng thái hiện tại — kỹ thuật thở, thư giãn cơ thể, và các hành động micro-step (1–3 phút). Mỗi phiên có đồng hồ đếm ngược để học sinh hoàn thành đúng liều lượng.
 
-**Khi cảm xúc ổn định:**
-Học sinh tự do khám phá thư viện bí kíp tâm lý thực tiễn — nguyên lý tâm lý học được trình bày gần gũi, có hướng dẫn áp dụng ngay vào đời sống học đường.
+**Khi không có vấn đề cần thúc đẩy:**
+Hiển thị thư viện **Mẹo vặt tâm lý** — các bài viết về hack tâm lý, kỹ năng sinh tồn với minh họa sống động. Nội dung gần gũi, có hướng dẫn áp dụng ngay vào đời sống học đường.
 
 ---
 
@@ -147,7 +153,6 @@ Học sinh tự do khám phá thư viện bí kíp tâm lý thực tiễn — ng
 **Hồ sơ cá nhân:**
 - Ảnh đại diện Gin thay đổi theo cấp độ tiến bộ
 - Biểu đồ Radar eCV 4 trục hiển thị trực quan
-- Ví Tự Chủ (điểm thưởng từ bài tập) + trạng thái Hồ sơ eCV
 - Truy cập kho Từ vựng đã lưu và Nhật ký Kỷ niệm
 
 **Danh bạ Hỗ trợ Tâm lý:**
@@ -163,14 +168,32 @@ Học sinh tự do khám phá thư viện bí kíp tâm lý thực tiễn — ng
 
 ---
 
-## 7. Báo cáo Định kỳ
+## 7. Báo cáo & Dashboard
 
-**Báo cáo Cá nhân:**
+**Dashboard Nhà trường — Thời gian thực:**
+Theo dõi các chỉ số sức khỏe cảm xúc toàn trường tích hợp từ app học sinh. Không bao gồm dữ liệu từ chatbot giáo viên/phụ huynh.
+
+**Báo cáo Định kỳ Nhà trường:**
+- Tần suất: Cuối mỗi học kỳ theo lịch thống nhất
+- Phạm vi: Toàn trường hoặc theo khối lớp — **không phân theo từng lớp** để bảo vệ quyền riêng tư
+- Nội dung: Thống kê, phân tích tương quan, kiểm tra độ tin cậy, nhận định các vấn đề sức khỏe tâm thần và đề xuất can thiệp — được trình bày ở trình độ chuyên gia tư vấn tâm lý học đường, đối chiếu với thực trạng khu vực/thành phố
+- Xuất khi có ít nhất **30 học sinh hoạt động mỗi khối** — đảm bảo không nhận diện được cá nhân
+
+**Báo cáo Cá nhân (học sinh):**
 - Tần suất: Mỗi 30 ngày
 - Nội dung: Cảm xúc chủ đạo & hoàn cảnh hay gặp · Radar eCV 4 trục · Bản đồ phản ứng cơ thể
 
-**Báo cáo Nhà trường:**
-- Tần suất: Giữa học kỳ hoặc cuối học kỳ
-- Phạm vi: Toàn trường hoặc theo khối lớp (10/11/12) — **không phân theo từng lớp** để bảo vệ quyền riêng tư học sinh
-- Nội dung: Chỉ số sức khỏe cảm xúc toàn trường · Phân bố tâm trạng · Bản đồ các tình huống rủi ro thường gặp
-- Báo cáo chỉ được xuất khi có ít nhất **30 học sinh hoạt động mỗi khối** trong kỳ — đảm bảo không thể nhận diện cá nhân từ dữ liệu tổng hợp
+---
+
+## 8. Web Chatbot — Giáo viên & Phụ huynh
+
+Công cụ miễn phí dành riêng cho người lớn — không dành cho học sinh.
+
+**Vai trò:**
+Đồng hành và trang bị cho giáo viên, phụ huynh kiến thức và kỹ thuật để tâm sự, tiếp cận và hỗ trợ học sinh một cách an toàn, không gây thêm căng thẳng. Đây là người bạn đồng hành trên con đường giáo dục.
+
+**Điều kiện sử dụng:**
+Đăng nhập bằng tài khoản Google, bổ sung số điện thoại và xác nhận các consent liên quan — đảm bảo đúng đối tượng người lớn sử dụng.
+
+**Giới hạn:**
+Chatbot chỉ hoạt động trong phạm vi nâng đỡ cảm xúc và gợi ý phương án tiếp cận. Không chẩn đoán, không thay thế chuyên gia tâm lý. Trong các tình huống vượt quá phạm vi, hệ thống chuyển đến đường dây hỗ trợ chuyên môn.
