@@ -5,12 +5,11 @@
 | Gói | Đối tượng | Nội dung | Giá |
 |---|---|---|---|
 | **Pilot** | Trường mới | Trải nghiệm 1 học kỳ + tập huấn cơ bản | Miễn phí (giới hạn thời gian) |
-| **School Core** | Trường | App lõi cho học sinh + Dashboard ẩn danh + Báo cáo phục vụ TT18 | ~60.000 VND/học sinh/năm, chiết khấu theo quy mô |
+| **School Core** | Trường | App lõi cho học sinh + Dashboard ẩn danh + Báo cáo phục vụ TT18 + Trắc nghiệm Tầng 2 có cán bộ tư vấn | ~60.000 VND/học sinh/năm, chiết khấu theo quy mô |
 | **School Plus** | Trường | Core + Chatbot cho giáo viên & phụ huynh + Tập huấn chuyên sâu | Báo giá theo quy mô |
-| **B2C Miễn phí** | Cá nhân | Check-in, Từ điển, Sổ cấp cứu, Trắc nghiệm Tầng 1 | 0 |
-| **B2C Premium** | Cá nhân | Báo cáo Insight nâng cao, nội dung mở rộng, Trắc nghiệm Tầng 2 có diễn giải | 39.000 VND/tháng · 249.000 VND/năm |
+| **B2C** | Học sinh cá nhân | Toàn bộ tính năng lõi: Check-in, Từ điển, CBT, Trắc nghiệm Tầng 1, Báo cáo cá nhân | **Miễn phí** |
 
-> **Nguyên tắc:** Minh bạch, không lại quả cá nhân, không paywall cảm xúc. Premium bán trên giá trị gia tăng trung tính — không khai thác trạng thái cảm xúc tiêu cực của trẻ.
+> **Nguyên tắc:** B2C hoàn toàn miễn phí — không có gói trả phí cho cá nhân. Trắc nghiệm lâm sàng Tầng 2 chỉ khả dụng qua kênh trường học (B2B2C), nơi có cán bộ tư vấn được ủy quyền tiếp nhận và diễn giải kết quả. Học sinh cá nhân cần đánh giá lâm sàng được hướng dẫn liên hệ phòng khám.
 
 ---
 
@@ -38,14 +37,20 @@
 
 ---
 
-## B2C — Freemium (Học sinh cá nhân)
+## B2C — Miễn phí hoàn toàn (Học sinh cá nhân)
 
-**Điều kiện mở khóa Premium:**
-- Check-in tối thiểu **7 ngày liên tục**
-- Ngày thứ 8: nhận báo cáo Insight lần đầu **miễn phí**
-- Sau đó: đăng ký Premium để tiếp tục nhận báo cáo định kỳ
+Học sinh đăng ký cá nhân được dùng toàn bộ tính năng lõi mà không cần trả phí:
 
-> Các tính năng lõi hỗ trợ cảm xúc luôn miễn phí và không bị giới hạn theo trạng thái tâm lý của học sinh.
+| Tính năng | B2C |
+|---|---|
+| Check-in cảm xúc hằng ngày | ✅ |
+| Từ điển cảm xúc | ✅ |
+| Bài tập CBT & Bí kíp tâm lý | ✅ |
+| Trắc nghiệm Tầng 1 (tự khám phá, định hướng nghề nghiệp) | ✅ |
+| Báo cáo cá nhân định kỳ | ✅ |
+| Trắc nghiệm Tầng 2 (lâm sàng: PHQ-A, GAD-7, DASS-21…) | ❌ Chỉ qua trường học |
+
+Học sinh cá nhân cần đánh giá lâm sàng chuyên sâu (Tầng 2) được ứng dụng hướng dẫn liên hệ phòng khám — nơi có chuyên gia chỉ định và diễn giải kết quả đúng quy trình.
 
 ---
 
@@ -65,5 +70,5 @@
 | **Acquisition** | Trường ký Pilot → consent phụ huynh → onboard; B2C qua web miễn phí | Số trường, tài khoản kích hoạt |
 | **Activation** | Check-in đầu tiên + streak 7 ngày | D7 retention |
 | **Retention** | Gamification, quest, Gin, chatbot đồng hành | WAU, streak trung bình |
-| **Conversion** | Free → Premium qua **giá trị** (báo cáo, nội dung), không qua áp lực cảm xúc | Conversion rate, ARPU |
-| **Expansion** | Trường gia hạn/mở rộng khối; B2C giữ lại sau tốt nghiệp | NRR, LTV |
+| **Conversion** | Trường Pilot → School Core sau 1 học kỳ; School Core → School Plus khi mở chatbot GV/PH | Tỷ lệ Pilot → trả phí, upsell rate |
+| **Expansion** | Trường gia hạn năm, mở rộng thêm khối; B2C giữ lại sau tốt nghiệp (tài khoản cá nhân) | NRR, LTV |

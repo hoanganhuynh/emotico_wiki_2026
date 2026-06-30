@@ -110,7 +110,11 @@ Kết quả Tầng 1 được diễn đạt nhẹ nhàng, khuyến khích — kh
 | SDQ | Hành vi & Tập trung | 30 ngày |
 | SCARED | Lo âu xã hội / Sợ trường học | 30 ngày |
 
-Đây là các công cụ sàng lọc lâm sàng quốc tế. Khi kết quả cho thấy dấu hiệu cần chú ý, Emotico **không trả thẳng nhãn lâm sàng cho học sinh**. Thay vào đó, hệ thống hiển thị thông điệp nhẹ nhàng ("nên trò chuyện với người lớn bạn tin tưởng") và chuyển kết quả đầy đủ đến cán bộ tư vấn học đường để diễn giải đúng chuyên môn theo quy trình Thông tư 18/2025.
+Đây là các công cụ sàng lọc lâm sàng quốc tế. **Chỉ khả dụng trong kênh trường học (B2B2C)** — nơi có cán bộ tư vấn học đường được ủy quyền tiếp nhận và diễn giải kết quả theo quy trình Thông tư 18/2025.
+
+Khi kết quả cho thấy dấu hiệu cần chú ý, Emotico **không trả thẳng nhãn lâm sàng cho học sinh**. Hệ thống hiển thị thông điệp nhẹ nhàng ("nên trò chuyện với người lớn bạn tin tưởng") và chuyển kết quả đầy đủ đến cán bộ tư vấn để diễn giải đúng chuyên môn.
+
+Học sinh đăng ký cá nhân (B2C) cần đánh giá lâm sàng được hướng dẫn liên hệ phòng khám — nơi có chuyên gia chỉ định làm trắc nghiệm đúng quy trình.
 
 **Trải nghiệm làm bài:**
 - Mỗi câu hỏi hiện riêng lẻ, không gây áp lực

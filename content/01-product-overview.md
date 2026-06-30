@@ -62,9 +62,9 @@ Nền tảng học thuật của Emotico được bảo chứng bởi:
 
 ## Mô hình kinh doanh
 
-**Học sinh cá nhân:** Người dùng trả phí để mở khóa bài trắc nghiệm nâng cao (Wellness Nghề nghiệp, Thích ứng nghề nghiệp) và nhận Báo cáo cá nhân chuyên sâu — nền tảng cho Hồ sơ sức khỏe tâm thần số phục vụ hướng nghiệp và săn học bổng.
+**Học sinh cá nhân (B2C):** Miễn phí toàn bộ — check-in, từ điển, bài tập CBT, trắc nghiệm tự khám phá (Tầng 1). Học sinh cần đánh giá lâm sàng chuyên sâu được hướng dẫn liên hệ phòng khám để được chỉ định làm trắc nghiệm đúng quy trình.
 
-**Trường học:** Hợp tác trực tiếp với Ban Giám hiệu và Hội Phụ huynh. Nhà trường nhận báo cáo tổng quan ẩn danh về tình trạng học sinh và đề xuất phương án can thiệp tâm lý kịp thời. Thu phí định kỳ 2 lần/năm theo số học sinh đăng ký.
+**Trường học (B2B2C):** Hợp tác trực tiếp với Ban Giám hiệu và Hội Phụ huynh. Nhà trường nhận báo cáo tổng quan ẩn danh về tình trạng học sinh và đề xuất phương án can thiệp tâm lý kịp thời. Trắc nghiệm lâm sàng Tầng 2 chỉ khả dụng trong kênh này — kết quả đi qua cán bộ tư vấn học đường được ủy quyền. Thu phí định kỳ 2 lần/năm theo số học sinh đăng ký.
 
 ## Mascot — eMascot Hổ Gin & eMonster
 
