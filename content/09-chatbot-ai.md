@@ -11,6 +11,45 @@ Mục tiêu của chatbot không phải là thay thế chuyên gia hay tư vấn
 
 ---
 
+## Luồng trải nghiệm
+
+Mỗi cuộc trò chuyện được cá nhân hóa qua 3 bước thiết lập trước khi chat:
+
+**① Chọn vai (Intake — lưu 1 lần)**
+
+Người dùng xác định mối quan hệ với trẻ:
+
+| Phụ huynh | Giáo viên |
+|---|---|
+| Cha · Mẹ · Người thân | Giáo viên chủ nhiệm · Giáo viên bộ môn · Cán bộ tư vấn |
+
+**② Bối cảnh mỗi cuộc trò chuyện**
+
+Người dùng cung cấp thông tin về trẻ để chatbot phản hồi đúng lứa tuổi và hoàn cảnh:
+
+- **Nhóm tuổi:** Mầm non (2–6) · Nhi đồng & Thiếu niên (7–15) · Vị thành niên (16–18)
+- **Giới tính:** Bé trai · Bé gái
+
+*(Với giáo viên, bước này thay thế cho check-in cảm xúc — giúp chatbot hiểu đúng ngữ cảnh lớp học)*
+
+**③ Chọn chủ đề → Chat**
+
+Người dùng chọn chủ đề cần hỗ trợ. Hệ thống dùng tổ hợp (độ tuổi + giới tính + quan hệ + chủ đề) để tư vấn đúng lứa, đúng ngữ cảnh.
+
+---
+
+## Chủ đề hỗ trợ theo nhóm tuổi
+
+| Mầm non (2–6) | Nhi đồng & Thiếu niên (7–15) | Vị thành niên (16–18) |
+|---|---|---|
+| Ăn vạ, bùng nổ cảm xúc | Giao tiếp với con | Khủng hoảng tuổi dậy thì |
+| Giao tiếp & lắng nghe con | Học tập & áp lực trường lớp | Con xa cách, khó nói chuyện |
+| Thói quen ăn/ngủ | Bạn bè & quan hệ xã hội | Định hướng tương lai, thi cử |
+| Chuẩn bị đi học | Con bướng, hay cãi | Ranh giới & quyền tự chủ |
+| Anh chị em, chia sẻ | Dùng điện thoại/mạng | Cảm xúc & sức khỏe tinh thần |
+
+---
+
 ## Chatbot có thể hỗ trợ gì?
 
 **Dành cho Phụ huynh:**
