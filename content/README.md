@@ -33,3 +33,8 @@ Emotico dùng AI để nâng đỡ cảm xúc — không để chẩn đoán, kh
 | **2. Trắc nghiệm Tâm lý** | Phân tầng theo độ tuổi & chỉ định chuyên gia | Nhận diện các vấn đề của bản thân trong giới hạn an toàn |
 | **3. Bài tập CBT & Mẹo vặt** | Cá nhân hóa theo cảm xúc & kết quả trắc nghiệm | Kỹ thuật điều hòa cảm xúc đã được kiểm chứng khoa học |
 
+## Quiz mới: Wellness
+
+Wellness là nội dung Quiz mới của Emotico, giúp học sinh tự nhìn lại bảy nhóm sức khỏe toàn diện: **Thể chất & Nhịp sống · Cảm xúc & Nội lực · Học tập & Tư duy · Kết nối & Quan hệ · Đời sống số · Bản sắc & Định hướng · Nguồn lực & Môi trường sống**.
+
+Đây là công cụ tự khám phá và phòng ngừa, **không chẩn đoán, không xếp hạng và không thay thế chuyên gia**. Wellness đang ở giai đoạn draft/pilot; chỉ các mô tả cốt lõi, an toàn và pháp lý được công khai trên wiki.

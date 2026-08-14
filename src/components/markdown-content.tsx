@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import type { Components } from 'react-markdown';
+import LockedSection from './locked-section';
 
 function slugify(text: string): string {
   return String(text)
@@ -36,7 +37,10 @@ export default function MarkdownContent({ content }: { content: string }) {
         h2: headingWithId(2),
         h3: headingWithId(3),
         h4: headingWithId(4),
-      }}
+        'private-section': ({ section, title }: { section?: string; title?: string }) => (
+          <LockedSection section={section || ''} title={title} />
+        ),
+      } as unknown as Components}
     >
       {content}
     </ReactMarkdown>

@@ -95,51 +95,32 @@ Kho từ vựng tâm lý được minh họa sinh động, giúp học sinh chuy
 
 ***
 
-## 4. Trắc nghiệm Tâm lý & Hồ sơ eCV
+## 4. Wellness Quiz — Khám phá sức khỏe toàn diện
 
-Hệ thống đánh giá tâm lý khoa học, chuẩn hóa lâm sàng quốc tế. Các bài trắc nghiệm được phân thành hai tầng để đảm bảo an toàn cho học sinh.
+Wellness là phiên bản mới của Quiz, giúp học sinh nhìn lại những yếu tố đang nâng đỡ hoặc ảnh hưởng đến đời sống hằng ngày. Đây là công cụ **tự khám phá và phòng ngừa**, không phải công cụ chẩn đoán hay kết luận bệnh lý.
 
-**Hiển thị theo độ tuổi:** Ứng dụng chỉ hiển thị các bài trắc nghiệm phù hợp với độ tuổi đã đăng ký. Khi tìm kiếm, toàn bộ nội dung liên quan đều hiện ra — nhưng bài không phù hợp độ tuổi hoặc cần chỉ định chuyên gia sẽ kèm thông báo rõ thay vì bị ẩn.
+### Bảy nhóm nội dung công khai
 
-**Tầng 1 — Tự do (học sinh tự làm, tự nhận kết quả):**
+| Mã | Nhóm | Nội dung cốt lõi |
+|---|---|---|
+| **BOD** | Thể chất & Nhịp sống | Cơ thể, nghỉ ngơi và nhịp sống |
+| **EMO** | Cảm xúc & Nội lực | Cảm xúc và nguồn lực bên trong |
+| **LRN** | Học tập & Tư duy | Trải nghiệm học tập và cách suy nghĩ |
+| **CON** | Kết nối & Quan hệ | Sự hỗ trợ và ranh giới trong quan hệ |
+| **DIG** | Đời sống số | Ảnh hưởng của môi trường số |
+| **IDN** | Bản sắc & Định hướng | Giá trị, sở thích và hướng phát triển |
+| **RES** | Nguồn lực & Môi trường sống | Người, nơi chốn và điều kiện nâng đỡ |
 
-Bao gồm các bài trắc nghiệm vui giải tỏa căng thẳng, khám phá bản thân phù hợp lứa tuổi, định hướng nghề nghiệp, và các khảo sát ngắn ghi nhận thực trạng học đường.
+Kết quả được trình bày ở mức gợi mở, tập trung vào các chủ đề nên quan tâm và nguồn hỗ trợ có thể tìm đến. Wellness không xếp hạng, không so sánh và không gắn nhãn lâm sàng.
 
-| Bài test                         | Đánh giá                       | Chu kỳ làm lại |
-| -------------------------------- | ------------------------------ | -------------- |
-| Trắc nghiệm vui theo chủ đề      | Giải tỏa, khám phá bản thân    | Tự do          |
-| Wellness Nghề nghiệp             | Định vị bản sắc nghề nghiệp    | 90 ngày        |
-| Thích ứng nghề nghiệp (Savickas) | Sức bật & Định hướng tương lai | 90 ngày        |
+### Nguyên tắc an toàn
 
-Kết quả Tầng 1 được diễn đạt nhẹ nhàng, khuyến khích — không dán nhãn lâm sàng, không gây lo lắng.
+* Nội dung hiển thị phù hợp với độ tuổi và quy trình đồng ý áp dụng.
+* Học sinh có thể dừng hoặc rút lại việc tham gia theo chính sách dữ liệu.
+* Khi có tín hiệu liên quan đến an toàn, phần diễn giải cá nhân hóa được dừng lại để hướng người dùng đến người lớn tin cậy, cán bộ tư vấn hoặc dịch vụ khẩn cấp phù hợp.
+* Wellness đang ở giai đoạn draft/pilot; chỉ mở rộng sau khi hoàn tất rà soát chuyên môn, pháp lý, bảo mật và khả năng tiếp cận.
 
-**Tầng 2 — Cần chuyên gia (kết quả qua cán bộ tư vấn):**
-
-| Bài test | Đánh giá                      | Chu kỳ làm lại |
-| -------- | ----------------------------- | -------------- |
-| PHQ-A    | Trầm cảm / U sầu              | 14 ngày        |
-| GAD-7    | Lo âu / Bất an sâu sắc        | 14 ngày        |
-| DASS-21  | Trầm cảm + Lo âu + Căng thẳng | 14 ngày        |
-| SDQ      | Hành vi & Tập trung           | 30 ngày        |
-| SCARED   | Lo âu xã hội / Sợ trường học  | 30 ngày        |
-
-Đây là các công cụ sàng lọc lâm sàng quốc tế. **Chỉ khả dụng trong kênh trường học (B2B2C)** — nơi có cán bộ tư vấn học đường được ủy quyền tiếp nhận và diễn giải kết quả theo quy trình Thông tư 18/2025.
-
-Khi kết quả cho thấy dấu hiệu cần chú ý, Emotico **không trả thẳng nhãn lâm sàng cho học sinh**. Hệ thống hiển thị thông điệp nhẹ nhàng ("nên trò chuyện với người lớn bạn tin tưởng") và chuyển kết quả đầy đủ đến cán bộ tư vấn để diễn giải đúng chuyên môn.
-
-Học sinh đăng ký cá nhân (B2C) cần đánh giá lâm sàng được hướng dẫn liên hệ phòng khám — nơi có chuyên gia chỉ định làm trắc nghiệm đúng quy trình.
-
-**Trải nghiệm làm bài:**
-
-* Mỗi câu hỏi hiện riêng lẻ, không gây áp lực
-* Phương án trả lời dạng thẻ bo góc mềm mại
-* Mascot Hổ Gin đi bộ dần qua màn hình theo tiến độ bài làm
-
-**Phát hiện mâu thuẫn dữ liệu:** Nếu cảm xúc check-in và kết quả trắc nghiệm không khớp — Emotico ghi nhận đây là tín hiệu "cần chuyên gia rà soát" và thông báo cho cán bộ tư vấn học đường. Hệ thống không phán xét, không phạt, không khóa tính năng của học sinh.
-
-**Radar eCV — Hồ sơ năng lực cảm xúc:**
-
-Kết quả các bài trắc nghiệm được tổng hợp thành hồ sơ năng lực cảm xúc 4 trục: Ổn định Nội tại · Ý chí & Điều tiết Nhận thức · Bản lĩnh & Ranh giới Xã hội · Sức bật & Định hướng Tương lai. Hồ sơ này phục vụ học sinh theo dõi sự phát triển cảm xúc theo thời gian và hỗ trợ định hướng nghề nghiệp, học bổng.
+<private-section section="wellness-details" title="Chi tiết Wellness" />
 
 ***
 
@@ -158,7 +139,7 @@ Hệ thống hỗ trợ tự chăm sóc cảm xúc dựa trên các kỹ thuật
 **Hồ sơ cá nhân:**
 
 * Ảnh đại diện Gin thay đổi theo cấp độ tiến bộ
-* Biểu đồ Radar eCV 4 trục hiển thị trực quan
+* Theo dõi các chủ đề Wellness đã quan tâm theo cách dễ hiểu
 * Truy cập kho Từ vựng đã lưu và Nhật ký Kỷ niệm
 
 **Danh bạ Hỗ trợ Tâm lý:**
@@ -172,7 +153,7 @@ Hệ thống hỗ trợ tự chăm sóc cảm xúc dựa trên các kỹ thuật
 
 * Bảo mật khu vực Nhật ký Kỷ niệm (vân tay/khuôn mặt/PIN)
 * Tùy chỉnh tần suất nhắc nhở từ Gin
-* Xuất Hồ sơ Năng lực eCV dạng PDF
+* Quản lý quyền riêng tư và yêu cầu dữ liệu theo chính sách sản phẩm
 
 ***
 
@@ -190,7 +171,7 @@ Hệ thống hỗ trợ tự chăm sóc cảm xúc dựa trên các kỹ thuật
 **Báo cáo Cá nhân (học sinh):**
 
 * Tần suất: Mỗi 30 ngày
-* Nội dung: Cảm xúc chủ đạo & hoàn cảnh hay gặp · Radar eCV 4 trục · Bản đồ phản ứng cơ thể
+* Nội dung: các chủ đề sức khỏe toàn diện và nguồn hỗ trợ phù hợp
 
 ***
 
