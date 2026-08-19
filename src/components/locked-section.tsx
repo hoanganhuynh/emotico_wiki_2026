@@ -1,9 +1,13 @@
 'use client';
 
+import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import type { Components } from 'react-markdown';
+import { extractHeadings, slugifyHeading } from './wiki-toc';
+import { useTOC } from '@/lib/toc-context';
 
 interface LockedSectionProps { section: string; title?: string; }
 
@@ -16,6 +20,7 @@ export default function LockedSection({ section, title = 'Nội dung nội bộ'
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const { addHeadings } = useTOC();
 
   useEffect(() => { if (open) inputRef.current?.focus(); }, [open]);
 
@@ -31,6 +36,10 @@ export default function LockedSection({ section, title = 'Nội dung nội bộ'
       .then((data) => { if (data.content) setContent(data.content); })
       .catch(() => {});
   }, [isInternal, section, content]);
+
+  useEffect(() => {
+    if (content) addHeadings(extractHeadings(content));
+  }, [content, addHeadings]);
 
   async function unlock(event: React.FormEvent) {
     event.preventDefault();
@@ -55,6 +64,21 @@ export default function LockedSection({ section, title = 'Nội dung nội bộ'
   if (!isInternal && !content) return null;
 
   if (content) {
+    const headingComponents: Components = {
+      h2: withHeadingId('h2'),
+      h3: withHeadingId('h3'),
+      h4: withHeadingId('h4'),
+      h5: withHeadingId('h5'),
+      h6: withHeadingId('h6'),
+    };
+    if (isInternal) {
+      return (
+        <section className="my-8">
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={headingComponents} className="prose prose-slate max-w-none">{content}</ReactMarkdown>
+        </section>
+      );
+    }
+
     return (
       <section className="my-8 rounded-2xl border border-[#E7E5E4] bg-white p-5 shadow-sm">
         <div className="mb-4 flex items-center justify-between gap-4">
@@ -67,7 +91,7 @@ export default function LockedSection({ section, title = 'Nội dung nội bộ'
             🔒 Khóa lại
           </button>
         </div>
-        <ReactMarkdown remarkPlugins={[remarkGfm]} className="prose prose-slate max-w-none">{content}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} components={headingComponents} className="prose prose-slate max-w-none">{content}</ReactMarkdown>
       </section>
     );
   }
@@ -88,4 +112,11 @@ export default function LockedSection({ section, title = 'Nội dung nội bộ'
       )}
     </>
   );
+}
+
+function withHeadingId(tag: 'h2' | 'h3' | 'h4' | 'h5' | 'h6') {
+  return function PrivateHeading({ children, ...props }: any) {
+    const id = slugifyHeading(String(children ?? ''));
+    return React.createElement(tag, { ...props, id, className: 'scroll-mt-24' }, children);
+  };
 }

@@ -3,11 +3,13 @@
 import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
+import { Eye, EyeSlash } from 'iconsax-react';
 
 function LoginForm() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [visible, setVisible] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
   const from = searchParams.get('from') || '/wiki-internal';
@@ -62,21 +64,26 @@ function LoginForm() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Mật khẩu"
-                autoFocus
-                required
-                className={[
-                  'w-full px-4 py-3 rounded-xl border text-sm outline-none transition-colors',
+              <div className="relative">
+                <input
+                  type={visible ? 'text' : 'password'}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Mật khẩu"
+                  autoFocus
+                  required
+                  className={[
+                    'w-full px-4 py-3 pr-12 rounded-xl border text-sm outline-none transition-colors',
                   'text-[#F5F5F5] placeholder-[#737373] caret-[#FFB223]',
                   error
                     ? 'border-red-500/80 bg-red-950/30 focus:border-red-400'
                     : 'border-[#3A3A3A] bg-[#101010] focus:border-[#FFB223] focus:bg-[#141414]',
-                ].join(' ')}
-              />
+                  ].join(' ')}
+                />
+                <button type="button" onClick={() => setVisible((value) => !value)} aria-label={visible ? 'Ẩn mật khẩu' : 'Hiện mật khẩu'} className="absolute inset-y-0 right-3 flex items-center text-[#737373] hover:text-[#F5F5F5]">
+                  {visible ? <EyeSlash size={19} color="currentColor" /> : <Eye size={19} color="currentColor" />}
+                </button>
+              </div>
               {error && (
                 <p role="alert" className="mt-2 text-xs text-red-400">{error}</p>
               )}

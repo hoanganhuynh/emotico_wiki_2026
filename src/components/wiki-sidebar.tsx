@@ -64,14 +64,16 @@ export default function WikiSidebar({
             item.slug === ''
               ? pathname === basePath
               : pathname === `${basePath}/${item.slug}`;
+          const isChildActive = item.children?.some((child) => pathname === `${basePath}/${child.slug}`) ?? false;
+          const itemIsActive = isActive || isChildActive;
 
           const IconComponent = (Icons as Record<string, React.ComponentType<{ size?: number; color?: string; variant?: string }>>)[item.icon];
 
           const linkClass = dark
-            ? isActive
+            ? itemIsActive
               ? 'bg-[#000000] text-white font-semibold'
               : 'text-[#A3A3A3] hover:text-white hover:bg-[#222222]'
-            : isActive
+            : itemIsActive
               ? 'bg-[#FFB223] text-[#1A1A2E] font-semibold'
               : 'text-[#6B6B80] hover:text-[#1A1A2E] hover:bg-white';
 
@@ -91,10 +93,25 @@ export default function WikiSidebar({
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm no-underline transition-colors ${linkClass}`}
               >
                 {IconComponent && (
-                  <IconComponent size={16} color="currentColor" variant={isActive ? 'Bold' : 'Linear'} />
+                  <IconComponent size={16} color="currentColor" variant={itemIsActive ? 'Bold' : 'Linear'} />
                 )}
                 {item.label}
               </Link>
+              {item.children && itemIsActive && (
+                <ul className={`ml-7 mt-1 space-y-0.5 border-l pl-2 ${dark ? 'border-[#343434]' : 'border-[#E0E0E6]'}`}>
+                  {item.children.map((child) => (
+                    <li key={child.slug}>
+                      <Link
+                        href={`${basePath}/${child.slug}`}
+                        onClick={onClose}
+                        className={`block rounded-md px-2 py-1.5 text-xs no-underline transition-colors ${pathname === `${basePath}/${child.slug}` ? (dark ? 'bg-[#222222] text-white font-semibold' : 'bg-[#EAEAEF] text-[#1A1A2E] font-semibold') : (dark ? 'text-[#8F8F8F] hover:bg-[#222222] hover:text-white' : 'text-[#777784] hover:bg-white hover:text-[#1A1A2E]')}`}
+                      >
+                        {child.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           );
         })}

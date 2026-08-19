@@ -1,10 +1,12 @@
-import { getInternalWikiPage } from '@/lib/wiki-internal';
+import { getInternalWikiPageResolved } from '@/lib/wiki-internal';
 import { notFound } from 'next/navigation';
 import MarkdownContent from '@/components/markdown-content';
 import WikiTOC from '@/components/wiki-toc';
 
-export default function WikiInternalHome() {
-  const page = getInternalWikiPage('');
+export const dynamic = 'force-dynamic';
+
+export default async function WikiInternalHome() {
+  const page = await getInternalWikiPageResolved('');
   if (!page) notFound();
 
   return (

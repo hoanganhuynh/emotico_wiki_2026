@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { useTOC, type Heading } from '@/lib/toc-context';
 
-function slugify(text: string): string {
+export function slugifyHeading(text: string): string {
   return text
     .toLowerCase()
     .replace(/[^\w\s-]/g, '')
@@ -16,10 +16,10 @@ export function extractHeadings(markdown: string): Heading[] {
   const lines = markdown.split('\n');
   const headings: Heading[] = [];
   for (const line of lines) {
-    const match = line.match(/^(#{2,3})\s+(.+)/);
+    const match = line.match(/^(#{2,6})\s+(.+)/);
     if (match) {
       const text = match[2].replace(/\*\*/g, '').trim();
-      headings.push({ id: slugify(text), text, level: match[1].length });
+      headings.push({ id: slugifyHeading(text), text, level: match[1].length });
     }
   }
   return headings;
@@ -39,9 +39,9 @@ function TOCList({ headings, activeId, dark, onSelect }: { headings: Heading[]; 
             }}
             className={[
               'block py-1 text-sm no-underline transition-colors leading-snug',
-              h.level === 3 ? 'pl-3' : '',
+              h.level === 3 ? 'pl-3' : h.level === 4 ? 'pl-5' : h.level >= 5 ? 'pl-7' : '',
               activeId === h.id
-                ? dark ? 'text-[#1A1A2E] font-medium' : 'text-[#FFB223] font-medium'
+                ? 'text-[#1A1A2E] font-medium'
                 : 'text-[#9B9BB0] hover:text-[#1A1A2E]',
             ].join(' ')}
           >

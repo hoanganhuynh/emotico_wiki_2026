@@ -2,10 +2,24 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import WikiSearch from '@/components/wiki-search';
-import { Setting2 } from 'iconsax-react';
+import { Edit2, Setting2 } from 'iconsax-react';
 
 export default function TopNav({ dark = false }: { dark?: boolean }) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const currentInternalSlug = pathname?.startsWith('/wiki-internal/')
+    ? pathname.split('/')[2]
+    : '';
+
+  async function logout() {
+    await fetch('/api/auth/logout', { method: 'POST' });
+    router.replace('/login');
+    router.refresh();
+  }
+
   return (
     <header
       id="top-nav"
@@ -32,23 +46,42 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
       {/* Spacer */}
       <div className="flex-1" />
 
-      {dark && (
-        <Link
-          href="/wiki-internal/settings"
-          aria-label="Cài đặt wiki internal"
-          title="Cài đặt bảo mật"
-          className="mr-4 flex h-9 w-9 items-center justify-center rounded-lg text-[#A3A3A3] transition-colors hover:bg-[#1A1A1A] hover:text-white"
-        >
-          <Setting2 size={20} color="currentColor" />
-        </Link>
-      )}
-
       {/* Metadata */}
       <div className={`hidden sm:flex items-center gap-3 text-xs font-medium ${dark ? 'text-[#A3A3A3]' : 'text-[#777784]'}`}>
-        <span>2026 · MVP</span>
-        <span aria-hidden="true" className={dark ? 'text-[#444444]' : 'text-[#D0D0D8]'}>•</span>
         <span title="Ngày cập nhật nội dung gần nhất">Cập nhật 19/08/2026</span>
       </div>
+
+      {dark && (
+        <div className="ml-4 flex items-center gap-1">
+          <Link
+            href={currentInternalSlug && currentInternalSlug !== 'edit' ? `/wiki-internal/edit?slug=${encodeURIComponent(currentInternalSlug)}` : '/wiki-internal/edit'}
+            aria-label="Chỉnh sửa wiki internal"
+            title="Chỉnh sửa nội dung"
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-[#A3A3A3] transition-colors hover:bg-[#1A1A1A] hover:text-white"
+          >
+            <Edit2 size={20} color="currentColor" />
+          </Link>
+          <Link
+            href="/wiki-internal/settings"
+            aria-label="Cài đặt wiki internal"
+            title="Cài đặt bảo mật"
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-[#A3A3A3] transition-colors hover:bg-[#1A1A1A] hover:text-white"
+          >
+            <Setting2 size={20} color="currentColor" />
+          </Link>
+          <button
+            type="button"
+            onClick={logout}
+            aria-label="Đăng xuất"
+            title="Đăng xuất"
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-[#A3A3A3] transition-colors hover:bg-[#1A1A1A] hover:text-white"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M10 17l5-5-5-5M15 12H3M21 19V5a2 2 0 0 0-2-2h-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        </div>
+      )}
     </header>
   );
 }

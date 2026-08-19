@@ -124,7 +124,38 @@ Kết quả được trình bày ở mức gợi mở, tập trung vào các ch�
 
 ***
 
-## 5. Bài tập CBT & Bí kíp Tâm lý
+## 5. Đoán vui — Những bài trắc nghiệm chỉ để giải trí
+
+Đoán vui là khu nội dung nhẹ nhàng, tách biệt về mục đích với Wellness. Các bài được thiết kế để chơi nhanh, không dùng để đo lường, đánh giá hay đưa ra kết luận về người tham gia.
+
+**Đặc điểm chung:**
+
+* Mỗi bài gồm **6 câu hỏi**, thời gian trải nghiệm khoảng **dưới 2 phút**.
+* Không có điểm số, không xếp hạng và không tạo hồ sơ tâm lý.
+* Câu trả lời và kết quả không được lưu vào hồ sơ, eCV hoặc dùng để điều chỉnh bài tập/gợi ý hỗ trợ.
+* Kết quả chỉ là một cách diễn giải vui theo lựa chọn trong bài; không phải nhận định về tính cách, sức khỏe hay năng lực của người dùng.
+* Không yêu cầu nhập thông tin cá nhân để xem kết quả.
+
+**Các chủ đề hiện có:**
+
+* Bạn là kiểu người học kiểu gì?
+* Màn hình điện thoại của bạn thuộc kiểu nào?
+* Bàn học của bạn nói gì về bạn?
+* Nếu bạn là một loài động vật đi học
+* Bạn ở vị trí nào trong nhóm bạn?
+* Bạn sẽ sống sót bao lâu nếu mất điện thoại?
+* Bạn thuộc kiểu người dùng tiền nào?
+* Nếu đời bạn là một môn học
+* Bạn nạp lại năng lượng kiểu gì?
+* Kiểu tin nhắn của bạn
+* Bạn là kiểu người lên kế hoạch nào?
+* Món ăn phản ánh cách bạn giải quyết vấn đề
+
+Mọi bài đều hiển thị nguyên tắc: **“Bài này chỉ để vui — nó không đo gì cả.”** Những chủ đề có thể bị hiểu thành chẩn đoán, gắn nhãn cố định, so sánh/xếp hạng người dùng hoặc đánh giá ngoại hình không thuộc phạm vi của Đoán vui.
+
+***
+
+## 6. Bài tập CBT & Bí kíp Tâm lý
 
 Hệ thống hỗ trợ tự chăm sóc cảm xúc dựa trên các kỹ thuật Cognitive Behavioral Therapy (CBT) đã được kiểm chứng lâm sàng. Bài tập được gợi ý dựa trên những gì học sinh đã ghi nhận — cảm xúc check-in và kết quả trắc nghiệm — để đảm bảo hỗ trợ đúng nhu cầu thực tế.
 
@@ -134,7 +165,7 @@ Hệ thống hỗ trợ tự chăm sóc cảm xúc dựa trên các kỹ thuật
 
 ***
 
-## 6. Hồ sơ & Danh bạ Hỗ trợ
+## 7. Hồ sơ & Danh bạ Hỗ trợ
 
 **Hồ sơ cá nhân:**
 
@@ -157,7 +188,7 @@ Hệ thống hỗ trợ tự chăm sóc cảm xúc dựa trên các kỹ thuật
 
 ***
 
-## 7. Báo cáo & Dashboard
+## 8. Báo cáo & Dashboard
 
 **Dashboard Nhà trường — Thời gian thực:** Theo dõi các chỉ số sức khỏe cảm xúc toàn trường tích hợp từ app học sinh. Không bao gồm dữ liệu từ chatbot giáo viên/phụ huynh.
 
@@ -175,7 +206,7 @@ Hệ thống hỗ trợ tự chăm sóc cảm xúc dựa trên các kỹ thuật
 
 ***
 
-## 8. Web Chatbot — Giáo viên & Phụ huynh
+## 9. Web Chatbot — Giáo viên & Phụ huynh
 
 Công cụ miễn phí dành riêng cho người lớn — không dành cho học sinh.
 

@@ -1,26 +1,29 @@
-import { getInternalWikiPage, NAV_INTERNAL_ITEMS } from '@/lib/wiki-internal';
+import { getInternalWikiPageResolved, NAV_INTERNAL_ITEMS } from '@/lib/wiki-internal';
+import { flattenNavItems } from '@/lib/nav';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import MarkdownContent from '@/components/markdown-content';
 import WikiTOC from '@/components/wiki-toc';
+
+export const dynamic = 'force-dynamic';
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return NAV_INTERNAL_ITEMS.filter((n) => n.slug !== '').map((n) => ({ slug: n.slug }));
+  return flattenNavItems(NAV_INTERNAL_ITEMS).filter((n) => n.slug !== '').map((n) => ({ slug: n.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const page = getInternalWikiPage(slug);
+  const page = await getInternalWikiPageResolved(slug);
   return { title: page ? `${page.title} — Emotico Internal` : 'Emotico Internal' };
 }
 
 export default async function WikiInternalPage({ params }: Props) {
   const { slug } = await params;
-  const page = getInternalWikiPage(slug);
+  const page = await getInternalWikiPageResolved(slug);
   if (!page) notFound();
 
   return (

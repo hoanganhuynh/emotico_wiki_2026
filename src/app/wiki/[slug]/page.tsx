@@ -1,4 +1,5 @@
 import { getWikiPage, NAV_ITEMS } from '@/lib/wiki';
+import { flattenNavItems } from '@/lib/nav';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import MarkdownContent from '@/components/markdown-content';
@@ -9,7 +10,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return NAV_ITEMS.filter((n) => n.slug !== '').map((n) => ({ slug: n.slug }));
+  return flattenNavItems(NAV_ITEMS).filter((n) => n.slug !== '').map((n) => ({ slug: n.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

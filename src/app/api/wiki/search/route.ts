@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getWikiPage, NAV_ITEMS } from '@/lib/wiki';
+import { getWikiPage } from '@/lib/wiki';
+import { NAV_ITEMS, flattenNavItems } from '@/lib/nav';
 
 function plainText(markdown: string) {
   return markdown
@@ -23,7 +24,7 @@ export async function GET(request: NextRequest) {
   if (query.length < 2) return NextResponse.json({ results: [] });
 
   const normalized = query.toLocaleLowerCase('vi');
-  const results = NAV_ITEMS.map((item) => {
+  const results = flattenNavItems(NAV_ITEMS).map((item) => {
     const page = getWikiPage(item.slug);
     if (!page) return null;
     const text = plainText(page.content);

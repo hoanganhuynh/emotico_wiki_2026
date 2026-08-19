@@ -1,12 +1,13 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
-import { Setting2, Lock1 } from 'iconsax-react';
+import { Setting2, Lock1, Eye, EyeSlash } from 'iconsax-react';
 
 export default function InternalSettingsPage() {
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [visible, setVisible] = useState({ current: false, new: false, confirm: false });
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
@@ -60,16 +61,31 @@ export default function InternalSettingsPage() {
         <form onSubmit={submit} className="mt-10 rounded-2xl border border-[#E4E4E4] bg-[#FAFAFA] p-6 md:p-8 space-y-5">
           <label className="block">
             <span className="mb-2 block text-sm font-medium">Mật khẩu hiện tại</span>
-            <input required type="password" autoComplete="current-password" value={currentPassword} onChange={(e) => setCurrentPassword(e.target.value)} className="w-full rounded-xl border border-[#D5D5D5] bg-white px-4 py-3 outline-none focus:border-[#111111]" />
+            <div className="relative">
+              <input required type={visible.current ? 'text' : 'password'} autoComplete="current-password" value={currentPassword} onChange={(e) => setCurrentPassword(e.target.value)} className="w-full rounded-xl border border-[#D5D5D5] bg-white px-4 py-3 pr-12 outline-none focus:border-[#111111]" />
+              <button type="button" onClick={() => setVisible((state) => ({ ...state, current: !state.current }))} aria-label={visible.current ? 'Ẩn mật khẩu hiện tại' : 'Hiện mật khẩu hiện tại'} className="absolute inset-y-0 right-3 flex items-center text-[#777777] hover:text-[#111111]">
+                {visible.current ? <EyeSlash size={19} color="currentColor" /> : <Eye size={19} color="currentColor" />}
+              </button>
+            </div>
           </label>
           <label className="block">
             <span className="mb-2 block text-sm font-medium">Mật khẩu mới</span>
-            <input required minLength={12} type="password" autoComplete="new-password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} className="w-full rounded-xl border border-[#D5D5D5] bg-white px-4 py-3 outline-none focus:border-[#111111]" />
+            <div className="relative">
+              <input required minLength={12} type={visible.new ? 'text' : 'password'} autoComplete="new-password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} className="w-full rounded-xl border border-[#D5D5D5] bg-white px-4 py-3 pr-12 outline-none focus:border-[#111111]" />
+              <button type="button" onClick={() => setVisible((state) => ({ ...state, new: !state.new }))} aria-label={visible.new ? 'Ẩn mật khẩu mới' : 'Hiện mật khẩu mới'} className="absolute inset-y-0 right-3 flex items-center text-[#777777] hover:text-[#111111]">
+                {visible.new ? <EyeSlash size={19} color="currentColor" /> : <Eye size={19} color="currentColor" />}
+              </button>
+            </div>
             <span className="mt-2 block text-xs text-[#777777]">Ít nhất 12 ký tự.</span>
           </label>
           <label className="block">
             <span className="mb-2 block text-sm font-medium">Xác nhận mật khẩu mới</span>
-            <input required minLength={12} type="password" autoComplete="new-password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="w-full rounded-xl border border-[#D5D5D5] bg-white px-4 py-3 outline-none focus:border-[#111111]" />
+            <div className="relative">
+              <input required minLength={12} type={visible.confirm ? 'text' : 'password'} autoComplete="new-password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="w-full rounded-xl border border-[#D5D5D5] bg-white px-4 py-3 pr-12 outline-none focus:border-[#111111]" />
+              <button type="button" onClick={() => setVisible((state) => ({ ...state, confirm: !state.confirm }))} aria-label={visible.confirm ? 'Ẩn mật khẩu xác nhận' : 'Hiện mật khẩu xác nhận'} className="absolute inset-y-0 right-3 flex items-center text-[#777777] hover:text-[#111111]">
+                {visible.confirm ? <EyeSlash size={19} color="currentColor" /> : <Eye size={19} color="currentColor" />}
+              </button>
+            </div>
           </label>
 
           {error && <p role="alert" className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">{error}</p>}
