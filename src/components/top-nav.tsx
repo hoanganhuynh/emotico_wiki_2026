@@ -21,7 +21,7 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
           alt="Emotico"
           width={96}
           height={32}
-          className={`h-8 w-auto ${dark ? 'invert' : ''}`}
+          className={`h-8 w-auto ${dark ? 'brightness-0 invert' : ''}`}
           priority
         />
       </Link>
@@ -31,10 +31,12 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
       {/* Spacer */}
       <div className="flex-1" />
 
-      {/* Version badge */}
-      <span className={`text-xs font-medium hidden sm:block ${dark ? 'text-[#555555]' : 'text-[#9B9BB0]'}`}>
-        2026 · MVP
-      </span>
+      {/* Metadata */}
+      <div className={`hidden sm:flex items-center gap-3 text-xs font-medium ${dark ? 'text-[#A3A3A3]' : 'text-[#777784]'}`}>
+        <span>2026 · MVP</span>
+        <span aria-hidden="true" className={dark ? 'text-[#444444]' : 'text-[#D0D0D8]'}>•</span>
+        <span title="Ngày cập nhật nội dung gần nhất">Cập nhật 19/08/2026</span>
+      </div>
     </header>
   );
 }

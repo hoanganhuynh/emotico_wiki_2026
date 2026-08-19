@@ -25,8 +25,8 @@ export default function WikiSidebar({
 
   const sidebarBg = dark ? 'bg-[#111111]' : 'bg-[#F7F7F9]';
   const sidebarBorder = dark ? 'border-[#2A2A2A]' : 'border-[#E0E0E6]';
-  const labelColor = dark ? 'text-[#555555]' : 'text-[#9B9BB0]';
-  const closeBtnColor = dark ? 'text-[#888888] hover:bg-[#222222]' : 'text-[#6B6B80] hover:bg-white';
+  const labelColor = dark ? 'text-[#9B9B9B]' : 'text-[#9B9BB0]';
+  const closeBtnColor = dark ? 'text-[#A3A3A3] hover:bg-[#222222]' : 'text-[#6B6B80] hover:bg-white';
 
   const navContent = (
     <nav className="py-6 px-3">
@@ -34,7 +34,7 @@ export default function WikiSidebar({
         Tài liệu
       </p>
       <ul className="space-y-0.5">
-        {navItems.map((item) => {
+        {navItems.map((item, index) => {
           const href = item.slug === '' ? basePath : `${basePath}/${item.slug}`;
           const isActive =
             item.slug === ''
@@ -46,13 +46,21 @@ export default function WikiSidebar({
           const linkClass = dark
             ? isActive
               ? 'bg-[#000000] text-white font-semibold'
-              : 'text-[#888888] hover:text-white hover:bg-[#222222]'
+              : 'text-[#A3A3A3] hover:text-white hover:bg-[#222222]'
             : isActive
               ? 'bg-[#FFB223] text-[#1A1A2E] font-semibold'
               : 'text-[#6B6B80] hover:text-[#1A1A2E] hover:bg-white';
 
+          const previousSection = navItems[index - 1]?.section;
+          const showSection = item.section && item.section !== previousSection;
+
           return (
             <li key={item.slug}>
+              {showSection && (
+                <p className={`px-3 pt-5 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] ${labelColor}`}>
+                  {item.section}
+                </p>
+              )}
               <Link
                 href={href}
                 onClick={onClose}
