@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import type { ComponentPropsWithoutRef } from 'react';
 import type { Components } from 'react-markdown';
 import LockedSection from './locked-section';
 
@@ -37,7 +38,7 @@ export default function MarkdownContent({ content, blueLinks = false }: { conten
         h2: headingWithId(2),
         h3: headingWithId(3),
         h4: headingWithId(4),
-        a: ({ children, ...props }) => (
+        a: ({ children, ...props }: ComponentPropsWithoutRef<'a'>) => (
           <a {...props} className={blueLinks ? 'text-[#2563EB] no-underline hover:text-[#1D4ED8] hover:underline' : undefined}>
             {children}
           </a>
