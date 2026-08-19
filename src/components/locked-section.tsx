@@ -52,6 +52,8 @@ export default function LockedSection({ section, title = 'Nội dung nội bộ'
     finally { setLoading(false); }
   }
 
+  if (!isInternal && !content) return null;
+
   if (content) {
     return (
       <section className="my-8 rounded-2xl border border-[#E7E5E4] bg-white p-5 shadow-sm">
