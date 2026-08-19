@@ -31,7 +31,7 @@ function MobileNavControls({
         <div className="relative">
           <button
             onClick={() => setTocOpen(o => !o)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#E0E0E6] text-sm text-[#6B6B80] hover:bg-[#F7F7F9] transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#333333] text-sm text-[#888888] hover:bg-[#1A1A1A] transition-colors"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M1 3h12M1 7h8M1 11h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
@@ -78,7 +78,7 @@ function MobileNavControls({
 
       <button
         onClick={onOpenSidebar}
-        className="w-9 h-9 flex items-center justify-center rounded-lg text-[#6B6B80] hover:bg-[#F7F7F9] transition-colors"
+        className="w-9 h-9 flex items-center justify-center rounded-lg text-[#888888] hover:bg-[#1A1A1A] transition-colors"
         aria-label={sidebarOpen ? 'Đóng menu' : 'Mở menu'}
       >
         {sidebarOpen ? (
@@ -106,12 +106,13 @@ function WikiInternalLayoutInner({ children }: { children: React.ReactNode }) {
         onClose={() => setSidebarOpen(false)}
         navItems={NAV_INTERNAL_ITEMS}
         basePath="/wiki-internal"
+        theme="dark"
       />
       <MobileNavControls onOpenSidebar={() => setSidebarOpen(o => !o)} sidebarOpen={sidebarOpen} />
-      <main className="flex-1 flex overflow-hidden pb-16 md:pb-0">
+      <main className="flex-1 flex overflow-hidden pb-16 md:pb-0 bg-white">
         {children}
       </main>
-      <WikiBottomNav navItems={NAV_INTERNAL_ITEMS} basePath="/wiki-internal" />
+      <WikiBottomNav navItems={NAV_INTERNAL_ITEMS} basePath="/wiki-internal" theme="dark" />
     </div>
   );
 }
