@@ -49,10 +49,11 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Quá nhiều lần thử. Vui lòng thử lại sau 15 phút.' }, { status: 429, headers: { 'Retry-After': '900' } });
     }
 
+    const wikiAuth = request.cookies.get('wiki-auth')?.value === 'authenticated';
     const passwordBuffer = Buffer.from(String(password || ''));
     const secretBuffer = Buffer.from(secret);
     const passwordMatches = passwordBuffer.length === secretBuffer.length && timingSafeEqual(passwordBuffer, secretBuffer);
-    if (!passwordMatches && !validSession(request, section, secret)) {
+    if (!wikiAuth && !passwordMatches && !validSession(request, section, secret)) {
       const next = current || { count: 0, resetAt: now + WINDOW_MS };
       next.count += 1;
       attempts.set(key, next);

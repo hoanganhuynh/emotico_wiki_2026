@@ -1,12 +1,15 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 interface LockedSectionProps { section: string; title?: string; }
 
 export default function LockedSection({ section, title = 'Nội dung nội bộ' }: LockedSectionProps) {
+  const pathname = usePathname();
+  const isInternal = pathname?.startsWith('/wiki-internal');
   const [open, setOpen] = useState(false);
   const [password, setPassword] = useState('');
   const [content, setContent] = useState<string | null>(null);
@@ -15,6 +18,19 @@ export default function LockedSection({ section, title = 'Nội dung nội bộ'
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => { if (open) inputRef.current?.focus(); }, [open]);
+
+  useEffect(() => {
+    if (!isInternal || content) return;
+    fetch('/api/wiki/private', {
+      method: 'POST',
+      cache: 'no-store',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ section, password: '' }),
+    })
+      .then((r) => r.json())
+      .then((data) => { if (data.content) setContent(data.content); })
+      .catch(() => {});
+  }, [isInternal, section, content]);
 
   async function unlock(event: React.FormEvent) {
     event.preventDefault();
