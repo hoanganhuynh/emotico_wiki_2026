@@ -45,7 +45,7 @@ export default function WikiSidebar({
 
           const linkClass = dark
             ? isActive
-              ? 'bg-white text-[#111111] font-semibold'
+              ? 'bg-[#000000] text-white font-semibold'
               : 'text-[#888888] hover:text-white hover:bg-[#222222]'
             : isActive
               ? 'bg-[#FFB223] text-[#1A1A2E] font-semibold'
