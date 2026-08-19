@@ -1,8 +1,12 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
-  const isAuthenticated = request.cookies.get('wiki-auth')?.value === 'authenticated';
+export async function middleware(request: NextRequest) {
+  const sessionResponse = await fetch(new URL('/api/auth/session', request.url), {
+    headers: { cookie: request.headers.get('cookie') || '' },
+    cache: 'no-store',
+  }).catch(() => null);
+  const isAuthenticated = sessionResponse?.ok === true;
 
   if (!isAuthenticated) {
     const loginUrl = request.nextUrl.clone();

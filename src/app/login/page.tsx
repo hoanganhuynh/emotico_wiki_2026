@@ -2,6 +2,7 @@
 
 import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 
 function LoginForm() {
   const [password, setPassword] = useState('');
@@ -37,21 +38,25 @@ function LoginForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9] flex items-center justify-center px-4">
+    <div className="min-h-screen bg-[#0D0D0D] flex items-center justify-center px-4 py-10 text-[#F5F5F5] selection:bg-[#FFB223] selection:text-[#111111]">
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="flex flex-col items-center mb-8">
-          <div className="w-14 h-14 rounded-2xl bg-[#FFB223] flex items-center justify-center mb-4 shadow-sm">
-            <span className="text-white text-2xl select-none">♥</span>
-          </div>
-          <h1 className="text-xl font-bold text-[#1C1917] tracking-tight">emotico</h1>
-          <p className="text-sm text-[#57534E] mt-1">Internal Wiki</p>
+          <Image
+            src="/logo.png"
+            alt="Emotico"
+            width={168}
+            height={56}
+            className="h-12 w-auto brightness-0 invert mb-4"
+            priority
+          />
+          <p className="text-sm text-[#A3A3A3] mt-1">Internal Wiki</p>
         </div>
 
         {/* Card */}
-        <div className="bg-white rounded-2xl border border-[#E7E5E4] p-8 shadow-sm">
-          <h2 className="text-base font-semibold text-[#1C1917] mb-1">Nhập mật khẩu</h2>
-          <p className="text-sm text-[#57534E] mb-6">
+        <div className="bg-[#171717] rounded-2xl border border-[#2B2B2B] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.35)]">
+          <h2 className="text-base font-semibold text-[#F5F5F5] mb-1">Nhập mật khẩu</h2>
+          <p className="text-sm text-[#A3A3A3] mb-6">
             Tài liệu này dành cho nội bộ. Liên hệ team nếu chưa có mật khẩu.
           </p>
 
@@ -66,14 +71,14 @@ function LoginForm() {
                 required
                 className={[
                   'w-full px-4 py-3 rounded-xl border text-sm outline-none transition-colors',
-                  'text-[#1C1917] placeholder-[#A8A29E]',
+                  'text-[#F5F5F5] placeholder-[#737373] caret-[#FFB223]',
                   error
-                    ? 'border-red-400 bg-red-50 focus:border-red-500'
-                    : 'border-[#E7E5E4] bg-[#FAFAF9] focus:border-[#FFB223] focus:bg-white',
+                    ? 'border-red-500/80 bg-red-950/30 focus:border-red-400'
+                    : 'border-[#3A3A3A] bg-[#101010] focus:border-[#FFB223] focus:bg-[#141414]',
                 ].join(' ')}
               />
               {error && (
-                <p className="mt-2 text-xs text-red-500">{error}</p>
+                <p role="alert" className="mt-2 text-xs text-red-400">{error}</p>
               )}
             </div>
 
@@ -83,8 +88,8 @@ function LoginForm() {
               className={[
                 'w-full py-3 rounded-xl text-sm font-semibold transition-all',
                 loading || !password
-                  ? 'bg-[#FFB223]/40 text-white cursor-not-allowed'
-                  : 'bg-[#FFB223] text-[#1C1917] hover:bg-[#FFA800] active:scale-[0.98]',
+                  ? 'bg-[#FFB223]/35 text-[#6B5A3A] cursor-not-allowed'
+                  : 'bg-[#FFB223] text-[#111111] hover:bg-[#FFC14A] active:scale-[0.98]',
               ].join(' ')}
             >
               {loading ? 'Đang xác thực...' : 'Vào wiki'}
@@ -92,7 +97,7 @@ function LoginForm() {
           </form>
         </div>
 
-        <p className="text-center text-xs text-[#A8A29E] mt-6">
+        <p className="text-center text-xs text-[#666666] mt-6">
           emotico · 2026
         </p>
       </div>

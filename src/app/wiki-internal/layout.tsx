@@ -109,7 +109,7 @@ function WikiInternalLayoutInner({ children }: { children: React.ReactNode }) {
         theme="dark"
       />
       <MobileNavControls onOpenSidebar={() => setSidebarOpen(o => !o)} sidebarOpen={sidebarOpen} />
-      <main className="flex-1 flex overflow-hidden pb-16 md:pb-0 bg-white">
+      <main className="flex-1 flex overflow-hidden pb-28 md:pb-0 bg-white">
         {children}
       </main>
       <WikiBottomNav navItems={NAV_INTERNAL_ITEMS} basePath="/wiki-internal" theme="dark" />

@@ -27,9 +27,33 @@ export default function WikiSidebar({
   const sidebarBorder = dark ? 'border-[#2A2A2A]' : 'border-[#E0E0E6]';
   const labelColor = dark ? 'text-[#9B9B9B]' : 'text-[#9B9BB0]';
   const closeBtnColor = dark ? 'text-[#A3A3A3] hover:bg-[#222222]' : 'text-[#6B6B80] hover:bg-white';
+  const isInternal = basePath === '/wiki-internal';
+  const switchHref = isInternal ? '/wiki' : '/wiki-internal';
+  const switchLabel = isInternal ? 'Về Wiki public' : 'Mở Wiki internal';
+  const switchBanner = (
+    <div className={`shrink-0 border-t p-3 ${dark ? 'border-[#2A2A2A] bg-[#111111]' : 'border-[#E0E0E6] bg-[#F7F7F9]'}`}>
+      <Link
+        href={switchHref}
+        onClick={onClose}
+        className={`flex items-center justify-between rounded-xl border px-3.5 py-3 no-underline transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFB223] focus:ring-offset-2 ${
+          dark
+            ? 'border-[#3A3A3A] bg-[#191919] text-[#E6E6E6] hover:border-[#FFB223]'
+            : 'border-[#E0E0E6] bg-white text-[#1A1A2E] hover:border-[#FFB223] hover:bg-[#FFF9ED]'
+        }`}
+      >
+        <span>
+            <span className={`flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest ${dark ? 'text-[#A3A3A3]' : 'text-[#777784]'}`}>
+            {isInternal ? <><Icons.Global size={13} color="currentColor" variant="Linear" aria-hidden="true" /><span className="sr-only">Wiki nội bộ</span></> : <><Icons.Lock1 size={13} color="currentColor" variant="Linear" aria-hidden="true" /><span className="sr-only">Wiki public</span></>}
+            </span>
+          <span className="mt-0.5 block text-xs font-semibold">{switchLabel}</span>
+        </span>
+        <span aria-hidden="true" className="text-base">→</span>
+      </Link>
+    </div>
+  );
 
   const navContent = (
-    <nav className="py-6 px-3">
+    <nav className="flex-1 overflow-y-auto py-6 px-3">
       <p className={`px-3 mb-2 text-xs font-semibold uppercase tracking-widest ${labelColor}`}>
         Tài liệu
       </p>
@@ -81,15 +105,16 @@ export default function WikiSidebar({
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className={`hidden md:block w-64 shrink-0 border-r ${sidebarBorder} ${sidebarBg} overflow-y-auto`}>
+      <aside className={`hidden md:flex md:flex-col w-64 shrink-0 border-r ${sidebarBorder} ${sidebarBg} overflow-hidden`}>
         {navContent}
+        {switchBanner}
       </aside>
 
       {/* Mobile drawer */}
       {isOpen && (
         <div className="md:hidden fixed inset-0 z-40 flex justify-end">
           <div className="absolute inset-0 bg-black/60" onClick={onClose} aria-hidden="true" />
-          <aside className={`relative z-10 w-64 ${sidebarBg} h-full overflow-y-auto shadow-xl`}>
+          <aside className={`relative z-10 flex w-64 flex-col ${sidebarBg} h-full overflow-hidden shadow-xl`}>
             <div className="flex items-center justify-between px-4 pt-4 pb-2">
               <span className={`text-xs font-semibold uppercase tracking-widest ${labelColor}`}>Menu</span>
               <button
@@ -103,6 +128,7 @@ export default function WikiSidebar({
               </button>
             </div>
             {navContent}
+            {switchBanner}
           </aside>
         </div>
       )}

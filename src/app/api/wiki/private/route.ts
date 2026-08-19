@@ -4,16 +4,13 @@ import { createHmac, timingSafeEqual } from 'node:crypto';
 import { NextRequest, NextResponse } from 'next/server';
 import { getWikiPassword } from '@/lib/wiki-auth';
 import { decryptPrivateContent } from '@/lib/private-content';
+import { clearRateLimit, isRateLimited, recordRateLimitFailure, verifyWikiPassword, verifyWikiSession } from '@/lib/wiki-auth-store';
 
 const PRIVATE_FILES: Record<string, string> = { 'wellness-details': 'wellness.enc' };
 const SESSION_COOKIE = 'wiki-private-session';
 const SESSION_TTL_SECONDS = 15 * 60;
-const MAX_ATTEMPTS = 5;
-const WINDOW_MS = 15 * 60 * 1000;
-const attempts = new Map<string, { count: number; resetAt: number }>();
-
 function clientKey(request: NextRequest) {
-  return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+  return `private:${request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'}`;
 }
 
 function signature(payload: string, secret: string) {
@@ -39,33 +36,26 @@ export async function POST(request: NextRequest) {
     const fileName = PRIVATE_FILES[section];
     if (!fileName) return NextResponse.json({ error: 'Không tìm thấy tài liệu.' }, { status: 404 });
 
-    const secret = getWikiPassword();
+    const sessionValid = await verifyWikiSession(request.cookies.get('wiki-auth')?.value);
+    const contentSecret = getWikiPassword();
     const key = clientKey(request);
     const now = Date.now();
-    const attempt = attempts.get(key);
-    if (attempt && attempt.resetAt <= now) attempts.delete(key);
-    const current = attempts.get(key);
-    if (current && current.count >= MAX_ATTEMPTS) {
+    if (await isRateLimited(key)) {
       return NextResponse.json({ error: 'Quá nhiều lần thử. Vui lòng thử lại sau 15 phút.' }, { status: 429, headers: { 'Retry-After': '900' } });
     }
 
-    const wikiAuth = request.cookies.get('wiki-auth')?.value === 'authenticated';
-    const passwordBuffer = Buffer.from(String(password || ''));
-    const secretBuffer = Buffer.from(secret);
-    const passwordMatches = passwordBuffer.length === secretBuffer.length && timingSafeEqual(passwordBuffer, secretBuffer);
-    if (!wikiAuth && !passwordMatches && !validSession(request, section, secret)) {
-      const next = current || { count: 0, resetAt: now + WINDOW_MS };
-      next.count += 1;
-      attempts.set(key, next);
-      return NextResponse.json({ error: 'Mật khẩu không đúng.' }, { status: 401 });
+    const passwordMatches = await verifyWikiPassword(String(password || ''));
+    if (!sessionValid && !passwordMatches && !validSession(request, section, contentSecret)) {
+      const blocked = await recordRateLimitFailure(key);
+      return NextResponse.json({ error: blocked ? 'Quá nhiều lần thử. Vui lòng thử lại sau 15 phút.' : 'Mật khẩu không đúng.' }, { status: blocked ? 429 : 401, headers: blocked ? { 'Retry-After': '900' } : undefined });
     }
 
-    attempts.delete(key);
+    await clearRateLimit(key);
     const encrypted = await fs.readFile(path.join(process.cwd(), 'content', 'private', fileName), 'utf8');
-    const content = decryptPrivateContent(encrypted, secret);
+    const content = decryptPrivateContent(encrypted, contentSecret);
     const payload = `${section}:${now + SESSION_TTL_SECONDS * 1000}`;
     const response = NextResponse.json({ content }, { headers: { 'Cache-Control': 'no-store' } });
-    response.cookies.set(SESSION_COOKIE, `${payload}.${signature(payload, secret)}`, {
+    response.cookies.set(SESSION_COOKIE, `${payload}.${signature(payload, contentSecret)}`, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'strict',

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import WikiSearch from '@/components/wiki-search';
+import { Setting2 } from 'iconsax-react';
 
 export default function TopNav({ dark = false }: { dark?: boolean }) {
   return (
@@ -30,6 +31,17 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
 
       {/* Spacer */}
       <div className="flex-1" />
+
+      {dark && (
+        <Link
+          href="/wiki-internal/settings"
+          aria-label="Cài đặt wiki internal"
+          title="Cài đặt bảo mật"
+          className="mr-4 flex h-9 w-9 items-center justify-center rounded-lg text-[#A3A3A3] transition-colors hover:bg-[#1A1A1A] hover:text-white"
+        >
+          <Setting2 size={20} color="currentColor" />
+        </Link>
+      )}
 
       {/* Metadata */}
       <div className={`hidden sm:flex items-center gap-3 text-xs font-medium ${dark ? 'text-[#A3A3A3]' : 'text-[#777784]'}`}>
