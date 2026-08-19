@@ -12,7 +12,8 @@ function LoginForm() {
   const [visible, setVisible] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
-  const from = searchParams.get('from') || '/wiki-internal';
+  const requestedFrom = searchParams.get('from') || '/wiki-internal';
+  const from = requestedFrom.startsWith('/wiki-internal') ? requestedFrom : '/wiki-internal';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

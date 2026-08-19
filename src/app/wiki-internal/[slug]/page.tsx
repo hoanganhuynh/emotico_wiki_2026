@@ -1,18 +1,14 @@
-import { getInternalWikiPageResolved, NAV_INTERNAL_ITEMS } from '@/lib/wiki-internal';
-import { flattenNavItems } from '@/lib/nav';
+import { getInternalWikiPageResolved } from '@/lib/wiki-internal';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import MarkdownContent from '@/components/markdown-content';
 import WikiTOC from '@/components/wiki-toc';
+import { requireWikiInternalSession } from '@/lib/wiki-internal-auth';
 
 export const dynamic = 'force-dynamic';
 
 interface Props {
   params: Promise<{ slug: string }>;
-}
-
-export async function generateStaticParams() {
-  return flattenNavItems(NAV_INTERNAL_ITEMS).filter((n) => n.slug !== '').map((n) => ({ slug: n.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -23,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function WikiInternalPage({ params }: Props) {
   const { slug } = await params;
+  await requireWikiInternalSession(`/wiki-internal/${slug}`);
   const page = await getInternalWikiPageResolved(slug);
   if (!page) notFound();
 

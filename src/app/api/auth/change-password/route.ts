@@ -3,6 +3,10 @@ import { changeWikiPassword, clearRateLimit, hasWikiDatabase, isRateLimited, rec
 
 export const runtime = 'nodejs';
 
+function validOrigin(request: NextRequest) {
+  return request.headers.get('origin') === new URL(request.url).origin;
+}
+
 export async function POST(request: NextRequest) {
   try {
     if (!hasWikiDatabase()) {
@@ -11,14 +15,17 @@ export async function POST(request: NextRequest) {
     if (!await verifyWikiSession(request.cookies.get('wiki-auth')?.value)) {
       return NextResponse.json({ error: 'Phiên đăng nhập đã hết hạn.' }, { status: 401 });
     }
+    if (!validOrigin(request)) {
+      return NextResponse.json({ error: 'Invalid origin.' }, { status: 403 });
+    }
     const rateKey = `change:${request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'}`;
     if (await isRateLimited(rateKey)) {
       return NextResponse.json({ error: 'Quá nhiều lần thử. Vui lòng thử lại sau 15 phút.' }, { status: 429, headers: { 'Retry-After': '900' } });
     }
 
     const { currentPassword, newPassword } = await request.json();
-    if (typeof newPassword !== 'string' || newPassword.length < 12) {
-      return NextResponse.json({ error: 'Mật khẩu mới cần ít nhất 12 ký tự.' }, { status: 400 });
+    if (typeof newPassword !== 'string' || newPassword.length < 12 || newPassword.length > 256) {
+      return NextResponse.json({ error: 'Mật khẩu mới cần từ 12 đến 256 ký tự.' }, { status: 400 });
     }
     if (newPassword === currentPassword) {
       return NextResponse.json({ error: 'Mật khẩu mới phải khác mật khẩu hiện tại.' }, { status: 400 });

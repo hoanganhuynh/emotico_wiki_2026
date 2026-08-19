@@ -13,6 +13,10 @@ function clientKey(request: NextRequest) {
   return `private:${request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'}`;
 }
 
+function validOrigin(request: NextRequest) {
+  return request.headers.get('origin') === new URL(request.url).origin;
+}
+
 function signature(payload: string, secret: string) {
   return createHmac('sha256', secret).update(payload).digest('base64url');
 }
@@ -32,7 +36,13 @@ export const runtime = 'nodejs';
 
 export async function POST(request: NextRequest) {
   try {
+    if (!validOrigin(request)) {
+      return NextResponse.json({ error: 'Origin không hợp lệ.' }, { status: 403 });
+    }
     const { section, password } = await request.json();
+    if (typeof password !== 'string' || password.length > 256) {
+      return NextResponse.json({ error: 'Mật khẩu không hợp lệ.' }, { status: 400 });
+    }
     const fileName = PRIVATE_FILES[section];
     if (!fileName) return NextResponse.json({ error: 'Không tìm thấy tài liệu.' }, { status: 404 });
 
@@ -44,7 +54,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Quá nhiều lần thử. Vui lòng thử lại sau 15 phút.' }, { status: 429, headers: { 'Retry-After': '900' } });
     }
 
-    const passwordMatches = await verifyWikiPassword(String(password || ''));
+    const passwordMatches = await verifyWikiPassword(password);
     if (!sessionValid && !passwordMatches && !validSession(request, section, contentSecret)) {
       const blocked = await recordRateLimitFailure(key);
       return NextResponse.json({ error: blocked ? 'Quá nhiều lần thử. Vui lòng thử lại sau 15 phút.' : 'Mật khẩu không đúng.' }, { status: blocked ? 429 : 401, headers: blocked ? { 'Retry-After': '900' } : undefined });

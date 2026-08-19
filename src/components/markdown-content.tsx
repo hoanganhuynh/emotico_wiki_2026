@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import type { ComponentPropsWithoutRef } from 'react';
 import type { Components } from 'react-markdown';
 import LockedSection from './locked-section';
@@ -22,11 +23,20 @@ function headingWithId(level: 2 | 3 | 4): Components['h2'] {
   };
 }
 
+const markdownSanitizeSchema = {
+  ...defaultSchema,
+  tagNames: [...(defaultSchema.tagNames || []), 'private-section'],
+  attributes: {
+    ...defaultSchema.attributes,
+    'private-section': ['section', 'title'],
+  },
+};
+
 export default function MarkdownContent({ content, blueLinks = false }: { content: string; blueLinks?: boolean }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeRaw]}
+      rehypePlugins={[rehypeRaw, [rehypeSanitize, markdownSanitizeSchema]]}
       className="prose prose-slate max-w-none
         prose-headings:text-[#1A1A2E]
         prose-a:text-[#1A1A2E] prose-a:no-underline hover:prose-a:text-black hover:prose-a:underline

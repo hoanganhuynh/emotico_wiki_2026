@@ -24,7 +24,7 @@ function allowedPage(slug: string) {
 
 function validOrigin(request: NextRequest) {
   const origin = request.headers.get('origin');
-  return !origin || origin === new URL(request.url).origin;
+  return origin === new URL(request.url).origin;
 }
 
 function versionName(value: unknown) {

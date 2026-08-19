@@ -14,8 +14,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Quá nhiều lần thử. Vui lòng thử lại sau 15 phút.' }, { status: 429, headers: { 'Retry-After': '900' } });
     }
     const { password } = await req.json();
+    if (typeof password !== 'string' || password.length > 256) {
+      return NextResponse.json({ error: 'Mật khẩu không hợp lệ.' }, { status: 400 });
+    }
 
-    if (!await verifyWikiPassword(String(password || ''))) {
+    if (!await verifyWikiPassword(password)) {
       const blocked = await recordRateLimitFailure(key);
       return NextResponse.json({ error: blocked ? 'Quá nhiều lần thử. Vui lòng thử lại sau 15 phút.' : 'Sai mật khẩu' }, { status: blocked ? 429 : 401, headers: blocked ? { 'Retry-After': '900' } : undefined });
     }
