@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { useTOC, type Heading } from '@/lib/toc-context';
 
 function slugify(text: string): string {
@@ -24,7 +25,7 @@ export function extractHeadings(markdown: string): Heading[] {
   return headings;
 }
 
-function TOCList({ headings, activeId, onSelect }: { headings: Heading[]; activeId: string; onSelect?: () => void }) {
+function TOCList({ headings, activeId, dark, onSelect }: { headings: Heading[]; activeId: string; dark?: boolean; onSelect?: () => void }) {
   return (
     <ul className="space-y-0.5 pl-2">
       {headings.map((h) => (
@@ -40,7 +41,7 @@ function TOCList({ headings, activeId, onSelect }: { headings: Heading[]; active
               'block py-1 text-sm no-underline transition-colors leading-snug',
               h.level === 3 ? 'pl-3' : '',
               activeId === h.id
-                ? 'text-[#FFB223] font-medium'
+                ? dark ? 'text-[#1A1A2E] font-medium' : 'text-[#FFB223] font-medium'
                 : 'text-[#9B9BB0] hover:text-[#1A1A2E]',
             ].join(' ')}
           >
@@ -53,6 +54,8 @@ function TOCList({ headings, activeId, onSelect }: { headings: Heading[]; active
 }
 
 export default function WikiTOC({ content }: { content: string }) {
+  const pathname = usePathname();
+  const dark = pathname?.startsWith('/wiki-internal');
   const headings = extractHeadings(content);
   const [activeId, setActiveId] = useState<string>('');
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -87,7 +90,7 @@ export default function WikiTOC({ content }: { content: string }) {
         <p className="mb-3 text-xs font-semibold text-[#9B9BB0] uppercase tracking-widest">
           Mục lục
         </p>
-        <TOCList headings={headings} activeId={activeId} />
+        <TOCList headings={headings} activeId={activeId} dark={dark} />
       </div>
     </aside>
   );
