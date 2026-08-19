@@ -2,20 +2,28 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { NAV_ITEMS } from '@/lib/nav';
+import { NAV_ITEMS, type NavItem } from '@/lib/nav';
 import * as Icons from 'iconsax-react';
 
-export default function WikiBottomNav() {
+interface WikiBottomNavProps {
+  navItems?: NavItem[];
+  basePath?: string;
+}
+
+export default function WikiBottomNav({
+  navItems = NAV_ITEMS,
+  basePath = '/wiki',
+}: WikiBottomNavProps) {
   const pathname = usePathname();
 
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-[#E0E0E6] flex items-center justify-around px-2 h-16 safe-area-pb">
-      {NAV_ITEMS.map((item) => {
-        const href = item.slug === '' ? '/wiki' : `/wiki/${item.slug}`;
+      {navItems.map((item) => {
+        const href = item.slug === '' ? basePath : `${basePath}/${item.slug}`;
         const isActive =
           item.slug === ''
-            ? pathname === '/wiki'
-            : pathname === `/wiki/${item.slug}`;
+            ? pathname === basePath
+            : pathname === `${basePath}/${item.slug}`;
 
         const IconComponent = (Icons as Record<string, React.ComponentType<{ size?: number; color?: string; variant?: string }>>)[item.icon];
 

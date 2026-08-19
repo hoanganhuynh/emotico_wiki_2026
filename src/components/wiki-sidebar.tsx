@@ -2,15 +2,22 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { NAV_ITEMS } from '@/lib/nav';
+import { NAV_ITEMS, type NavItem } from '@/lib/nav';
 import * as Icons from 'iconsax-react';
 
 interface WikiSidebarProps {
   isOpen?: boolean;
   onClose?: () => void;
+  navItems?: NavItem[];
+  basePath?: string;
 }
 
-export default function WikiSidebar({ isOpen = false, onClose }: WikiSidebarProps) {
+export default function WikiSidebar({
+  isOpen = false,
+  onClose,
+  navItems = NAV_ITEMS,
+  basePath = '/wiki',
+}: WikiSidebarProps) {
   const pathname = usePathname();
 
   const navContent = (
@@ -19,12 +26,12 @@ export default function WikiSidebar({ isOpen = false, onClose }: WikiSidebarProp
         Tài liệu
       </p>
       <ul className="space-y-0.5">
-        {NAV_ITEMS.map((item) => {
-          const href = item.slug === '' ? '/wiki' : `/wiki/${item.slug}`;
+        {navItems.map((item) => {
+          const href = item.slug === '' ? basePath : `${basePath}/${item.slug}`;
           const isActive =
             item.slug === ''
-              ? pathname === '/wiki'
-              : pathname === `/wiki/${item.slug}`;
+              ? pathname === basePath
+              : pathname === `${basePath}/${item.slug}`;
 
           const IconComponent = (Icons as Record<string, React.ComponentType<{ size?: number; color?: string; variant?: string }>>)[item.icon];
           return (

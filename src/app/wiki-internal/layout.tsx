@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom';
 import WikiSidebar from '@/components/wiki-sidebar';
 import WikiBottomNav from '@/components/wiki-bottom-nav';
 import { TOCProvider, useTOC } from '@/lib/toc-context';
+import { NAV_INTERNAL_ITEMS } from '@/lib/nav';
 
 function MobileNavControls({
   onOpenSidebar,
@@ -95,25 +96,30 @@ function MobileNavControls({
   );
 }
 
-function WikiLayoutInner({ children }: { children: React.ReactNode }) {
+function WikiInternalLayoutInner({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="flex flex-1 overflow-hidden">
-      <WikiSidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} basePath="/wiki" />
+      <WikiSidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        navItems={NAV_INTERNAL_ITEMS}
+        basePath="/wiki-internal"
+      />
       <MobileNavControls onOpenSidebar={() => setSidebarOpen(o => !o)} sidebarOpen={sidebarOpen} />
       <main className="flex-1 flex overflow-hidden pb-16 md:pb-0">
         {children}
       </main>
-      <WikiBottomNav basePath="/wiki" />
+      <WikiBottomNav navItems={NAV_INTERNAL_ITEMS} basePath="/wiki-internal" />
     </div>
   );
 }
 
-export default function WikiLayout({ children }: { children: React.ReactNode }) {
+export default function WikiInternalLayout({ children }: { children: React.ReactNode }) {
   return (
     <TOCProvider>
-      <WikiLayoutInner>{children}</WikiLayoutInner>
+      <WikiInternalLayoutInner>{children}</WikiInternalLayoutInner>
     </TOCProvider>
   );
 }
