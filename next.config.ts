@@ -1,6 +1,15 @@
 import type { NextConfig } from 'next';
 
 const config: NextConfig = {
+  // The wiki loader reads Markdown files through fs at runtime. Include them
+  // in Vercel's serverless function traces so deployed wiki routes can resolve
+  // the same content that is available in the repository.
+  outputFileTracingIncludes: {
+    '/*': [
+      './content/*.md',
+      './content-internal/*.md',
+    ],
+  },
   async headers() {
     return [{
       source: '/(.*)',

@@ -42,7 +42,7 @@ export function flattenNavItems(items: NavItem[]): NavItem[] {
 
 /** Public wiki sidebar — no auth required */
 export const NAV_ITEMS: NavItem[] = [
-  { slug: '',                    label: 'Tổng quan',                 file: 'README.md',              icon: 'Home2',       section: 'Tổng quan' },
+  { slug: '',                    label: 'Tổng quan',                 file: '00-overview.md',          icon: 'Home2',       section: 'Tổng quan' },
   { slug: '01-product-overview', label: 'Tổng quan sản phẩm',       file: '01-product-overview.md', icon: 'Box1',        section: 'Tổng quan' },
   { slug: '02-features',         label: 'Tính năng',                 file: '02-features.md',         icon: 'Star1',       section: 'Sản phẩm', children: FEATURE_CHILDREN },
   { slug: '09-chatbot-ai',       label: 'Chatbot AI',                file: '09-chatbot-ai.md',       icon: 'MessageText', section: 'Sản phẩm' },
@@ -53,7 +53,7 @@ export const NAV_ITEMS: NavItem[] = [
 /** Internal wiki sidebar — requires login; superset of NAV_ITEMS */
 export const NAV_INTERNAL_ITEMS: NavItem[] = [
   // === Tài liệu công khai (mirror of /wiki) ===
-  { slug: '',                    label: 'Tổng quan',                 file: 'README.md',              icon: 'Home2',       section: 'Tổng quan' },
+  { slug: '',                    label: 'Tổng quan',                 file: '00-overview.md',          icon: 'Home2',       section: 'Tổng quan' },
   { slug: '01-product-overview', label: 'Tổng quan sản phẩm',       file: '01-product-overview.md', icon: 'Box1',        section: 'Tổng quan' },
   { slug: '02-features',         label: 'Tính năng',                 file: '02-features.md',         icon: 'Star1',       section: 'Sản phẩm', children: FEATURE_CHILDREN },
   { slug: '09-chatbot-ai',       label: 'Chatbot AI',                file: '09-chatbot-ai.md',       icon: 'MessageText', section: 'Sản phẩm' },

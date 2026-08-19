@@ -21,7 +21,7 @@ function headingWithId(level: 2 | 3 | 4): Components['h2'] {
   };
 }
 
-export default function MarkdownContent({ content }: { content: string }) {
+export default function MarkdownContent({ content, blueLinks = false }: { content: string; blueLinks?: boolean }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
@@ -37,6 +37,11 @@ export default function MarkdownContent({ content }: { content: string }) {
         h2: headingWithId(2),
         h3: headingWithId(3),
         h4: headingWithId(4),
+        a: ({ children, ...props }) => (
+          <a {...props} className={blueLinks ? 'text-[#2563EB] no-underline hover:text-[#1D4ED8] hover:underline' : undefined}>
+            {children}
+          </a>
+        ),
         'private-section': ({ section, title }: { section?: string; title?: string }) => (
           <LockedSection section={section || ''} title={title} />
         ),
