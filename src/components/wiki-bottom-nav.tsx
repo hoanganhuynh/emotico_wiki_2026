@@ -9,79 +9,92 @@ interface WikiBottomNavProps {
   navItems?: NavItem[];
   basePath?: string;
   theme?: 'light' | 'dark';
+  onOpenMenu: () => void;
+  menuOpen: boolean;
 }
+
+const PUBLIC_QUICK_LINKS = [
+  { slug: '', label: 'Bắt đầu' },
+  { slug: '02-features', label: 'Tính năng' },
+  { slug: '09-chatbot-ai', label: 'Chatbot' },
+  { slug: '04-security', label: 'An toàn' },
+];
+
+const INTERNAL_QUICK_LINKS = [
+  { slug: '', label: 'Bắt đầu' },
+  { slug: '08-school-admin', label: 'Nhà trường' },
+  { slug: '06-roadmap', label: 'Lộ trình' },
+  { slug: '05-business-model', label: 'Kinh doanh' },
+];
 
 export default function WikiBottomNav({
   navItems = NAV_ITEMS,
   basePath = '/wiki',
   theme = 'light',
+  onOpenMenu,
+  menuOpen,
 }: WikiBottomNavProps) {
   const pathname = usePathname();
   const dark = theme === 'dark';
   const isInternal = basePath === '/wiki-internal';
-  const ctaHref = isInternal ? '/wiki' : '/wiki-internal';
-  const ctaLabel = isInternal ? 'Về Wiki public' : 'Mở Wiki internal';
-  const mobileLabels: Record<string, string> = {
-    '': 'Trang chủ',
-    '01-product-overview': 'Giới thiệu',
-    '02-features': 'Tính năng',
-    '09-chatbot-ai': 'Chatbot',
-    '04-security': 'An toàn',
-  };
+  const quickLinks = isInternal ? INTERNAL_QUICK_LINKS : PUBLIC_QUICK_LINKS;
+  const quickItems = quickLinks.flatMap((quickLink) => {
+    const item = navItems.find((navItem) => navItem.slug === quickLink.slug);
+    return item ? [{ ...item, label: quickLink.label }] : [];
+  });
 
   return (
     <div className={`md:hidden fixed bottom-0 left-0 right-0 z-50 border-t safe-area-pb ${dark ? 'bg-[#111111] border-[#2A2A2A]' : 'bg-white border-[#E0E0E6]'}`}>
-      <div className="px-3 pt-2">
-        <Link
-          href={ctaHref}
-          className={`flex items-center justify-between rounded-xl border px-4 py-2.5 no-underline transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFB223] focus:ring-offset-2 ${
-            dark
-              ? 'border-[#3A3A3A] bg-[#191919] text-[#E6E6E6] hover:border-[#FFB223]'
-              : 'border-[#E0E0E6] bg-[#FAFAFB] text-[#1A1A2E] hover:border-[#FFB223] hover:bg-[#FFF9ED]'
-          }`}
-        >
-          <span>
-            <span className={`flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest ${dark ? 'text-[#A3A3A3]' : 'text-[#777784]'}`}>
-              {isInternal ? <><Icons.Global size={13} color="currentColor" variant="Linear" aria-hidden="true" /><span className="sr-only">Wiki nội bộ</span></> : <><Icons.Lock1 size={13} color="currentColor" variant="Linear" aria-hidden="true" /><span className="sr-only">Wiki public</span></>}
-            </span>
-            <span className="mt-0.5 block text-xs font-semibold">{ctaLabel}</span>
-          </span>
-          <span aria-hidden="true" className="text-base">→</span>
-        </Link>
-      </div>
-      <nav aria-label="Điều hướng nhanh" className="flex h-[4.5rem] items-center justify-around px-2">
-        {navItems.slice(0, 5).map((item) => {
+      <nav aria-label="Điều hướng nhanh" className="h-[4.75rem] px-2">
+        <ul className="flex h-full items-center justify-around">
+        {quickItems.map((item) => {
         const href = item.slug === '' ? basePath : `${basePath}/${item.slug}`;
         const isActive =
           item.slug === ''
             ? pathname === basePath
-            : pathname === `${basePath}/${item.slug}`;
+            : pathname === `${basePath}/${item.slug}` || (item.slug === '02-features' && pathname?.startsWith(`${basePath}/feature-`));
 
         const IconComponent = (Icons as Record<string, React.ComponentType<{ size?: number; color?: string; variant?: string }>>)[item.icon];
 
         return (
-          <Link
-            key={item.slug}
-            href={href}
-            className={[
-              'flex flex-col items-center justify-center gap-1 flex-1 h-full no-underline transition-colors',
-              isActive ? (dark ? 'text-white' : 'text-[#9A5A00]') : 'text-[#555555]',
-            ].join(' ')}
-            aria-current={isActive ? 'page' : undefined}
-          >
-            {IconComponent && (
-              <IconComponent
-                size={22}
-                color="currentColor"
-                variant={isActive ? 'Bold' : 'Linear'}
-              />
-            )}
-            <span className="max-w-full truncate px-1 text-[10px] font-medium leading-none">
-              {mobileLabels[item.slug] || item.label}
-            </span>
-          </Link>
+          <li key={item.slug} className="flex h-full flex-1">
+            <Link
+              href={href}
+              className={[
+                'flex h-full w-full flex-col items-center justify-center gap-1 no-underline transition-colors',
+                isActive ? (dark ? 'text-white' : 'text-[#9A5A00]') : (dark ? 'text-[#A3A3A3]' : 'text-[#555555]'),
+              ].join(' ')}
+              aria-current={isActive ? 'page' : undefined}
+            >
+              {IconComponent && (
+                <IconComponent
+                  size={22}
+                  color="currentColor"
+                  variant={isActive ? 'Bold' : 'Linear'}
+                />
+              )}
+              <span className="max-w-full truncate px-1 text-[10px] font-medium leading-none">
+                {item.label}
+              </span>
+            </Link>
+          </li>
         );
         })}
+        <li className="flex h-full flex-1">
+          <button
+            type="button"
+            onClick={onOpenMenu}
+            aria-expanded={menuOpen}
+            aria-controls="wiki-mobile-navigation"
+            className={`flex h-full w-full flex-col items-center justify-center gap-1 transition-colors focus:outline-none focus:ring-2 focus:ring-inset ${dark ? 'text-[#A3A3A3] focus:ring-[#FFB223]' : 'text-[#555555] focus:ring-[#9A5A00]'}`}
+          >
+            <svg width="22" height="22" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M2 4h14M2 9h14M2 14h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            </svg>
+            <span className="text-[10px] font-medium leading-none">Thêm</span>
+          </button>
+        </li>
+        </ul>
       </nav>
     </div>
   );

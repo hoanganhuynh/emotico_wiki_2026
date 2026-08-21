@@ -82,10 +82,10 @@ function WikiInternalLayoutInner({ children }: { children: React.ReactNode }) {
         tocItems={headings}
       />
       <MobileNavControls onOpenSidebar={() => setSidebarOpen(o => !o)} sidebarOpen={sidebarOpen} />
-      <main className="flex min-w-0 flex-1 overflow-hidden bg-white pb-36 md:pb-0">
+      <main className="flex min-w-0 flex-1 overflow-hidden bg-white pb-24 md:pb-0">
         {children}
       </main>
-      <WikiBottomNav navItems={NAV_INTERNAL_ITEMS} basePath="/wiki-internal" theme="dark" />
+      <WikiBottomNav navItems={NAV_INTERNAL_ITEMS} basePath="/wiki-internal" theme="dark" onOpenMenu={() => setSidebarOpen(o => !o)} menuOpen={sidebarOpen} />
     </div>
   );
 }
