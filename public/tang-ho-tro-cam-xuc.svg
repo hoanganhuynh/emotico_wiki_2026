@@ -1,14 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="tier-title" aria-describedby="tier-desc">
-  <title id="tier-title">Ba tầng hỗ trợ sức khỏe cảm xúc học đường</title>
-  <desc id="tier-desc">Emotico hoạt động ở Tầng 1, phòng ngừa phổ quát. Tầng 2 là hỗ trợ chọn lọc của cán bộ tư vấn học đường. Tầng 3 là điều trị chuyên sâu của chuyên gia hoặc cơ sở y tế.</desc>
-  <rect width="960" height="420" rx="28" fill="#F7F7F9"/>
-  <text x="480" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">Ba tầng hỗ trợ cảm xúc học đường</text>
-  <path d="M160 330 480 88 800 330Z" fill="#FFF9ED" stroke="#1A1A2E" stroke-width="3"/>
-  <path d="M290 330 480 186 670 330Z" fill="#FFE5A8" stroke="#1A1A2E" stroke-width="3"/>
-  <path d="M400 330 480 270 560 330Z" fill="#FFB223" stroke="#1A1A2E" stroke-width="3"/>
-  <text x="480" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#1A1A2E">Tầng 3 · Chuyên gia / cơ sở y tế</text>
-  <text x="480" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A2E">Tầng 2 · Cán bộ tư vấn học đường</text>
-  <text x="480" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#1A1A2E">Tầng 1 · Phòng ngừa phổ quát</text>
-  <text x="480" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1A1A2E">Emotico hỗ trợ ở tầng này</text>
-  <text x="480" y="382" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#4B4B59">Khi cần nhiều hỗ trợ hơn, Emotico hướng người dùng tìm đến người lớn tin cậy và dịch vụ chuyên môn phù hợp.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-labelledby="tier-title" aria-describedby="tier-desc" lang="vi">
+  <title id="tier-title">Ba tầng hỗ trợ cảm xúc học đường</title>
+  <desc id="tier-desc">Ba thẻ bậc thang thể hiện các tầng hỗ trợ. Tầng 1 là phòng ngừa phổ quát, nơi Emotico đồng hành. Tầng 2 là hỗ trợ chọn lọc từ cán bộ tư vấn học đường. Tầng 3 là chăm sóc chuyên sâu từ chuyên gia hoặc cơ sở y tế.</desc>
+
+  <rect width="1200" height="640" rx="32" fill="#F7F7F9"/>
+  <path d="M0 108H1200" stroke="#E4E4EA"/>
+
+  <text x="72" y="66" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A2E">Ba tầng hỗ trợ cảm xúc học đường</text>
+  <text x="72" y="94" font-family="Arial, sans-serif" font-size="17" fill="#5E5E70">Mỗi tầng bổ sung một mức đồng hành phù hợp với nhu cầu của học sinh.</text>
+
+  <path d="M96 177V552" stroke="#D8D8E2" stroke-width="2" stroke-dasharray="4 8"/>
+
+  <g>
+    <rect x="130" y="145" width="1000" height="124" rx="24" fill="#FFF9ED" stroke="#E6C77E" stroke-width="2"/>
+    <rect x="130" y="145" width="12" height="124" rx="6" fill="#FFB223"/>
+    <circle cx="96" cy="207" r="34" fill="#FFB223" stroke="#1A1A2E" stroke-width="2"/>
+    <text x="96" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1A1A2E">1</text>
+    <text x="178" y="194" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A2E">Tầng 1 · Phòng ngừa phổ quát</text>
+    <text x="178" y="225" font-family="Arial, sans-serif" font-size="18" fill="#4B4B59">Kỹ năng cảm xúc, tự chăm sóc và tìm kiếm sự đồng hành từ sớm.</text>
+    <rect x="834" y="181" width="244" height="44" rx="22" fill="#1A1A2E"/>
+    <text x="956" y="209" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Emotico đồng hành</text>
+  </g>
+
+  <g>
+    <rect x="190" y="306" width="880" height="112" rx="24" fill="#FFF1CC" stroke="#E7C767" stroke-width="2"/>
+    <rect x="190" y="306" width="12" height="112" rx="6" fill="#F3C548"/>
+    <circle cx="156" cy="362" r="34" fill="#F3C548" stroke="#1A1A2E" stroke-width="2"/>
+    <text x="156" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1A1A2E">2</text>
+    <text x="238" y="351" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#1A1A2E">Tầng 2 · Hỗ trợ chọn lọc</text>
+    <text x="238" y="383" font-family="Arial, sans-serif" font-size="18" fill="#4B4B59">Cán bộ tư vấn học đường cùng theo dõi và nâng đỡ các em khi cần.</text>
+  </g>
+
+  <g>
+    <rect x="250" y="455" width="760" height="112" rx="24" fill="#FFE0A0" stroke="#E7B847" stroke-width="2"/>
+    <rect x="250" y="455" width="12" height="112" rx="6" fill="#D98A00"/>
+    <circle cx="216" cy="511" r="34" fill="#D98A00" stroke="#1A1A2E" stroke-width="2"/>
+    <text x="216" y="519" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="298" y="500" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#1A1A2E">Tầng 3 · Chăm sóc chuyên sâu</text>
+    <text x="298" y="532" font-family="Arial, sans-serif" font-size="18" fill="#4B4B59">Chuyên gia hoặc cơ sở y tế đánh giá và hỗ trợ phù hợp.</text>
+  </g>
+
+  <text x="600" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Khi nhu cầu hỗ trợ tăng lên, Nhà trường và gia đình cùng kết nối học sinh với nguồn lực phù hợp.</text>
 </svg>
