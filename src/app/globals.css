@@ -33,6 +33,12 @@ html, body {
   margin-top: 0;
 }
 
+/* SVG illustrations must shrink with the article column instead of cropping on mobile. */
+.prose img {
+  width: 100%;
+  height: auto;
+}
+
 .prose a {
   color: #9A5A00;
   text-decoration: none;
