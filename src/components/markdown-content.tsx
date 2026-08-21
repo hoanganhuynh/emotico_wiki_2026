@@ -53,6 +53,11 @@ export default function MarkdownContent({ content, blueLinks = false }: { conten
             {children}
           </a>
         ),
+        table: ({ children, ...props }: ComponentPropsWithoutRef<'table'>) => (
+          <div className="wiki-table-scroll">
+            <table {...props}>{children}</table>
+          </div>
+        ),
         'private-section': ({ section, title }: { section?: string; title?: string }) => (
           <LockedSection section={section || ''} title={title} />
         ),
