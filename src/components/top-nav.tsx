@@ -23,20 +23,20 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
   return (
     <header
       id="top-nav"
-      className={`fixed top-0 left-0 right-0 z-50 h-14 border-b flex items-center px-4 sm:px-6 transition-colors ${
+      className={`fixed top-0 left-0 right-0 z-50 flex h-16 items-center px-3 pl-14 md:h-14 md:px-6 transition-colors ${
         dark
           ? 'bg-[#111111] border-[#2A2A2A]'
           : 'bg-white border-[#E0E0E6]'
       }`}
     >
       {/* Logo */}
-      <Link href={dark ? '/wiki-internal' : '/wiki'} className="flex items-center no-underline shrink-0">
+      <Link href={dark ? '/wiki-internal' : '/wiki'} className="flex shrink-0 items-center no-underline">
         <Image
           src="/logo.png"
           alt="Emotico"
           width={96}
           height={32}
-          className={`h-8 w-auto ${dark ? 'brightness-0 invert' : ''}`}
+          className={`h-7 w-auto sm:h-8 ${dark ? 'brightness-0 invert' : ''}`}
           priority
         />
       </Link>
@@ -52,7 +52,7 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
       </div>
 
       {dark && (
-        <div className="ml-4 flex items-center gap-1">
+        <div className="ml-4 hidden items-center gap-1 sm:flex">
           <Link
             href={currentInternalSlug && currentInternalSlug !== 'edit' ? `/wiki-internal/edit?slug=${encodeURIComponent(currentInternalSlug)}` : '/wiki-internal/edit'}
             aria-label="Chỉnh sửa wiki internal"

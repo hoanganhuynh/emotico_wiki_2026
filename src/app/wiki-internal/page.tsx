@@ -12,8 +12,8 @@ export default async function WikiInternalHome() {
   if (!page) notFound();
 
   return (
-    <div className="flex flex-1 min-h-0">
-      <article className="flex-1 px-4 sm:px-8 py-6 sm:py-10 overflow-y-auto min-w-0">
+    <div className="flex min-h-0 min-w-0 flex-1">
+      <article className="min-w-0 flex-1 overflow-y-auto px-4 py-5 sm:px-8 sm:py-10">
         <div className="max-w-3xl mx-auto">
           <MarkdownContent content={page.content} />
         </div>

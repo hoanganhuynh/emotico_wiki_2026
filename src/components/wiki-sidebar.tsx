@@ -53,7 +53,7 @@ export default function WikiSidebar({
   );
 
   const navContent = (
-    <nav className="flex-1 overflow-y-auto py-6 px-3">
+    <nav aria-label={isInternal ? 'Điều hướng Wiki nội bộ' : 'Điều hướng Wiki'} className="flex-1 overflow-y-auto px-3 py-6">
       <p className={`px-3 mb-2 text-xs font-semibold uppercase tracking-widest ${labelColor}`}>
         Tài liệu
       </p>
@@ -90,6 +90,7 @@ export default function WikiSidebar({
               <Link
                 href={href}
                 onClick={onClose}
+                aria-current={isActive ? 'page' : undefined}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm no-underline transition-colors ${linkClass}`}
               >
                 {IconComponent && (
@@ -104,6 +105,7 @@ export default function WikiSidebar({
                       <Link
                         href={`${basePath}/${child.slug}`}
                         onClick={onClose}
+                        aria-current={pathname === `${basePath}/${child.slug}` ? 'page' : undefined}
                         className={`block rounded-md px-2 py-1.5 text-xs no-underline transition-colors ${pathname === `${basePath}/${child.slug}` ? (dark ? 'bg-[#222222] text-white font-semibold' : 'bg-[#EAEAEF] text-[#1A1A2E] font-semibold') : (dark ? 'text-[#8F8F8F] hover:bg-[#222222] hover:text-white' : 'text-[#777784] hover:bg-white hover:text-[#1A1A2E]')}`}
                       >
                         {child.label}
@@ -128,15 +130,15 @@ export default function WikiSidebar({
       </aside>
 
       {/* Mobile drawer */}
-      {isOpen && (
-        <div className="md:hidden fixed inset-0 z-40 flex justify-end">
+      <div id="wiki-mobile-navigation" hidden={!isOpen} className="md:hidden fixed inset-0 z-[60] flex justify-start">
           <div className="absolute inset-0 bg-black/60" onClick={onClose} aria-hidden="true" />
-          <aside className={`relative z-10 flex w-64 flex-col ${sidebarBg} h-full overflow-hidden shadow-xl`}>
+          <aside className={`relative z-10 flex h-full w-[min(20rem,calc(100vw-2rem))] flex-col ${sidebarBg} overflow-hidden shadow-xl`}>
             <div className="flex items-center justify-between px-4 pt-4 pb-2">
               <span className={`text-xs font-semibold uppercase tracking-widest ${labelColor}`}>Menu</span>
               <button
+                type="button"
                 onClick={onClose}
-                className={`w-8 h-8 flex items-center justify-center rounded-lg transition-colors ${closeBtnColor}`}
+                className={`flex h-11 w-11 items-center justify-center rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFB223] focus:ring-offset-2 ${dark ? 'focus:ring-offset-[#111111]' : 'focus:ring-offset-white'} ${closeBtnColor}`}
                 aria-label="Đóng menu"
               >
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -147,8 +149,7 @@ export default function WikiSidebar({
             {navContent}
             {switchBanner}
           </aside>
-        </div>
-      )}
+      </div>
     </>
   );
 }

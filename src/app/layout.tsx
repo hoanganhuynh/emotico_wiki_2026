@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="vi">
       <body className="bg-white text-[#1A1A2E]">
         <ConditionalTopNav />
-        <div className="pt-14 h-screen flex flex-col">
+        <div className="h-screen flex flex-col pt-16 md:pt-14">
           {children}
         </div>
       </body>

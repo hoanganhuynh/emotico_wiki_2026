@@ -47,10 +47,10 @@ export default function WikiSearch() {
   }, [query]);
 
   return (
-    <div className="relative ml-3 w-full max-w-[360px]">
-      <div className="flex h-9 items-center rounded-lg border border-[#E0E0E6] bg-[#FAFAFB] px-3 transition focus-within:border-[#FFB223] focus-within:bg-white focus-within:ring-2 focus-within:ring-[#FFB223]/20">
+    <div className="relative ml-2 min-w-0 flex-1 max-w-[360px] sm:ml-3">
+      <div className="flex h-10 items-center rounded-lg border border-[#E0E0E6] bg-[#FAFAFB] px-3 transition focus-within:border-[#FFB223] focus-within:bg-white focus-within:ring-2 focus-within:ring-[#FFB223]/20 sm:h-9">
         <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0 text-[#9B9BB0]"><circle cx="7" cy="7" r="4.5" stroke="currentColor"/><path d="m10.5 10.5 3 3" stroke="currentColor" strokeLinecap="round"/></svg>
-        <input ref={inputRef} value={query} onChange={(event) => { setQuery(event.target.value); setOpen(true); }} onFocus={() => setOpen(true)} placeholder="Tìm trong wiki…" aria-label="Tìm trong wiki" className="min-w-0 flex-1 bg-transparent px-2 text-sm text-[#1A1A2E] outline-none placeholder:text-[#9B9BB0]" />
+        <input ref={inputRef} value={query} onChange={(event) => { setQuery(event.target.value); setOpen(true); }} onFocus={() => setOpen(true)} placeholder="Tìm trong wiki…" aria-label="Tìm trong wiki" className="min-w-0 flex-1 bg-transparent px-2 text-base text-[#1A1A2E] outline-none placeholder:text-[#9B9BB0] sm:text-sm" />
         <kbd className="hidden rounded border border-[#E0E0E6] bg-white px-1.5 py-0.5 text-[10px] text-[#9B9BB0] sm:inline">⌘K</kbd>
       </div>
       {open && query.trim().length >= 2 && (
