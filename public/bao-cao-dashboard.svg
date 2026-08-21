@@ -1,10 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="dashboard-title" aria-describedby="dashboard-desc" lang="vi">
-  <title id="dashboard-title">Minh họa Báo cáo và Dashboard</title><desc id="dashboard-desc">Một bảng thông tin tổng hợp theo chủ đề, minh họa cách Nhà trường nhận biết các nhu cầu chung của cộng đồng học đường.</desc>
-  <rect width="960" height="360" rx="28" fill="#F7F7F9"/>
-  <text x="56" y="64" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">Nhìn vào chủ đề chung của cộng đồng</text>
-  <text x="56" y="92" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Thông tin tổng hợp giúp Nhà trường lựa chọn hoạt động nâng đỡ phù hợp.</text>
-  <rect x="56" y="126" width="848" height="178" rx="24" fill="#FFFFFF" stroke="#E0E0E6" stroke-width="2"/>
-  <rect x="82" y="150" width="164" height="126" rx="16" fill="#FFF1CC"/><text x="106" y="181" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#9A5A00">CHỦ ĐỀ CẦN LƯU Ý</text><text x="106" y="218" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A2E">Nghỉ ngơi</text><text x="106" y="246" font-family="Arial, sans-serif" font-size="14" fill="#4B4B59">trong tuần này</text>
-  <text x="286" y="160" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#6B6B80">CÁC CHỦ ĐỀ ĐƯỢC NHẮC TỚI</text>
-  <g><text x="286" y="202" font-family="Arial, sans-serif" font-size="16" fill="#1A1A2E">Nghỉ ngơi</text><rect x="408" y="187" width="364" height="18" rx="9" fill="#F0F0F3"/><rect x="408" y="187" width="292" height="18" rx="9" fill="#FFB223"/><text x="800" y="202" font-family="Arial, sans-serif" font-size="14" fill="#5E5E70">Ưu tiên</text><text x="286" y="242" font-family="Arial, sans-serif" font-size="16" fill="#1A1A2E">Áp lực học tập</text><rect x="408" y="227" width="364" height="18" rx="9" fill="#F0F0F3"/><rect x="408" y="227" width="216" height="18" rx="9" fill="#23AEFF"/><text x="800" y="242" font-family="Arial, sans-serif" font-size="14" fill="#5E5E70">Theo dõi</text></g>
+  <title id="dashboard-title">Minh họa Báo cáo và Dashboard</title>
+  <desc id="dashboard-desc">Một bảng tổng hợp cho thấy Nghỉ ngơi là chủ đề được ưu tiên trong tuần, tiếp theo là Áp lực học tập cần theo dõi.</desc>
+  <defs>
+    <linearGradient id="dashboard-focus" x1="80" y1="146" x2="296" y2="278" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4D7"/>
+      <stop offset="1" stop-color="#FFE4A1"/>
+    </linearGradient>
+    <filter id="dashboard-shadow" x="36" y="110" width="888" height="216" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1A1A2E" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <rect width="960" height="360" rx="28" fill="#F8F8FA"/>
+  <circle cx="884" cy="58" r="72" fill="#EAF5FF"/>
+  <text x="56" y="62" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#1A1A2E">Nhìn vào chủ đề chung của cộng đồng</text>
+  <text x="56" y="91" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Thông tin tổng hợp giúp Nhà trường lựa chọn hoạt động nâng đỡ phù hợp.</text>
+
+  <rect x="56" y="122" width="848" height="178" rx="24" fill="#FFFFFF" filter="url(#dashboard-shadow)"/>
+  <rect x="80" y="146" width="216" height="130" rx="18" fill="url(#dashboard-focus)"/>
+  <circle cx="260" cy="178" r="16" fill="#FFB223"/>
+  <path d="M260 169v18M251 178h18" stroke="#1A1A2E" stroke-width="2" stroke-linecap="round"/>
+  <text x="104" y="177" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing=".8" fill="#7A4300">CHỦ ĐỀ CẦN LƯU Ý</text>
+  <text x="104" y="219" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A2E">Nghỉ ngơi</text>
+  <text x="104" y="248" font-family="Arial, sans-serif" font-size="14" fill="#4B4B59">Ưu tiên trong tuần này</text>
+
+  <text x="328" y="164" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing=".8" fill="#6B6B80">TỔNG QUAN TRONG TUẦN</text>
+  <text x="328" y="204" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#1A1A2E">Nghỉ ngơi</text>
+  <rect x="482" y="187" width="238" height="18" rx="9" fill="#EEEFF3"/>
+  <rect x="482" y="187" width="190" height="18" rx="9" fill="#FFB223"/>
+  <rect x="744" y="181" width="92" height="30" rx="15" fill="#FFF0CE"/>
+  <text x="790" y="201" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#7A4300">Ưu tiên</text>
+
+  <line x1="328" y1="226" x2="836" y2="226" stroke="#EEEFF3"/>
+  <text x="328" y="254" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#1A1A2E">Áp lực học tập</text>
+  <rect x="482" y="237" width="238" height="18" rx="9" fill="#EEEFF3"/>
+  <rect x="482" y="237" width="142" height="18" rx="9" fill="#23AEFF"/>
+  <rect x="744" y="231" width="92" height="30" rx="15" fill="#EAF5FF"/>
+  <text x="790" y="251" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1A5877">Theo dõi</text>
 </svg>
