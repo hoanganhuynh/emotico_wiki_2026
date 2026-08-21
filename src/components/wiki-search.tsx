@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 
 interface SearchResult { slug: string; title: string; excerpt: string; }
 
-export default function WikiSearch() {
+export default function WikiSearch({ fullWidth = false, className = '' }: { fullWidth?: boolean; className?: string }) {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [open, setOpen] = useState(false);
@@ -16,8 +16,10 @@ export default function WikiSearch() {
     const onKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
         event.preventDefault();
-        inputRef.current?.focus();
-        setOpen(true);
+        if (inputRef.current?.offsetParent !== null) {
+          inputRef.current?.focus();
+          setOpen(true);
+        }
       }
       if (event.key === 'Escape') {
         setOpen(false);
@@ -47,7 +49,7 @@ export default function WikiSearch() {
   }, [query]);
 
   return (
-    <div className="relative ml-2 min-w-0 flex-1 max-w-[360px] sm:ml-3">
+    <div className={`${fullWidth ? 'relative min-w-0 w-full max-w-none' : 'relative ml-2 min-w-0 flex-1 max-w-[360px] sm:ml-3'} ${className}`}>
       <div className="flex h-10 items-center rounded-lg border border-[#E0E0E6] bg-[#FAFAFB] px-3 transition focus-within:border-[#9A5A00] focus-within:bg-white focus-within:ring-2 focus-within:ring-[#9A5A00]/20 sm:h-9">
         <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0 text-[#9B9BB0]"><circle cx="7" cy="7" r="4.5" stroke="currentColor"/><path d="m10.5 10.5 3 3" stroke="currentColor" strokeLinecap="round"/></svg>
         <input ref={inputRef} type="search" value={query} onChange={(event) => { setQuery(event.target.value); setOpen(true); }} onFocus={() => setOpen(true)} placeholder="Tìm trong wiki…" aria-label="Tìm trong wiki" className="min-w-0 flex-1 bg-transparent px-2 text-base text-[#1A1A2E] outline-none placeholder:text-[#9B9BB0] focus-visible:outline-none sm:text-sm" />

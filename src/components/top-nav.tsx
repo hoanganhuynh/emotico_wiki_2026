@@ -23,12 +23,13 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
   return (
     <header
       id="top-nav"
-      className={`fixed top-0 left-0 right-0 z-50 flex h-16 items-center px-3 pl-14 md:h-14 md:px-6 transition-colors ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors ${dark ? 'h-[7.25rem] md:h-14' : 'h-16 md:h-14'} ${
         dark
           ? 'bg-[#111111] border-[#2A2A2A]'
           : 'bg-white border-[#E0E0E6]'
       }`}
     >
+      <div className="flex h-16 items-center px-3 pl-14 md:h-14 md:px-6">
       {/* Logo */}
       <Link href={dark ? '/wiki-internal' : '/wiki'} className="flex shrink-0 items-center no-underline">
         <Image
@@ -41,7 +42,7 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
         />
       </Link>
 
-      <WikiSearch />
+      <WikiSearch className={dark ? 'hidden md:block' : ''} />
 
       {/* Spacer */}
       <div className="flex-1" />
@@ -52,7 +53,7 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
       </div>
 
       {dark && (
-        <div className="ml-4 hidden items-center gap-1 sm:flex">
+        <div className="ml-auto flex shrink-0 items-center gap-0.5 md:ml-4 md:gap-1">
           <Link
             href={currentInternalSlug && currentInternalSlug !== 'edit' ? `/wiki-internal/edit?slug=${encodeURIComponent(currentInternalSlug)}` : '/wiki-internal/edit'}
             aria-label="Chỉnh sửa wiki internal"
@@ -80,6 +81,12 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
               <path d="M10 17l5-5-5-5M15 12H3M21 19V5a2 2 0 0 0-2-2h-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
+        </div>
+      )}
+      </div>
+      {dark && (
+        <div className="px-3 pb-3 md:hidden">
+          <WikiSearch fullWidth />
         </div>
       )}
     </header>
