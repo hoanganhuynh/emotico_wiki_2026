@@ -17,8 +17,8 @@ export interface WikiPage {
 
 function updatesPage(updates: Awaited<ReturnType<typeof getPublicWikiUpdates>>): WikiPage {
   const content = updates.length === 0
-    ? '# Phiên bản cập nhật\n\nChưa có thay đổi nào được xuất bản. Khi có cập nhật, phần này sẽ giải thích ngắn gọn những điều người dùng cần biết.'
-    : `# Phiên bản cập nhật\n\nĐây là các thay đổi đã được xuất bản cho người dùng.\n\n${updates.map((update) => `## ${update.title}\n\n${update.changeNote}\n\n*Cập nhật ${new Date(update.publishedAt).toLocaleDateString('vi-VN')}*`).join('\n\n')}`;
+    ? '# Phiên bản cập nhật\n\nChưa có thay đổi nào được xuất bản. Khi có cập nhật, trang này sẽ giải thích ngắn gọn những điều Nhà trường, Giáo viên và Phụ huynh cần biết.'
+    : `# Phiên bản cập nhật\n\nĐây là các thay đổi đã được xuất bản trên Wiki, được biên tập để Nhà trường, Giáo viên và Phụ huynh dễ theo dõi.\n\n${updates.map((update) => `## ${update.title}\n\n${update.changeNote}\n\n*Cập nhật ${new Date(update.publishedAt).toLocaleDateString('vi-VN')}*`).join('\n\n')}`;
   return { slug: 'updates', title: 'Phiên bản cập nhật', content };
 }
 

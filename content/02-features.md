@@ -1,97 +1,91 @@
 # Tính năng
 
-Mỗi tính năng được thiết kế để bạn bắt đầu từ một bước nhỏ. Bạn có thể dừng bất cứ lúc nào; nếu lo cho sự an toàn của mình hoặc của một học sinh, hãy tìm đến người lớn tin cậy hoặc nguồn hỗ trợ chuyên môn.
+Các tính năng của Emotico được xây dựng để hỗ trợ những thực hành cảm xúc nhỏ, có thể lặp lại trong đời sống học đường. Phụ huynh, Giáo viên và Nhà trường có thể dùng trang này để hiểu học sinh sẽ gặp gì trên ứng dụng, vai trò của từng trải nghiệm và cách các trải nghiệm ấy mở ra cuộc trò chuyện.
 
 ## 1. Check-in Cảm xúc
 
-**Dùng khi nào?** Khi bạn muốn dừng lại một chút để gọi tên điều mình đang cảm thấy.
+Check-in giúp học sinh dừng lại để gọi tên cảm xúc đang hiện diện. Các em chọn một hoặc nhiều cảm xúc, thể hiện mức độ và có thể ghi thêm điều đang diễn ra. Việc có từ ngữ cho trải nghiệm của mình thường là điểm khởi đầu hữu ích để học sinh tự nhìn lại và chia sẻ với người lớn.
 
-1. Chọn cảm xúc gần nhất với bạn lúc này.
-2. Chọn mức độ và, nếu cần, thêm một cảm xúc khác.
-3. Ghi thêm điều đang diễn ra nếu bạn muốn.
-
-Sau đó, Emotico có thể gợi ý một bài tập ngắn, một từ trong từ điển cảm xúc hoặc một bước hỗ trợ khác. Đây là cách tự nhìn lại, không phải bài kiểm tra hay chẩn đoán.
+Sau một lần check-in, Emotico có thể đề xuất một bài thực hành ngắn, một mục trong từ điển cảm xúc hoặc một bước chăm sóc phù hợp với chủ đề vừa được ghi nhận.
 
 ![Màn hình minh họa lựa chọn và hòa trộn cảm xúc trong Emotico.](/hoa-tron-cam-xuc.png)
 
-*Minh họa: chọn một hoặc nhiều cảm xúc để diễn tả trải nghiệm của bạn theo cách gần gũi hơn.*
+*Minh họa: học sinh chọn một hoặc nhiều cảm xúc để diễn tả trải nghiệm theo cách gần gũi hơn.*
 
 ## 2. Lịch sử & Báo cáo Cảm xúc
 
-**Dùng khi nào?** Khi bạn muốn nhìn lại cảm xúc của mình theo thời gian.
-
-Bạn chọn khoảng thời gian, xem lại các lần check-in và nhận ra những điều thường ảnh hưởng đến mình. Phần này nhằm giúp bạn tự nhận biết xu hướng; nó không gắn nhãn hoặc kết luận về sức khỏe của bạn.
+Lịch sử giúp học sinh nhìn lại các lần check-in theo một khoảng thời gian do các em lựa chọn. Qua đó, các em có thể nhận ra những điều thường đem lại năng lượng, gây áp lực hoặc khiến mình cần nghỉ ngơi nhiều hơn. Với Phụ huynh và Giáo viên, đây là cơ sở để lắng nghe điều học sinh muốn kể thay vì bắt đầu từ một phán đoán có sẵn.
 
 ![Sơ đồ ba bước xem lại một tính năng: chọn, thực hiện hướng dẫn, xem bước tiếp theo.](/huong-dan-tinh-nang.svg)
 
-*Minh họa: bắt đầu bằng khoảng thời gian muốn xem, rồi chọn bước chăm sóc phù hợp nếu bạn nhận ra điều cần quan tâm.*
+*Minh họa: xem lại theo từng giai đoạn giúp học sinh nhận ra chủ đề cần quan tâm và chọn một bước chăm sóc tiếp theo.*
 
 ## 3. Từ điển Cảm xúc
 
-**Dùng khi nào?** Khi bạn có cảm giác khó diễn tả hoặc muốn hiểu một từ chỉ cảm xúc.
+Từ điển Cảm xúc giải thích các từ chỉ cảm xúc bằng ví dụ gần gũi với đời sống của học sinh. Công cụ giúp các em phân biệt những cảm xúc dễ nhầm lẫn, mở rộng vốn từ để kể về trải nghiệm của mình và nghĩ về một cách phản hồi an toàn hơn.
 
-Tìm theo tên hoặc mô tả gần đúng. Mỗi mục giải thích bằng ví dụ gần gũi, giúp bạn phân biệt các cảm xúc dễ nhầm lẫn và nghĩ về cách phản hồi an toàn hơn.
+Phụ huynh và Giáo viên cũng có thể dùng từ điển như một ngôn ngữ chung khi trò chuyện, nhất là khi học sinh chưa biết diễn đạt điều mình đang cảm thấy.
 
 ![Sơ đồ ba bước dùng từ điển cảm xúc: chọn từ, đọc giải thích, chọn bước tiếp theo.](/huong-dan-tinh-nang.svg)
 
-*Minh họa: từ điển giúp gọi đúng tên cảm xúc; nó không dùng để đánh giá con người.*
+*Minh họa: từ điển giúp học sinh gọi tên cảm xúc và tìm ra cách diễn đạt phù hợp.*
 
 ## 4. Wellness Quiz — Khám phá sức khỏe toàn diện
 
-**Dùng khi nào?** Khi bạn muốn xem những phần nào trong đời sống đang nâng đỡ hoặc làm bạn mệt mỏi, như nghỉ ngơi, việc học, các mối quan hệ hay đời sống số.
+Wellness Quiz mời học sinh suy ngẫm về những phần quen thuộc của đời sống như nghỉ ngơi, việc học, các mối quan hệ và đời sống số. Kết quả gợi mở những chủ đề đáng chú ý cùng nguồn lực phù hợp, để các em tự nhìn lại và để người lớn hiểu thêm điểm bắt đầu cho một cuộc trao đổi.
 
-Bạn trả lời từng câu theo trải nghiệm của mình. Kết quả là gợi ý những chủ đề có thể quan tâm và nguồn hỗ trợ có thể tìm đến. Wellness không xếp hạng, không so sánh và không đưa ra kết luận bệnh lý.
+Nhà trường và gia đình có thể xem đây là một hoạt động phòng ngừa: nhẹ nhàng, có cấu trúc và đủ gần gũi để học sinh chủ động tham gia.
 
 ![Sơ đồ ba bước làm Wellness: chọn chủ đề, trả lời theo trải nghiệm, xem gợi ý hỗ trợ.](/huong-dan-tinh-nang.svg)
 
-*Minh họa: bạn có thể dừng bài bất cứ lúc nào; khi có lo ngại về an toàn, hãy tìm đến người lớn tin cậy.*
+*Minh họa: học sinh khám phá một chủ đề, trả lời theo trải nghiệm và xem gợi ý cho bước tiếp theo.*
 
-## 5. Đoán vui — Những bài trắc nghiệm chỉ để giải trí
+## 5. Đoán vui — Khám phá những góc nhỏ của bản thân
 
-**Dùng khi nào?** Khi bạn muốn chơi một bài ngắn, nhẹ nhàng.
+Đoán vui tạo một điểm chạm nhẹ nhàng để học sinh khám phá sở thích, thói quen và cách các em phản hồi trước những tình huống thường ngày. Các chủ đề ngắn, gần gũi giúp các em có thêm ngôn ngữ để kể về mình và mở đầu một cuộc trao đổi với bạn bè, Phụ huynh hoặc Giáo viên.
 
-Đoán vui chỉ đưa ra cách diễn giải vui theo lựa chọn của bạn. Kết quả không được dùng để đánh giá tính cách, năng lực hay sức khỏe tâm thần.
+Hoạt động này không yêu cầu chuyên gia giám sát để tham gia. Nhà trường và gia đình có thể xem đây là một trải nghiệm khởi đầu, từ đó lắng nghe điều học sinh muốn chia sẻ và ghi nhận những góc nhỏ làm nên bản thân các em.
 
-![Sơ đồ ba bước dùng bài Đoán vui: chọn bài, trả lời, xem kết quả chỉ để giải trí.](/huong-dan-tinh-nang.svg)
+![Sơ đồ ba bước dùng bài Đoán vui: chọn bài, trả lời, xem kết quả khám phá sở thích và thói quen.](/huong-dan-tinh-nang.svg)
 
-*Minh họa: mọi bài Đoán vui đều có thông báo rõ rằng kết quả chỉ để vui.*
+*Minh họa: một bài Đoán vui ngắn có thể mở đầu cho cuộc trò chuyện gần gũi về sở thích và trải nghiệm của học sinh.*
 
 ## 6. Bài tập CBT & Bí kíp Tâm lý
 
-CBT là tên viết tắt của một nhóm bài tập giúp bạn nhận biết suy nghĩ, cảm xúc và hành động của mình. Trong Emotico, bài tập được chia thành các bước ngắn, dễ làm như thở chậm, thư giãn cơ thể hoặc thử một hành động nhỏ.
+CBT là tên viết tắt của một nhóm bài thực hành giúp nhận biết mối liên hệ giữa suy nghĩ, cảm xúc và hành động. Trong Emotico, học sinh tiếp cận các bước ngắn, dễ theo dõi như thở chậm, thư giãn cơ thể hoặc thử một hành động nhỏ để chăm sóc bản thân.
 
-Chọn bài phù hợp với điều bạn vừa check-in, đọc hướng dẫn, rồi tự xem bước nào hữu ích cho mình. Nếu bài tập làm bạn khó chịu hơn hoặc vấn đề kéo dài, hãy nói chuyện với người lớn tin cậy hoặc chuyên gia.
+Các bài tập giúp các em tích lũy kỹ năng tự điều chỉnh trong những tình huống thường ngày. Khi một trải nghiệm kéo dài hoặc cần được quan tâm sâu hơn, người lớn có thể cùng học sinh trao đổi và kết nối với nguồn lực chuyên môn phù hợp.
 
 ![Sơ đồ ba bước thực hành bài tập ngắn: chọn bài, làm theo hướng dẫn, tìm hỗ trợ nếu cần.](/huong-dan-tinh-nang.svg)
 
-*Minh họa: bài tập là một cách tự chăm sóc ngắn, không thay thế tư vấn hoặc điều trị.*
+*Minh họa: học sinh chọn bài thực hành, làm theo hướng dẫn và suy ngẫm về bước nào hữu ích cho mình.*
 
 ## 7. Hồ sơ & Danh bạ Hỗ trợ
 
-Hồ sơ giúp bạn quản lý những nội dung đã lưu. Danh bạ hỗ trợ giúp bạn tìm nơi có thể liên hệ khi cần thêm sự giúp đỡ.
+Hồ sơ giúp học sinh quản lý những nội dung đã lưu; Danh bạ Hỗ trợ giúp các em và người lớn tìm nơi có thể liên hệ theo khu vực hoặc nhu cầu. Thông tin này tạo một cầu nối thiết thực từ việc tự nhận biết cảm xúc đến hành động tìm kiếm sự đồng hành.
 
-Bạn chọn khu vực hoặc loại hỗ trợ cần tìm. Hãy kiểm tra lại thông tin liên hệ trước khi đến; trong tình huống khẩn cấp, hãy liên hệ dịch vụ khẩn cấp tại nơi bạn sống.
+Phụ huynh và Giáo viên nên cùng học sinh kiểm tra thông tin liên hệ trước khi kết nối. Trong tình huống khẩn cấp, ưu tiên liên hệ dịch vụ khẩn cấp hoặc cơ sở y tế tại địa phương.
 
 ![Sơ đồ ba bước tìm hỗ trợ: chọn nhu cầu, xem nguồn phù hợp, liên hệ người lớn hoặc chuyên gia.](/huong-dan-tinh-nang.svg)
 
-*Minh họa: Emotico dẫn bạn đến nguồn hỗ trợ; quyết định chăm sóc chuyên môn thuộc về bạn, gia đình và người có chuyên môn.*
+*Minh họa: học sinh và người lớn xác định nhu cầu, tìm nguồn lực phù hợp và thực hiện bước kết nối tiếp theo.*
 
 ## 8. Báo cáo & Dashboard
 
-Nhà trường xem các thông tin tổng hợp để nhận ra chủ đề cần quan tâm ở quy mô cộng đồng. Báo cáo không phải hồ sơ theo dõi từng học sinh và không dùng để xếp hạng lớp hay cá nhân.
+Báo cáo và dashboard cho Nhà trường góc nhìn tổng hợp về những chủ đề cảm xúc đang cần được quan tâm trong cộng đồng. Từ bức tranh này, đội ngũ phụ trách có thể ưu tiên các hoạt động phòng ngừa, trao đổi cùng Giáo viên và phối hợp với Phụ huynh khi cần thiết.
 
-Khi cần tìm hiểu thêm về một chủ đề, nhà trường nên phối hợp với cán bộ tư vấn, phụ huynh và các nguồn lực phù hợp.
+Thông tin tổng hợp được thiết kế để hỗ trợ việc ra quyết định chăm sóc ở cấp cộng đồng, kết hợp cùng quan sát thực tế và chuyên môn của đội ngũ Nhà trường.
 
 ![Sơ đồ ba bước dùng thông tin tổng hợp: xem chủ đề, trao đổi với người phụ trách, chuẩn bị hỗ trợ phù hợp.](/huong-dan-tinh-nang.svg)
 
-*Minh họa: thông tin tổng hợp giúp mở ra cuộc trao đổi chăm sóc, không thay thế đánh giá của con người.*
+*Minh họa: Nhà trường xem chủ đề chung, trao đổi với đội ngũ phụ trách và chuẩn bị hoạt động nâng đỡ phù hợp.*
 
 ## 9. Web Chatbot — Giáo viên & Phụ huynh
 
-Chatbot hỗ trợ người lớn chuẩn bị cho một cuộc trò chuyện với học sinh: có thể bắt đầu ra sao, nên lắng nghe thế nào và lúc nào nên tìm thêm trợ giúp.
+Web Chatbot hỗ trợ người lớn chuẩn bị cho một cuộc trò chuyện nâng đỡ học sinh: có thể mở đầu ra sao, nên lắng nghe điều gì và khi nào nên phối hợp thêm nguồn lực. Người dùng mô tả tình huống với thông tin cần thiết, sau đó đọc các gợi ý như một phần chuẩn bị trước khi trao đổi trực tiếp với học sinh.
 
-Bạn mô tả tình huống mà không cần chia sẻ thông tin nhận dạng không cần thiết. Chatbot không chẩn đoán, không đưa ra chỉ định điều trị và không xử lý tình huống khẩn cấp thay cho con người.
+Khi xuất hiện dấu hiệu cần quan tâm sâu hơn, Chatbot giúp người lớn xác định bước kết nối tiếp theo với Nhà trường, cán bộ tư vấn hoặc người có chuyên môn phù hợp.
 
 ![Sơ đồ ba bước dùng chatbot: nêu tình huống, nhận gợi ý trao đổi, tìm hỗ trợ chuyên môn khi cần.](/huong-dan-tinh-nang.svg)
 
-*Minh họa: gợi ý của chatbot là điểm khởi đầu cho cuộc trò chuyện an toàn với học sinh.*
+*Minh họa: gợi ý của chatbot tạo điểm khởi đầu cho cuộc trò chuyện an toàn, tôn trọng và có sự hiện diện của người lớn.*

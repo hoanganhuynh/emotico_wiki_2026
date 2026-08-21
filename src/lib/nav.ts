@@ -30,7 +30,7 @@ const FEATURE_CHILDREN: NavChild[] = [
   { slug: 'feature-history', label: 'Lịch sử & Báo cáo Cảm xúc', sourceHeading: '## 2. Lịch sử & Báo cáo Cảm xúc' },
   { slug: 'feature-dictionary', label: 'Từ điển Cảm xúc', sourceHeading: '## 3. Từ điển Cảm xúc' },
   { slug: 'feature-wellness', label: 'Wellness Quiz', sourceHeading: '## 4. Wellness Quiz — Khám phá sức khỏe toàn diện' },
-  { slug: 'feature-fun-quiz', label: 'Đoán vui', sourceHeading: '## 5. Đoán vui — Những bài trắc nghiệm chỉ để giải trí' },
+  { slug: 'feature-fun-quiz', label: 'Đoán vui', sourceHeading: '## 5. Đoán vui — Khám phá những góc nhỏ của bản thân' },
   { slug: 'feature-cbt', label: 'Bài tập CBT & Bí kíp Tâm lý', sourceHeading: '## 6. Bài tập CBT & Bí kíp Tâm lý' },
   { slug: 'feature-support', label: 'Hồ sơ & Danh bạ Hỗ trợ', sourceHeading: '## 7. Hồ sơ & Danh bạ Hỗ trợ' },
   { slug: 'feature-dashboard', label: 'Báo cáo & Dashboard', sourceHeading: '## 8. Báo cáo & Dashboard' },
@@ -56,7 +56,7 @@ export function flattenNavItems(items: NavItem[]): NavItem[] {
 /** Public wiki sidebar — no auth required */
 export const NAV_ITEMS: NavItem[] = [
   { slug: '',                    label: 'Bắt đầu với Emotico',      file: '00-overview.md',          icon: 'Home2',       section: 'Bắt đầu', category: 'Sản phẩm & nội dung', visibility: 'public' },
-  { slug: '01-product-overview', label: 'Emotico dành cho ai?',      file: '01-product-overview.md', icon: 'Box1',        section: 'Bắt đầu', category: 'Sản phẩm & nội dung', visibility: 'public' },
+  { slug: '01-product-overview', label: 'Emotico đồng hành cùng ai?', file: '01-product-overview.md', icon: 'Box1',        section: 'Bắt đầu', category: 'Sản phẩm & nội dung', visibility: 'public' },
   { slug: '02-features',         label: 'Tính năng',                 file: '02-features.md',         icon: 'Star1',       section: 'Tính năng', category: 'Sản phẩm & nội dung', visibility: 'public', children: FEATURE_CHILDREN },
   { slug: '09-chatbot-ai',       label: 'Chatbot cho người lớn',     file: '09-chatbot-ai.md',       icon: 'MessageText', section: 'Tính năng', category: 'Sản phẩm & nội dung', visibility: 'public' },
   { slug: '04-security',         label: 'An toàn & quyền riêng tư', file: '04-security.md',       icon: 'Shield',      section: 'An toàn & bằng chứng', category: 'Nghiên cứu, pháp lý & an toàn', visibility: 'public' },
@@ -68,7 +68,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const NAV_INTERNAL_ITEMS: NavItem[] = [
   // === Tài liệu công khai (mirror of /wiki) ===
   { slug: '',                    label: 'Bắt đầu với Emotico',      file: '00-overview.md',          icon: 'Home2',       section: 'Sản phẩm & nội dung', category: 'Sản phẩm & nội dung', visibility: 'public' },
-  { slug: '01-product-overview', label: 'Emotico dành cho ai?',      file: '01-product-overview.md', icon: 'Box1',        section: 'Sản phẩm & nội dung', category: 'Sản phẩm & nội dung', visibility: 'public' },
+  { slug: '01-product-overview', label: 'Emotico đồng hành cùng ai?', file: '01-product-overview.md', icon: 'Box1',        section: 'Sản phẩm & nội dung', category: 'Sản phẩm & nội dung', visibility: 'public' },
   { slug: '02-features',         label: 'Tính năng',                 file: '02-features.md',         icon: 'Star1',       section: 'Sản phẩm & nội dung', category: 'Sản phẩm & nội dung', visibility: 'public', children: FEATURE_CHILDREN },
   { slug: '09-chatbot-ai',       label: 'Chatbot cho người lớn',     file: '09-chatbot-ai.md',       icon: 'MessageText', section: 'Sản phẩm & nội dung', category: 'Sản phẩm & nội dung', visibility: 'public' },
   { slug: '04-security',         label: 'An toàn & quyền riêng tư', file: '04-security.md',         icon: 'Shield',      section: 'Nghiên cứu, pháp lý & an toàn', category: 'Nghiên cứu, pháp lý & an toàn', visibility: 'public' },

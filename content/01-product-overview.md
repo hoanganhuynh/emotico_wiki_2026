@@ -1,23 +1,19 @@
-# Emotico dành cho ai?
+# Emotico đồng hành cùng ai?
 
-Emotico có các trải nghiệm khác nhau để mỗi người nhận được cách hỗ trợ phù hợp với vai trò của mình.
+Emotico được thiết kế để Nhà trường, Giáo viên và Phụ huynh có thêm một cách gần gũi nhằm nâng đỡ sức khỏe cảm xúc của học sinh. Mỗi nhóm tiếp cận một phần trải nghiệm phù hợp với trách nhiệm và bối cảnh của mình; mục tiêu chung là giúp các em được thấu hiểu, được trao đổi và được kết nối đúng lúc.
 
-## Học sinh
+## Học sinh: nhận biết và diễn đạt trải nghiệm của mình
 
-App Emotico giúp học sinh gọi tên cảm xúc, nhìn lại điều đang ảnh hưởng đến mình và thực hành những bước nhỏ để bình tĩnh hơn. Bạn quyết định điều mình muốn ghi lại; công cụ không đưa ra chẩn đoán về bạn.
+Ứng dụng giúp học sinh gọi tên cảm xúc, nhìn lại điều đang ảnh hưởng đến các em và thực hành những bước chăm sóc ngắn trong ngày. Những trải nghiệm này nuôi dưỡng khả năng tự quan sát và tạo thêm chất liệu để các em chia sẻ với người lớn khi sẵn sàng.
 
-## Phụ huynh và giáo viên
+## Phụ huynh và Giáo viên: chuẩn bị để lắng nghe tốt hơn
 
-Web Chatbot hỗ trợ người lớn chuẩn bị cho một cuộc trò chuyện với học sinh: lắng nghe thế nào, hỏi gì, và khi nào nên tìm sự hỗ trợ từ người có chuyên môn.
+Web Chatbot là không gian để người lớn chuẩn bị cho một cuộc trò chuyện nâng đỡ học sinh: mở đầu như thế nào, nên lắng nghe điều gì và đâu là bước phối hợp phù hợp. Các gợi ý được trình bày để hỗ trợ sự cân nhắc của người lớn trong từng bối cảnh cụ thể.
 
-## Nhà trường
+## Nhà trường: nhìn vào nhu cầu của cộng đồng
 
-Nhà trường có thể xem những thông tin tổng hợp để nhận ra chủ đề cần quan tâm ở quy mô cộng đồng. Nội dung này không dùng để xếp hạng hay theo dõi một học sinh cụ thể.
+Báo cáo và dashboard cung cấp góc nhìn tổng hợp về những chủ đề cảm xúc cần được quan tâm trong cộng đồng học đường. Từ đó, Nhà trường có thể lựa chọn hoạt động phòng ngừa, trao đổi cùng đội ngũ phụ trách và phối hợp với gia đình một cách có cơ sở.
 
-## Điều Emotico không làm
+## Một mạng lưới hỗ trợ liền mạch
 
-* Không kết luận một người có bệnh hay không.
-* Không kê đơn hoặc thay thế trị liệu, tư vấn hay chăm sóc y tế.
-* Không đưa ra quyết định an toàn thay cho người lớn và chuyên gia.
-
-Khi một tình huống vượt ngoài phạm vi tự chăm sóc, Emotico sẽ hướng người dùng đến nguồn hỗ trợ phù hợp.
+Emotico tạo điều kiện để những bước chăm sóc hằng ngày kết nối với mạng lưới rộng hơn. Khi học sinh cần được quan tâm chuyên sâu, Phụ huynh, Giáo viên, Nhà trường và người có chuyên môn cùng giữ vai trò quan trọng trong việc lựa chọn hỗ trợ tiếp theo.
