@@ -4,6 +4,7 @@ out/
 .env
 .env.local
 .DS_Store
+.worktrees/
 
 # Flutter web build — populated by CI from emotico2026 private repo
 public/ds/*
