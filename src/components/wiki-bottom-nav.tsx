@@ -21,6 +21,13 @@ export default function WikiBottomNav({
   const isInternal = basePath === '/wiki-internal';
   const ctaHref = isInternal ? '/wiki' : '/wiki-internal';
   const ctaLabel = isInternal ? 'Về Wiki public' : 'Mở Wiki internal';
+  const mobileLabels: Record<string, string> = {
+    '': 'Trang chủ',
+    '01-product-overview': 'Giới thiệu',
+    '02-features': 'Tính năng',
+    '09-chatbot-ai': 'Chatbot',
+    '04-security': 'An toàn',
+  };
 
   return (
     <div className={`md:hidden fixed bottom-0 left-0 right-0 z-50 border-t safe-area-pb ${dark ? 'bg-[#111111] border-[#2A2A2A]' : 'bg-white border-[#E0E0E6]'}`}>
@@ -42,7 +49,7 @@ export default function WikiBottomNav({
           <span aria-hidden="true" className="text-base">→</span>
         </Link>
       </div>
-      <nav className="flex h-16 items-center justify-around px-2">
+      <nav aria-label="Điều hướng nhanh" className="flex h-[4.5rem] items-center justify-around px-2">
         {navItems.slice(0, 5).map((item) => {
         const href = item.slug === '' ? basePath : `${basePath}/${item.slug}`;
         const isActive =
@@ -58,8 +65,9 @@ export default function WikiBottomNav({
             href={href}
             className={[
               'flex flex-col items-center justify-center gap-1 flex-1 h-full no-underline transition-colors',
-              isActive ? (dark ? 'text-white' : 'text-[#FFB223]') : 'text-[#555555]',
+              isActive ? (dark ? 'text-white' : 'text-[#9A5A00]') : 'text-[#555555]',
             ].join(' ')}
+            aria-current={isActive ? 'page' : undefined}
           >
             {IconComponent && (
               <IconComponent
@@ -68,6 +76,9 @@ export default function WikiBottomNav({
                 variant={isActive ? 'Bold' : 'Linear'}
               />
             )}
+            <span className="max-w-full truncate px-1 text-[10px] font-medium leading-none">
+              {mobileLabels[item.slug] || item.label}
+            </span>
           </Link>
         );
         })}

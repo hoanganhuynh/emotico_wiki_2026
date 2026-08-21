@@ -135,7 +135,7 @@ function WikiLayoutInner({ children }: { children: React.ReactNode }) {
     <div className="flex flex-1 overflow-hidden">
       <WikiSidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} basePath="/wiki" />
       <MobileNavControls onOpenSidebar={() => setSidebarOpen(o => !o)} sidebarOpen={sidebarOpen} />
-      <main className="flex min-w-0 flex-1 overflow-hidden pb-28 md:pb-0">
+      <main className="flex min-w-0 flex-1 overflow-hidden pb-36 md:pb-0">
         {children}
       </main>
       <WikiBottomNav basePath="/wiki" />
