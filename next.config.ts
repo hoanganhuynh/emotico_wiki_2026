@@ -1,6 +1,8 @@
 import type { NextConfig } from 'next';
+import path from 'node:path';
 
 const config: NextConfig = {
+  outputFileTracingRoot: path.join(__dirname),
   // The wiki loader reads Markdown files through fs at runtime. Include them
   // in Vercel's serverless function traces so deployed wiki routes can resolve
   // the same content that is available in the repository.

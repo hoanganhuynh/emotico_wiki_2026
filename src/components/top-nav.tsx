@@ -48,7 +48,7 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
 
       {/* Metadata */}
       <div className={`hidden sm:flex items-center gap-3 text-xs font-medium ${dark ? 'text-[#A3A3A3]' : 'text-[#777784]'}`}>
-        <span title="Ngày cập nhật nội dung gần nhất">Cập nhật 19/08/2026</span>
+        <Link href="/wiki/updates" className="no-underline hover:underline" title="Xem các thay đổi đã xuất bản">Phiên bản cập nhật</Link>
       </div>
 
       {dark && (

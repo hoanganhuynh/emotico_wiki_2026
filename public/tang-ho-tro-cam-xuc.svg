@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="tier-title" aria-describedby="tier-desc">
+  <title id="tier-title">Ba tầng hỗ trợ sức khỏe cảm xúc học đường</title>
+  <desc id="tier-desc">Emotico hoạt động ở Tầng 1, phòng ngừa phổ quát. Tầng 2 là hỗ trợ chọn lọc của cán bộ tư vấn học đường. Tầng 3 là điều trị chuyên sâu của chuyên gia hoặc cơ sở y tế.</desc>
+  <rect width="960" height="420" rx="28" fill="#F7F7F9"/>
+  <text x="480" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">Ba tầng hỗ trợ cảm xúc học đường</text>
+  <path d="M160 330 480 88 800 330Z" fill="#FFF9ED" stroke="#1A1A2E" stroke-width="3"/>
+  <path d="M290 330 480 186 670 330Z" fill="#FFE5A8" stroke="#1A1A2E" stroke-width="3"/>
+  <path d="M400 330 480 270 560 330Z" fill="#FFB223" stroke="#1A1A2E" stroke-width="3"/>
+  <text x="480" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#1A1A2E">Tầng 3 · Chuyên gia / cơ sở y tế</text>
+  <text x="480" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A2E">Tầng 2 · Cán bộ tư vấn học đường</text>
+  <text x="480" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#1A1A2E">Tầng 1 · Phòng ngừa phổ quát</text>
+  <text x="480" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1A1A2E">Emotico hỗ trợ ở tầng này</text>
+  <text x="480" y="382" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#4B4B59">Khi cần nhiều hỗ trợ hơn, Emotico hướng người dùng tìm đến người lớn tin cậy và dịch vụ chuyên môn phù hợp.</text>
+</svg>

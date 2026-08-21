@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getWikiPage } from '@/lib/wiki';
+import { getPublishedWikiPage } from '@/lib/wiki';
 import { NAV_ITEMS, flattenNavItems } from '@/lib/nav';
 
 function plainText(markdown: string) {
@@ -24,8 +24,8 @@ export async function GET(request: NextRequest) {
   if (query.length < 2) return NextResponse.json({ results: [] });
 
   const normalized = query.toLocaleLowerCase('vi');
-  const results = flattenNavItems(NAV_ITEMS).map((item) => {
-    const page = getWikiPage(item.slug);
+  const pages = await Promise.all(flattenNavItems(NAV_ITEMS).map(async (item) => {
+    const page = await getPublishedWikiPage(item.slug);
     if (!page) return null;
     const text = plainText(page.content);
     const haystack = `${page.title} ${item.label} ${text}`.toLocaleLowerCase('vi');
@@ -35,7 +35,8 @@ export async function GET(request: NextRequest) {
       title: page.title,
       excerpt: snippet(text, query),
     };
-  }).filter(Boolean).slice(0, 8);
+  }));
+  const results = pages.filter(Boolean).slice(0, 8);
 
   return NextResponse.json({ results }, { headers: { 'Cache-Control': 'no-store' } });
 }

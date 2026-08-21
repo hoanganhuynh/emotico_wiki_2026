@@ -4,14 +4,27 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
 import type { ChangeEvent, MouseEvent, ReactNode } from 'react';
-import { flattenNavItems, NAV_INTERNAL_ITEMS } from '@/lib/nav';
+import { flattenNavItems, INTERNAL_CATEGORIES, NAV_INTERNAL_ITEMS } from '@/lib/nav';
 
 interface Version {
   id: number;
   versionName: string;
+  title: string;
+  changeNote: string;
   content: string;
   createdAt: string;
   createdBy: string;
+}
+
+interface DocumentPage {
+  slug: string;
+  title: string;
+  content: string;
+  category: string;
+  visibility: 'public' | 'internal';
+  currentVersionId: number | null;
+  publishedVersionId: number | null;
+  publishedAt: string | null;
 }
 
 function Icon({ children }: { children: ReactNode }) {
@@ -26,8 +39,12 @@ function EyeIcon() { return <Icon><path d="M3 12s3.2-5 9-5 9 5 9 5-3.2 5-9 5-9-5
 function RollbackIcon() { return <Icon><path d="M9 7H4v5M4 12a8 8 0 1 0 2.3-5.6L4 9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></Icon>; }
 
 interface EditorResponse {
-  page: { slug: string; title: string; content: string };
+  page: DocumentPage;
   history: Version[];
+}
+
+function pageStateKey(page: DocumentPage) {
+  return JSON.stringify({ title: page.title, content: page.content, category: page.category, visibility: page.visibility });
 }
 
 const EDITABLE_PAGES = flattenNavItems(NAV_INTERNAL_ITEMS).filter((item) => item.slug !== '');
@@ -37,10 +54,11 @@ export default function WikiEditor() {
   const params = useSearchParams();
   const requestedSlug = params.get('slug') || EDITABLE_PAGES[0]?.slug || '';
   const [slug, setSlug] = useState(requestedSlug);
-  const [page, setPage] = useState<EditorResponse['page'] | null>(null);
-  const [originalContent, setOriginalContent] = useState('');
+  const [page, setPage] = useState<DocumentPage | null>(null);
+  const [originalPage, setOriginalPage] = useState('');
   const [history, setHistory] = useState<Version[]>([]);
   const [versionName, setVersionName] = useState('');
+  const [changeNote, setChangeNote] = useState('');
   const [selectedVersion, setSelectedVersion] = useState<Version | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -68,7 +86,7 @@ export default function WikiEditor() {
       .then((data) => {
         if (cancelled) return;
         setPage(data.page);
-        setOriginalContent(data.page.content);
+        setOriginalPage(pageStateKey(data.page));
         setHistory(data.history);
         setSelectedVersion(null);
         setMessage('');
@@ -79,11 +97,11 @@ export default function WikiEditor() {
   }, [slug]);
 
   const exitHref = page ? `/wiki-internal/${page.slug}` : '/wiki-internal';
-  const hasUnsavedChanges = Boolean(page && page.content !== originalContent);
+  const hasUnsavedChanges = Boolean(page && pageStateKey(page) !== originalPage);
 
   async function save(): Promise<boolean> {
-    if (!page || !versionName.trim()) {
-      setError('Bạn phải đặt tên phiên bản trước khi lưu.');
+    if (!page || !versionName.trim() || !changeNote.trim()) {
+      setError('Bạn cần đặt tên phiên bản và ghi chú cập nhật trước khi lưu.');
       return false;
     }
     setSaving(true);
@@ -93,12 +111,21 @@ export default function WikiEditor() {
       const response = await fetch('/api/wiki-internal/edit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slug, content: page.content, versionName }),
+        body: JSON.stringify({
+          slug,
+          title: page.title,
+          category: page.category,
+          visibility: page.visibility,
+          content: page.content,
+          versionName,
+          changeNote,
+        }),
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || `Không thể lưu (HTTP ${response.status}).`);
       setMessage(`Đã lưu phiên bản “${data.version.versionName}” trên máy chủ.`);
       setVersionName('');
+      setChangeNote('');
       await reload();
       return true;
     } catch (reason) {
@@ -112,8 +139,28 @@ export default function WikiEditor() {
     const data = await response.json() as EditorResponse;
     if (!response.ok) throw new Error((data as unknown as { error?: string }).error || 'Không thể tải lại lịch sử.');
     setPage(data.page);
-    setOriginalContent(data.page.content);
+    setOriginalPage(pageStateKey(data.page));
     setHistory(data.history);
+  }
+
+  async function publish() {
+    if (!page?.currentVersionId) return;
+    setSaving(true);
+    setError('');
+    setMessage('');
+    try {
+      const response = await fetch('/api/wiki-internal/edit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug, action: 'publish', versionId: page.currentVersionId }),
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || `Không thể xuất bản (HTTP ${response.status}).`);
+      setMessage(`Đã xuất bản “${data.published.title}” trên Wiki public.`);
+      await reload();
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : 'Không thể xuất bản nội dung.');
+    } finally { setSaving(false); }
   }
 
   function requestExit(event: MouseEvent<HTMLAnchorElement>) {
@@ -134,8 +181,9 @@ export default function WikiEditor() {
 
   function restore(version: Version) {
     if (!page) return;
-    setPage({ ...page, content: version.content });
+    setPage({ ...page, title: version.title || page.title, content: version.content });
     setVersionName(`Khôi phục: ${version.versionName}`);
+    setChangeNote(`Khôi phục nội dung từ phiên bản “${version.versionName}”.`);
     setSelectedVersion(null);
     setMessage('Đã nạp bản cũ vào trình soạn thảo. Hãy kiểm tra rồi lưu để tạo phiên bản mới.');
   }
@@ -171,16 +219,37 @@ export default function WikiEditor() {
           </div>
         </div>
 
-        <div className="mb-6 grid gap-3 lg:grid-cols-[minmax(0,280px)_minmax(260px,1fr)_minmax(220px,1fr)]">
+        <div className="mb-6 grid gap-3 lg:grid-cols-2">
           <label className="text-sm font-semibold text-[#1A1A2E]">Tài liệu
             <select value={slug} onChange={(event) => setSlug(event.target.value)} className="mt-2 w-full rounded-xl border border-[#D9D9E0] bg-white px-3 py-3 font-normal outline-none focus:border-[#1A1A2E]">
               {EDITABLE_PAGES.map((item) => <option key={item.slug} value={item.slug}>{item.label}</option>)}
             </select>
           </label>
+          <label className="text-sm font-semibold text-[#1A1A2E]">Tiêu đề tài liệu
+            <input value={page?.title || ''} onChange={(event) => page && setPage({ ...page, title: event.target.value })} className="mt-2 w-full rounded-xl border border-[#D9D9E0] px-3 py-3 font-normal text-[#1A1A2E] outline-none focus:border-[#1A1A2E]" maxLength={160} disabled={loading || !page} />
+          </label>
+          <label className="text-sm font-semibold text-[#1A1A2E]">Nhóm nội dung
+            <select value={page?.category || ''} onChange={(event) => page && setPage({ ...page, category: event.target.value })} className="mt-2 w-full rounded-xl border border-[#D9D9E0] bg-white px-3 py-3 font-normal outline-none focus:border-[#1A1A2E]" disabled={loading || !page}>
+              {INTERNAL_CATEGORIES.map((category) => <option key={category} value={category}>{category}</option>)}
+            </select>
+          </label>
+          <label className="text-sm font-semibold text-[#1A1A2E]">Phạm vi
+            <select value={page?.visibility || 'internal'} onChange={(event) => page && setPage({ ...page, visibility: event.target.value as DocumentPage['visibility'] })} className="mt-2 w-full rounded-xl border border-[#D9D9E0] bg-white px-3 py-3 font-normal outline-none focus:border-[#1A1A2E]" disabled={loading || !page}>
+              <option value="internal">Chỉ Internal</option>
+              <option value="public">Có thể xuất bản public</option>
+            </select>
+          </label>
           <label className="text-sm font-semibold text-[#1A1A2E]">Tên phiên bản bắt buộc
             <input value={versionName} onChange={(event) => setVersionName(event.target.value)} placeholder="Ví dụ: Cập nhật Đoán vui" className="mt-2 w-full rounded-xl border border-[#D9D9E0] px-3 py-3 font-normal text-[#1A1A2E] outline-none focus:border-[#1A1A2E]" maxLength={120} />
           </label>
+          <label className="text-sm font-semibold text-[#1A1A2E] lg:col-span-2">Ghi chú cập nhật bắt buộc (tối đa 200 ký tự)
+            <textarea value={changeNote} onChange={(event) => setChangeNote(event.target.value)} placeholder="Ví dụ: Bổ sung minh họa và hướng dẫn dùng Check-in." className="mt-2 min-h-20 w-full resize-y rounded-xl border border-[#D9D9E0] px-3 py-3 font-normal text-[#1A1A2E] outline-none focus:border-[#1A1A2E]" maxLength={200} />
+          </label>
         </div>
+
+        {page && <div className="mb-6 rounded-xl border border-[#E0E0E6] bg-[#FAFAFB] px-4 py-3 text-sm text-[#4B4B59]">
+          <p><strong>Trạng thái public:</strong> {page.visibility === 'public' ? (page.publishedVersionId ? `Đã xuất bản${page.publishedAt ? ` · ${new Date(page.publishedAt).toLocaleString('vi-VN')}` : ''}` : 'Chưa có bản public') : 'Chỉ dùng nội bộ'}</p>
+        </div>}
 
         {error && <p role="alert" className="mb-4 rounded-xl bg-[#FFF1F2] px-4 py-3 text-sm text-[#B42318]">{error}</p>}
         {message && <p role="status" className="mb-4 rounded-xl bg-[#F0FDF4] px-4 py-3 text-sm text-[#166534]">{message}</p>}
@@ -199,14 +268,15 @@ export default function WikiEditor() {
             </label>
             <div className="mt-4 flex flex-wrap items-end gap-3">
               <p className="flex-1 text-xs text-[#777784]">File upload chỉ thay nội dung trong editor; bấm “Lưu phiên bản” để lưu server-side.</p>
-              <button type="button" onClick={save} disabled={saving || loading || !page} className="inline-flex items-center gap-2 rounded-xl bg-[#111111] px-5 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"><SaveIcon />{saving ? 'Đang lưu…' : 'Lưu phiên bản'}</button>
+              {page?.visibility === 'public' && <button type="button" onClick={publish} disabled={saving || loading || !page.currentVersionId} className="inline-flex items-center gap-2 rounded-xl border border-[#1A1A2E] px-5 py-3 text-sm font-semibold text-[#1A1A2E] disabled:cursor-not-allowed disabled:opacity-50">Xuất bản public</button>}
+              <button type="button" onClick={save} disabled={saving || loading || !page} className="inline-flex items-center gap-2 rounded-xl bg-[#111111] px-5 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"><SaveIcon />{saving ? 'Đang lưu…' : 'Lưu nháp'}</button>
             </div>
           </section>
 
           {showHistory && <aside className="rounded-2xl border border-[#E0E0E6] bg-[#FAFAFB] p-4 sm:p-5">
             <h2 className="text-lg font-bold text-[#1A1A2E]">Lịch sử phiên bản</h2>
             <p className="mt-1 text-xs text-[#777784]">Giữ tối đa 30 phiên bản mới nhất.</p>
-            {loading ? <p className="mt-5 text-sm text-[#777784]">Đang tải…</p> : history.length === 0 ? <p className="mt-5 text-sm text-[#777784]">Chưa có phiên bản đã lưu.</p> : <ol className="mt-5 space-y-3">{history.map((version) => <li key={version.id} className="rounded-xl border border-[#E0E0E6] bg-white p-3"><div className="flex items-start justify-between gap-2"><div><p className="text-sm font-semibold text-[#1A1A2E]">{version.versionName}</p><p className="mt-1 text-xs text-[#777784]">{new Date(version.createdAt).toLocaleString('vi-VN')}</p></div><button type="button" onClick={() => setSelectedVersion(selectedVersion?.id === version.id ? null : version)} className="inline-flex items-center gap-1 text-xs font-semibold text-[#1A1A2E] underline"><EyeIcon />Xem</button></div>{selectedVersion?.id === version.id && <><pre className="mt-3 max-h-40 overflow-auto whitespace-pre-wrap rounded-lg bg-[#F7F7F9] p-2 text-[11px] leading-5 text-[#4B4B59]">{version.content}</pre><button type="button" onClick={() => restore(version)} className="mt-3 inline-flex items-center gap-2 rounded-lg border border-[#C9C9D2] px-3 py-2 text-xs font-semibold text-[#1A1A2E] hover:bg-[#F7F7F9]"><RollbackIcon />Nạp bản này để rollback</button></>}</li>)}</ol>}
+            {loading ? <p className="mt-5 text-sm text-[#777784]">Đang tải…</p> : history.length === 0 ? <p className="mt-5 text-sm text-[#777784]">Chưa có phiên bản đã lưu.</p> : <ol className="mt-5 space-y-3">{history.map((version) => <li key={version.id} className="rounded-xl border border-[#E0E0E6] bg-white p-3"><div className="flex items-start justify-between gap-2"><div><p className="text-sm font-semibold text-[#1A1A2E]">{version.versionName}</p><p className="mt-1 text-xs text-[#4B4B59]">{version.changeNote || 'Không có ghi chú cập nhật.'}</p><p className="mt-1 text-xs text-[#777784]">{new Date(version.createdAt).toLocaleString('vi-VN')}</p></div><button type="button" onClick={() => setSelectedVersion(selectedVersion?.id === version.id ? null : version)} className="inline-flex items-center gap-1 text-xs font-semibold text-[#1A1A2E] underline"><EyeIcon />Xem</button></div>{selectedVersion?.id === version.id && <><pre className="mt-3 max-h-40 overflow-auto whitespace-pre-wrap rounded-lg bg-[#F7F7F9] p-2 text-[11px] leading-5 text-[#4B4B59]">{version.content}</pre><button type="button" onClick={() => restore(version)} className="mt-3 inline-flex items-center gap-2 rounded-lg border border-[#C9C9D2] px-3 py-2 text-xs font-semibold text-[#1A1A2E] hover:bg-[#F7F7F9]"><RollbackIcon />Nạp bản này để rollback</button></>}</li>)}</ol>}
           </aside>}
         </div>
       </div>
@@ -218,9 +288,9 @@ export default function WikiEditor() {
             <div className="mt-6 flex flex-wrap justify-end gap-2">
               <button type="button" onClick={() => setShowExitPrompt(false)} className="rounded-lg border border-[#D9D9E0] px-4 py-2 text-sm font-semibold text-[#1A1A2E]">Ở lại</button>
               <button type="button" onClick={discardAndExit} className="rounded-lg border border-[#D9D9E0] px-4 py-2 text-sm font-semibold text-[#6B6B80]">Thoát không lưu</button>
-              <button type="button" onClick={saveAndExit} disabled={saving || !versionName.trim()} className="rounded-lg bg-[#111111] px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50">Lưu & thoát</button>
+              <button type="button" onClick={saveAndExit} disabled={saving || !versionName.trim() || !changeNote.trim()} className="rounded-lg bg-[#111111] px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50">Lưu & thoát</button>
             </div>
-            {!versionName.trim() && <p className="mt-3 text-right text-xs text-[#B42318]">Hãy đặt tên phiên bản để lưu trước khi thoát.</p>}
+            {(!versionName.trim() || !changeNote.trim()) && <p className="mt-3 text-right text-xs text-[#B42318]">Hãy đặt tên phiên bản và ghi chú cập nhật trước khi lưu.</p>}
           </div>
         </div>
       )}

@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { NAV_ITEMS, flattenNavItems } from './nav';
+import { getPublishedWikiDocument, getPublicWikiUpdates } from './wiki-content-store';
 
 export type { NavItem } from './nav';
 export { NAV_ITEMS } from './nav';
@@ -12,6 +13,13 @@ export interface WikiPage {
   slug: string;
   title: string;
   content: string;
+}
+
+function updatesPage(updates: Awaited<ReturnType<typeof getPublicWikiUpdates>>): WikiPage {
+  const content = updates.length === 0
+    ? '# Phiên bản cập nhật\n\nChưa có thay đổi nào được xuất bản. Khi có cập nhật, phần này sẽ giải thích ngắn gọn những điều người dùng cần biết.'
+    : `# Phiên bản cập nhật\n\nĐây là các thay đổi đã được xuất bản cho người dùng.\n\n${updates.map((update) => `## ${update.title}\n\n${update.changeNote}\n\n*Cập nhật ${new Date(update.publishedAt).toLocaleDateString('vi-VN')}*`).join('\n\n')}`;
+  return { slug: 'updates', title: 'Phiên bản cập nhật', content };
 }
 
 function extractSection(content: string, heading: string): string {
@@ -47,4 +55,13 @@ export function getWikiPage(slug: string): WikiPage | null {
     title: (data.title as string | undefined) ?? nav.label,
     content: pageContent,
   };
+}
+
+/** Resolves the immutable public snapshot first; Markdown files remain safe baseline content until first publish. */
+export async function getPublishedWikiPage(slug: string): Promise<WikiPage | null> {
+  if (slug === 'updates') return updatesPage(await getPublicWikiUpdates());
+  const baseline = getWikiPage(slug);
+  if (!baseline) return null;
+  const published = await getPublishedWikiDocument(slug);
+  return published ? { slug: published.slug, title: published.title, content: published.content } : baseline;
 }

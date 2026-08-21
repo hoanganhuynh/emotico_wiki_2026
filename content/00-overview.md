@@ -1,40 +1,25 @@
-# Emotico Wiki
+# Bắt đầu với Emotico
 
-> Kênh phòng ngừa & nâng đỡ cảm xúc học đường cấp 1 — AI có kiểm soát, không chẩn đoán, luôn có người trong vòng lặp
+Emotico là nơi giúp học sinh, gia đình, giáo viên và nhà trường hiểu hơn về cảm xúc, thực hành những bước tự chăm sóc nhỏ và tìm đúng người hỗ trợ khi cần.
 
----
+> Emotico dùng AI có kiểm soát để hỗ trợ giao tiếp và gợi ý bước tiếp theo. Emotico **không chẩn đoán**, không thay thế chuyên gia và luôn ưu tiên có người lớn hoặc chuyên môn phù hợp trong những tình huống cần thiết.
 
-## Emotico là gì?
+## “Tầng 1 — phòng ngừa phổ quát” nghĩa là gì?
 
-**Emotico** là hệ sinh thái sản phẩm số chăm sóc sức khỏe tâm thần học đường, gồm ba thành phần phục vụ ba nhóm người dùng riêng biệt:
+“Tầng 1” không nói về lớp học. Đây là mức hỗ trợ dành cho mọi học sinh: học cách nhận biết cảm xúc, thực hành chăm sóc bản thân và tìm hỗ trợ sớm. Khi một bạn cần nhiều hỗ trợ hơn, Emotico không tự xử lý mà hướng bạn đến người lớn tin cậy, cán bộ tư vấn hoặc dịch vụ chuyên môn.
 
-| Sản phẩm | Người dùng | Vai trò |
-|---|---|---|
-| **App Emotico** | Học sinh 7–18 tuổi | Người bạn nâng đỡ cảm xúc — ghi nhận, phân tích, hỗ trợ tự điều chỉnh |
-| **Web Chatbot** | Giáo viên & Phụ huynh | Đồng hành — gợi ý phương án tâm sự, tiếp cận và hỗ trợ học sinh |
-| **Admin Dashboard** | Nhà trường | Theo dõi chỉ số sức khỏe cảm xúc toàn trường, can thiệp kịp thời |
+![Sơ đồ ba tầng hỗ trợ cảm xúc học đường: Emotico ở tầng phòng ngừa phổ quát; các tầng tiếp theo là tư vấn học đường và chuyên gia hoặc cơ sở y tế.](/tang-ho-tro-cam-xuc.svg)
 
-Emotico dùng AI để nâng đỡ cảm xúc — không để chẩn đoán, không để thay thế chuyên gia. Trong mọi tình huống chạm đến an toàn, hệ thống ưu tiên kết nối đến chuyên gia thật thay vì tự xử lý.
+*Minh họa: Emotico hoạt động ở Tầng 1 và không thay thế hỗ trợ ở Tầng 2 hoặc Tầng 3.*
 
-| | |
-|---|---|
-| 🎓 **40.000 học sinh** | Mục tiêu Năm 1 |
-| 🏫 **30 trường học** | Pilot tại TP.HCM |
-| 🤝 **AI có giới hạn** | Nâng đỡ cảm xúc, không chẩn đoán |
-| 🐯 **eMascot Hổ Gin** | Người bạn đồng hành |
+## Bạn có thể tìm gì ở đây?
 
----
+| Nếu bạn là… | Bạn có thể xem… |
+| --- | --- |
+| Học sinh | Cách check-in cảm xúc, tìm từ phù hợp và thử bài tập ngắn. |
+| Phụ huynh hoặc giáo viên | Cách bắt đầu một cuộc trò chuyện và tìm hỗ trợ an toàn cho học sinh. |
+| Nhà trường | Cách sử dụng các thông tin tổng hợp để nâng đỡ học sinh, không theo dõi từng em. |
 
-## Ba trụ cột cốt lõi (App học sinh)
+## Khi cần giúp ngay
 
-| Trụ cột | Tính năng | Mục tiêu |
-|---|---|---|
-| **1. Check-in Cảm xúc** | Hệ thống Blended Cảm xúc + eMascot Gin | Gọi đúng tên cảm xúc và nhận diện các tác nhân ảnh hưởng |
-| **2. Trắc nghiệm Tâm lý** | Phân tầng theo độ tuổi & chỉ định chuyên gia | Nhận diện các vấn đề của bản thân trong giới hạn an toàn |
-| **3. Bài tập CBT & Mẹo vặt** | Cá nhân hóa theo cảm xúc & kết quả trắc nghiệm | Kỹ thuật điều hòa cảm xúc đã được kiểm chứng khoa học |
-
-## Quiz mới: Wellness
-
-Wellness là nội dung Quiz mới của Emotico, giúp học sinh tự nhìn lại bảy nhóm sức khỏe toàn diện: **Thể chất & Nhịp sống · Cảm xúc & Nội lực · Học tập & Tư duy · Kết nối & Quan hệ · Đời sống số · Bản sắc & Định hướng · Nguồn lực & Môi trường sống**.
-
-Đây là công cụ tự khám phá và phòng ngừa, **không chẩn đoán, không xếp hạng và không thay thế chuyên gia**. Wellness đang ở giai đoạn draft/pilot; chỉ các mô tả cốt lõi, an toàn và pháp lý được công khai trên wiki.
+Nếu bạn hoặc một học sinh đang có nguy cơ mất an toàn, hãy liên hệ ngay với người lớn tin cậy, cán bộ tư vấn, cơ sở y tế hoặc dịch vụ khẩn cấp tại nơi bạn sống. Emotico không phải là dịch vụ cấp cứu.

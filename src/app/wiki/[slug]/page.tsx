@@ -1,4 +1,4 @@
-import { getWikiPage, NAV_ITEMS } from '@/lib/wiki';
+import { getPublishedWikiPage, NAV_ITEMS } from '@/lib/wiki';
 import { flattenNavItems } from '@/lib/nav';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -9,19 +9,21 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams() {
   return flattenNavItems(NAV_ITEMS).filter((n) => n.slug !== '').map((n) => ({ slug: n.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const page = getWikiPage(slug);
+  const page = await getPublishedWikiPage(slug);
   return { title: page ? `${page.title} — Emotico` : 'Emotico' };
 }
 
 export default async function WikiPage({ params }: Props) {
   const { slug } = await params;
-  const page = getWikiPage(slug);
+  const page = await getPublishedWikiPage(slug);
   if (!page) notFound();
 
   return (

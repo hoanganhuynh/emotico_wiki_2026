@@ -1,10 +1,12 @@
-import { getWikiPage } from '@/lib/wiki';
+import { getPublishedWikiPage } from '@/lib/wiki';
 import { notFound } from 'next/navigation';
 import MarkdownContent from '@/components/markdown-content';
 import WikiTOC from '@/components/wiki-toc';
 
-export default function WikiHomePage() {
-  const page = getWikiPage('');
+export const dynamic = 'force-dynamic';
+
+export default async function WikiHomePage() {
+  const page = await getPublishedWikiPage('');
   if (!page) notFound();
 
   return (

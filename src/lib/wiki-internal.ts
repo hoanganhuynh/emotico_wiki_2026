@@ -7,7 +7,8 @@ import { getCurrentWikiDocument } from './wiki-content-store';
 export type { NavItem } from './nav';
 export { NAV_INTERNAL_ITEMS } from './nav';
 
-const CONTENT_DIR = path.join(process.cwd(), 'content-internal');
+const INTERNAL_CONTENT_DIR = path.join(process.cwd(), 'content-internal');
+const PUBLIC_CONTENT_DIR = path.join(process.cwd(), 'content');
 
 export interface WikiPage {
   slug: string;
@@ -32,7 +33,7 @@ export function getInternalWikiPage(slug: string): WikiPage | null {
   const nav = flattenNavItems(NAV_INTERNAL_ITEMS).find((n) => n.slug === slug);
   if (!nav) return null;
 
-  const filePath = path.join(CONTENT_DIR, nav.file);
+  const filePath = path.join(nav.visibility === 'public' ? PUBLIC_CONTENT_DIR : INTERNAL_CONTENT_DIR, nav.file);
   if (!fs.existsSync(filePath)) return null;
 
   const raw = fs.readFileSync(filePath, 'utf8');
