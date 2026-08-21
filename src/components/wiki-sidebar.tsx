@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { NAV_ITEMS, type NavItem } from '@/lib/nav';
+import type { Heading } from '@/lib/toc-context';
 import * as Icons from 'iconsax-react';
 
 interface WikiSidebarProps {
@@ -11,6 +12,7 @@ interface WikiSidebarProps {
   navItems?: NavItem[];
   basePath?: string;
   theme?: 'light' | 'dark';
+  tocItems?: Heading[];
 }
 
 export default function WikiSidebar({
@@ -19,6 +21,7 @@ export default function WikiSidebar({
   navItems = NAV_ITEMS,
   basePath = '/wiki',
   theme = 'light',
+  tocItems = [],
 }: WikiSidebarProps) {
   const pathname = usePathname();
   const dark = theme === 'dark';
@@ -121,6 +124,31 @@ export default function WikiSidebar({
     </nav>
   );
 
+  const mobileToc = tocItems.length > 0 && (
+    <div className={`border-b px-4 py-2 ${sidebarBorder}`}>
+      <details>
+        <summary className={`flex h-10 cursor-pointer items-center text-sm font-medium ${dark ? 'text-[#E6E6E6]' : 'text-[#1A1A2E]'}`}>
+          Mục lục trang
+        </summary>
+        <nav aria-label="Mục lục trang" className="pb-2">
+          <ul className="space-y-0.5">
+            {tocItems.map((heading) => (
+              <li key={heading.id}>
+                <a
+                  href={`#${heading.id}`}
+                  onClick={onClose}
+                  className={`block rounded-md py-1.5 text-xs leading-snug no-underline transition-colors ${heading.level === 3 ? 'pl-3' : ''} ${dark ? 'text-[#A3A3A3] hover:bg-[#222222] hover:text-white' : 'text-[#6B6B80] hover:bg-white hover:text-[#1A1A2E]'}`}
+                >
+                  {heading.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </details>
+    </div>
+  );
+
   return (
     <>
       {/* Desktop sidebar */}
@@ -146,6 +174,7 @@ export default function WikiSidebar({
                 </svg>
               </button>
             </div>
+            {mobileToc}
             {navContent}
             {switchBanner}
           </aside>

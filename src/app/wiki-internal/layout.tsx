@@ -14,26 +14,17 @@ function MobileNavControls({
   onOpenSidebar: () => void;
   sidebarOpen: boolean;
 }) {
-  const [tocOpen, setTocOpen] = useState(false);
-  const { headings } = useTOC();
   const [mounted, setMounted] = useState(false);
   const menuToggleRef = useRef<HTMLButtonElement>(null);
-  const tocToggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    if (!sidebarOpen && !tocOpen) return;
+    if (!sidebarOpen) return;
 
     const closeWithEscape = (event: KeyboardEvent) => {
       if (event.key !== 'Escape') return;
       event.preventDefault();
-
-      if (tocOpen) {
-        setTocOpen(false);
-        window.setTimeout(() => tocToggleRef.current?.focus(), 0);
-        return;
-      }
 
       onOpenSidebar();
       window.setTimeout(() => menuToggleRef.current?.focus(), 0);
@@ -41,7 +32,7 @@ function MobileNavControls({
 
     window.addEventListener('keydown', closeWithEscape);
     return () => window.removeEventListener('keydown', closeWithEscape);
-  }, [onOpenSidebar, sidebarOpen, tocOpen]);
+  }, [onOpenSidebar, sidebarOpen]);
 
   if (!mounted) return null;
 
@@ -49,7 +40,7 @@ function MobileNavControls({
   if (!header) return null;
 
   return createPortal(
-    <div className="absolute left-2 top-1/2 z-10 flex -translate-y-1/2 items-center gap-1 md:hidden">
+    <div className="absolute left-2 top-1/2 z-10 -translate-y-1/2 md:hidden">
       <button
         ref={menuToggleRef}
         type="button"
@@ -71,59 +62,6 @@ function MobileNavControls({
         )}
       </button>
 
-      {headings.length > 0 && (
-        <div className="relative">
-          <button
-            ref={tocToggleRef}
-            type="button"
-            onClick={() => setTocOpen(o => !o)}
-            className="flex h-11 items-center gap-1.5 rounded-lg border border-[#333333] px-3 text-sm text-[#888888] transition-colors hover:bg-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#FFB223] focus:ring-offset-2 focus:ring-offset-[#111111]"
-            aria-expanded={tocOpen}
-            aria-controls="wiki-mobile-toc"
-          >
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M1 3h12M1 7h8M1 11h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-            </svg>
-            Mục lục
-            <svg
-              width="12" height="12" viewBox="0 0 12 12" fill="none"
-              className={`transition-transform ${tocOpen ? 'rotate-180' : ''}`}
-            >
-              <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </button>
-
-          {tocOpen && (
-            <>
-              <div className="fixed inset-0 z-10" onClick={() => setTocOpen(false)} />
-              <div id="wiki-mobile-toc" className="fixed left-0 right-0 top-16 z-20 border-b border-[#333333] bg-[#111111] px-5 py-4 shadow-lg">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#9B9B9B]">Mục lục</p>
-                <ul className="space-y-0.5">
-                  {headings.map((h) => (
-                    <li key={h.id}>
-                      <a
-                        href={`#${h.id}`}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          document.getElementById(h.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                          setTocOpen(false);
-                        }}
-                        className={[
-                          'block py-2 text-sm leading-snug text-[#E6E6E6] no-underline transition-colors hover:text-[#FFB223]',
-                          h.level === 3 ? 'pl-4 text-[#A3A3A3]' : 'font-medium',
-                        ].join(' ')}
-                      >
-                        {h.text}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </>
-          )}
-        </div>
-      )}
-
     </div>,
     header,
   );
@@ -131,6 +69,7 @@ function MobileNavControls({
 
 function WikiInternalLayoutInner({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { headings } = useTOC();
 
   return (
     <div className="flex flex-1 overflow-hidden">
@@ -140,6 +79,7 @@ function WikiInternalLayoutInner({ children }: { children: React.ReactNode }) {
         navItems={NAV_INTERNAL_ITEMS}
         basePath="/wiki-internal"
         theme="dark"
+        tocItems={headings}
       />
       <MobileNavControls onOpenSidebar={() => setSidebarOpen(o => !o)} sidebarOpen={sidebarOpen} />
       <main className="flex min-w-0 flex-1 overflow-hidden bg-white pb-36 md:pb-0">
