@@ -83,7 +83,7 @@ export default function WikiSidebar({
           return (
             <li key={item.slug}>
               {showSection && (
-                <p className={`px-3 pt-5 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] ${labelColor}`}>
+                <p className={`px-3 pt-4 pb-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] ${labelColor}`}>
                   {item.section}
                 </p>
               )}

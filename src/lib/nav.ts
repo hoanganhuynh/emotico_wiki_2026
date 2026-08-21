@@ -55,29 +55,29 @@ export function flattenNavItems(items: NavItem[]): NavItem[] {
 
 /** Public wiki sidebar — no auth required */
 export const NAV_ITEMS: NavItem[] = [
-  { slug: '',                    label: 'Bắt đầu với Emotico',      file: '00-overview.md',          icon: 'Home2',       section: 'Bắt đầu', category: 'Sản phẩm & nội dung', visibility: 'public' },
-  { slug: '01-product-overview', label: 'Emotico đồng hành cùng ai?', file: '01-product-overview.md', icon: 'Box1',        section: 'Bắt đầu', category: 'Sản phẩm & nội dung', visibility: 'public' },
-  { slug: '02-features',         label: 'Tính năng',                 file: '02-features.md',         icon: 'Star1',       section: 'Tính năng', category: 'Sản phẩm & nội dung', visibility: 'public', children: FEATURE_CHILDREN },
-  { slug: '09-chatbot-ai',       label: 'Chatbot cho người lớn',     file: '09-chatbot-ai.md',       icon: 'MessageText', section: 'Tính năng', category: 'Sản phẩm & nội dung', visibility: 'public' },
-  { slug: '04-security',         label: 'An toàn & quyền riêng tư', file: '04-security.md',       icon: 'Shield',      section: 'An toàn & bằng chứng', category: 'Nghiên cứu, pháp lý & an toàn', visibility: 'public' },
-  { slug: '10-impact-model',     label: 'Cơ sở khoa học & pháp lý', file: '10-impact-model.md',     icon: 'Buildings2',  section: 'An toàn & bằng chứng', category: 'Nghiên cứu, pháp lý & an toàn', visibility: 'public' },
-  { slug: 'updates',             label: 'Phiên bản cập nhật',       file: '11-updates.md',          icon: 'Clock',       section: 'An toàn & bằng chứng', category: 'Tài nguyên & lịch sử', visibility: 'public' },
+  { slug: '',                    label: 'Bắt đầu',                  file: '00-overview.md',          icon: 'Home2',       section: 'Khám phá', category: 'Sản phẩm & nội dung', visibility: 'public' },
+  { slug: '01-product-overview', label: 'Dành cho ai?',              file: '01-product-overview.md', icon: 'Box1',        section: 'Khám phá', category: 'Sản phẩm & nội dung', visibility: 'public' },
+  { slug: '02-features',         label: 'Tính năng',                 file: '02-features.md',         icon: 'Star1',       section: 'Khám phá', category: 'Sản phẩm & nội dung', visibility: 'public', children: FEATURE_CHILDREN },
+  { slug: '09-chatbot-ai',       label: 'Chatbot',                   file: '09-chatbot-ai.md',       icon: 'MessageText', section: 'Khám phá', category: 'Sản phẩm & nội dung', visibility: 'public' },
+  { slug: '04-security',         label: 'An toàn & riêng tư',       file: '04-security.md',         icon: 'Shield',      section: 'Tin cậy', category: 'Nghiên cứu, pháp lý & an toàn', visibility: 'public' },
+  { slug: '10-impact-model',     label: 'Cơ sở khoa học',           file: '10-impact-model.md',     icon: 'Buildings2',  section: 'Tin cậy', category: 'Nghiên cứu, pháp lý & an toàn', visibility: 'public' },
+  { slug: 'updates',             label: 'Cập nhật',                 file: '11-updates.md',          icon: 'Clock',       section: 'Tin cậy', category: 'Tài nguyên & lịch sử', visibility: 'public' },
 ];
 
 /** Internal wiki sidebar — requires login; superset of NAV_ITEMS */
 export const NAV_INTERNAL_ITEMS: NavItem[] = [
   // === Tài liệu công khai (mirror of /wiki) ===
-  { slug: '',                    label: 'Bắt đầu với Emotico',      file: '00-overview.md',          icon: 'Home2',       section: 'Sản phẩm & nội dung', category: 'Sản phẩm & nội dung', visibility: 'public' },
-  { slug: '01-product-overview', label: 'Emotico đồng hành cùng ai?', file: '01-product-overview.md', icon: 'Box1',        section: 'Sản phẩm & nội dung', category: 'Sản phẩm & nội dung', visibility: 'public' },
-  { slug: '02-features',         label: 'Tính năng',                 file: '02-features.md',         icon: 'Star1',       section: 'Sản phẩm & nội dung', category: 'Sản phẩm & nội dung', visibility: 'public', children: FEATURE_CHILDREN },
-  { slug: '09-chatbot-ai',       label: 'Chatbot cho người lớn',     file: '09-chatbot-ai.md',       icon: 'MessageText', section: 'Sản phẩm & nội dung', category: 'Sản phẩm & nội dung', visibility: 'public' },
-  { slug: '04-security',         label: 'An toàn & quyền riêng tư', file: '04-security.md',         icon: 'Shield',      section: 'Nghiên cứu, pháp lý & an toàn', category: 'Nghiên cứu, pháp lý & an toàn', visibility: 'public' },
-  { slug: '10-impact-model',     label: 'Cơ sở khoa học & pháp lý', file: '10-impact-model.md',     icon: 'Buildings2',  section: 'Nghiên cứu, pháp lý & an toàn', category: 'Nghiên cứu, pháp lý & an toàn', visibility: 'public' },
+  { slug: '',                    label: 'Bắt đầu',                  file: '00-overview.md',          icon: 'Home2',       section: 'Wiki public', category: 'Sản phẩm & nội dung', visibility: 'public' },
+  { slug: '01-product-overview', label: 'Dành cho ai?',              file: '01-product-overview.md', icon: 'Box1',        section: 'Wiki public', category: 'Sản phẩm & nội dung', visibility: 'public' },
+  { slug: '02-features',         label: 'Tính năng',                 file: '02-features.md',         icon: 'Star1',       section: 'Wiki public', category: 'Sản phẩm & nội dung', visibility: 'public', children: FEATURE_CHILDREN },
+  { slug: '09-chatbot-ai',       label: 'Chatbot',                   file: '09-chatbot-ai.md',       icon: 'MessageText', section: 'Wiki public', category: 'Sản phẩm & nội dung', visibility: 'public' },
+  { slug: '04-security',         label: 'An toàn & riêng tư',       file: '04-security.md',         icon: 'Shield',      section: 'Wiki public', category: 'Nghiên cứu, pháp lý & an toàn', visibility: 'public' },
+  { slug: '10-impact-model',     label: 'Cơ sở khoa học',           file: '10-impact-model.md',     icon: 'Buildings2',  section: 'Wiki public', category: 'Nghiên cứu, pháp lý & an toàn', visibility: 'public' },
   // === Tài liệu nội bộ ===
-  { slug: '03-architecture',     label: 'Kiến trúc kỹ thuật',       file: '03-architecture.md',     icon: 'Cpu',        section: 'Phát triển sản phẩm', category: 'Phát triển sản phẩm', visibility: 'internal' },
-  { slug: '05-business-model',   label: 'Mô hình kinh doanh',       file: '05-business-model.md',   icon: 'Chart21',    section: 'Kinh doanh', category: 'Kinh doanh', visibility: 'internal' },
-  { slug: '06-roadmap',          label: 'Lộ trình sản phẩm',        file: '06-roadmap.md',          icon: 'Map1',       section: 'Phát triển sản phẩm', category: 'Phát triển sản phẩm', visibility: 'internal' },
-  { slug: '07-dev-guide',        label: 'Hướng dẫn phát triển',     file: '07-dev-guide.md',        icon: 'Code',       section: 'Phát triển sản phẩm', category: 'Phát triển sản phẩm', visibility: 'internal' },
-  { slug: '08-school-admin',     label: 'Vận hành nhà trường',      file: '08-school-admin.md',     icon: 'Teacher',    section: 'Vận hành', category: 'Vận hành', visibility: 'internal' },
-  { slug: '11-content-standards', label: 'Chuẩn nội dung & tài nguyên', file: '11-content-standards.md', icon: 'FolderOpen', section: 'Tài nguyên & lịch sử', category: 'Tài nguyên & lịch sử', visibility: 'internal' },
+  { slug: '08-school-admin',     label: 'Nhà trường',               file: '08-school-admin.md',     icon: 'Teacher',    section: 'Vận hành & phát triển', category: 'Vận hành', visibility: 'internal' },
+  { slug: '03-architecture',     label: 'Kiến trúc',                file: '03-architecture.md',     icon: 'Cpu',        section: 'Vận hành & phát triển', category: 'Phát triển sản phẩm', visibility: 'internal' },
+  { slug: '06-roadmap',          label: 'Lộ trình',                 file: '06-roadmap.md',          icon: 'Map1',       section: 'Vận hành & phát triển', category: 'Phát triển sản phẩm', visibility: 'internal' },
+  { slug: '07-dev-guide',        label: 'Hướng dẫn dev',            file: '07-dev-guide.md',        icon: 'Code',       section: 'Vận hành & phát triển', category: 'Phát triển sản phẩm', visibility: 'internal' },
+  { slug: '05-business-model',   label: 'Kinh doanh',               file: '05-business-model.md',   icon: 'Chart21',    section: 'Kế hoạch & tài nguyên', category: 'Kinh doanh', visibility: 'internal' },
+  { slug: '11-content-standards', label: 'Chuẩn nội dung',          file: '11-content-standards.md', icon: 'FolderOpen', section: 'Kế hoạch & tài nguyên', category: 'Tài nguyên & lịch sử', visibility: 'internal' },
 ];
