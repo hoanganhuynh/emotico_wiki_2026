@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="support-title" aria-describedby="support-desc" lang="vi">
+  <title id="support-title">Minh họa Danh bạ hỗ trợ</title><desc id="support-desc">Một lộ trình từ nhu cầu đến người lớn tin cậy, tư vấn học đường và nguồn lực chuyên môn phù hợp.</desc>
+  <rect width="960" height="360" rx="28" fill="#F7F7F9"/>
+  <text x="56" y="64" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">Tìm đúng nguồn lực cho đúng nhu cầu</text>
+  <text x="56" y="92" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Danh bạ hỗ trợ giúp người lớn và học sinh biết có thể kết nối với ai tiếp theo.</text>
+  <g font-family="Arial, sans-serif"><rect x="56" y="142" width="230" height="132" rx="22" fill="#FFFFFF" stroke="#E0E0E6" stroke-width="2"/><text x="86" y="184" font-size="15" font-weight="700" fill="#6B6B80">BƯỚC 1</text><text x="86" y="217" font-size="22" font-weight="700" fill="#1A1A2E">Xác định nhu cầu</text><text x="86" y="245" font-size="15" fill="#4B4B59">Các em đang cần điều gì?</text>
+  <path d="M303 208h90" stroke="#1A1A2E" stroke-width="3"/><path d="m379 196 14 12-14 12" fill="none" stroke="#1A1A2E" stroke-width="3"/>
+  <rect x="412" y="122" width="224" height="66" rx="20" fill="#FFF1CC"/><text x="444" y="162" font-size="18" font-weight="700" fill="#1A1A2E">Người lớn tin cậy</text><rect x="412" y="204" width="224" height="66" rx="20" fill="#E8F4FF"/><text x="444" y="244" font-size="18" font-weight="700" fill="#1A1A2E">Tư vấn học đường</text>
+  <path d="M654 155h58M654 237h58" stroke="#1A1A2E" stroke-width="3"/><path d="m698 143 14 12-14 12m0 58 14 12-14 12" fill="none" stroke="#1A1A2E" stroke-width="3"/>
+  <rect x="732" y="164" width="172" height="76" rx="22" fill="#1A1A2E"/><text x="818" y="195" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">Nguồn lực</text><text x="818" y="219" text-anchor="middle" font-size="16" fill="#FFFFFF">chuyên môn</text></g>
+</svg>

@@ -12,7 +12,7 @@ Giáo viên và Phụ huynh có thể trao đổi với Chatbot về cách mở 
 2. Đọc các gợi ý để chuẩn bị cho cuộc trò chuyện trực tiếp, cân nhắc chúng cùng với hiểu biết của người lớn về bối cảnh của em.
 3. Chọn bước tiếp theo: trò chuyện với học sinh, phối hợp cùng Nhà trường hoặc kết nối với người có chuyên môn.
 
-![Sơ đồ ba bước dùng chatbot: nêu tình huống, nhận gợi ý trao đổi, tìm hỗ trợ chuyên môn khi cần.](/huong-dan-tinh-nang.svg)
+![Hội thoại minh họa Giáo viên hoặc Phụ huynh dùng chatbot để chuẩn bị cách mở đầu cuộc trò chuyện với học sinh.](/chatbot-nguoi-lon.svg)
 
 *Minh họa: Chatbot hỗ trợ người lớn chuẩn bị cuộc trò chuyện và lựa chọn cách đồng hành phù hợp với học sinh.*
 

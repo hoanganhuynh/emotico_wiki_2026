@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="cbt-title" aria-describedby="cbt-desc" lang="vi">
+  <title id="cbt-title">Minh họa bài tập CBT</title><desc id="cbt-desc">Ba thẻ liên kết tình huống, suy nghĩ và bước nhỏ, minh họa một bài thực hành giúp học sinh quan sát trải nghiệm của mình.</desc>
+  <rect width="960" height="360" rx="28" fill="#F7F7F9"/>
+  <text x="56" y="64" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">Quan sát, gọi tên, rồi thử một bước nhỏ</text>
+  <text x="56" y="92" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Các bài thực hành giúp học sinh thấy mối liên hệ giữa điều xảy ra, suy nghĩ và hành động.</text>
+  <g font-family="Arial, sans-serif"><rect x="56" y="140" width="232" height="142" rx="22" fill="#FFFFFF" stroke="#E0E0E6" stroke-width="2"/><circle cx="92" cy="179" r="19" fill="#E8F4FF"/><path d="M83 179h18M92 170v18" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/><text x="82" y="224" font-size="19" font-weight="700" fill="#1A1A2E">Tình huống</text><text x="82" y="252" font-size="15" fill="#4B4B59">“Em sắp thuyết trình.”</text>
+  <path d="M307 211h68" stroke="#1A1A2E" stroke-width="3"/><path d="m361 199 14 12-14 12" fill="none" stroke="#1A1A2E" stroke-width="3"/>
+  <rect x="394" y="140" width="232" height="142" rx="22" fill="#FFF1CC" stroke="#E7C767" stroke-width="2"/><circle cx="430" cy="179" r="19" fill="#FFB223"/><path d="M421 183c5-8 13-8 18 0M421 174h1m16 0h1" fill="none" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/><text x="420" y="224" font-size="19" font-weight="700" fill="#1A1A2E">Suy nghĩ</text><text x="420" y="252" font-size="15" fill="#4B4B59">“Mình sẽ làm chưa tốt.”</text>
+  <path d="M645 211h68" stroke="#1A1A2E" stroke-width="3"/><path d="m699 199 14 12-14 12" fill="none" stroke="#1A1A2E" stroke-width="3"/>
+  <rect x="732" y="140" width="172" height="142" rx="22" fill="#E9F8EE" stroke="#8FD2A9" stroke-width="2"/><circle cx="768" cy="179" r="19" fill="#43B86B"/><path d="m759 179 6 6 12-14" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="758" y="224" font-size="19" font-weight="700" fill="#1A1A2E">Bước nhỏ</text><text x="758" y="252" font-size="15" fill="#4B4B59">Thở chậm 3 lần.</text></g>
+</svg>

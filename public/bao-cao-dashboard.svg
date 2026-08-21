@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="dashboard-title" aria-describedby="dashboard-desc" lang="vi">
+  <title id="dashboard-title">Minh họa Báo cáo và Dashboard</title><desc id="dashboard-desc">Một bảng thông tin tổng hợp theo chủ đề, minh họa cách Nhà trường nhận biết các nhu cầu chung của cộng đồng học đường.</desc>
+  <rect width="960" height="360" rx="28" fill="#F7F7F9"/>
+  <text x="56" y="64" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">Nhìn vào chủ đề chung của cộng đồng</text>
+  <text x="56" y="92" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Thông tin tổng hợp giúp Nhà trường lựa chọn hoạt động nâng đỡ phù hợp.</text>
+  <rect x="56" y="126" width="848" height="178" rx="24" fill="#FFFFFF" stroke="#E0E0E6" stroke-width="2"/>
+  <rect x="82" y="150" width="164" height="126" rx="16" fill="#FFF1CC"/><text x="106" y="181" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#9A5A00">CHỦ ĐỀ CẦN LƯU Ý</text><text x="106" y="218" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A2E">Nghỉ ngơi</text><text x="106" y="246" font-family="Arial, sans-serif" font-size="14" fill="#4B4B59">trong tuần này</text>
+  <text x="286" y="160" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#6B6B80">CÁC CHỦ ĐỀ ĐƯỢC NHẮC TỚI</text>
+  <g><text x="286" y="202" font-family="Arial, sans-serif" font-size="16" fill="#1A1A2E">Nghỉ ngơi</text><rect x="408" y="187" width="364" height="18" rx="9" fill="#F0F0F3"/><rect x="408" y="187" width="292" height="18" rx="9" fill="#FFB223"/><text x="800" y="202" font-family="Arial, sans-serif" font-size="14" fill="#5E5E70">Ưu tiên</text><text x="286" y="242" font-family="Arial, sans-serif" font-size="16" fill="#1A1A2E">Áp lực học tập</text><rect x="408" y="227" width="364" height="18" rx="9" fill="#F0F0F3"/><rect x="408" y="227" width="216" height="18" rx="9" fill="#23AEFF"/><text x="800" y="242" font-family="Arial, sans-serif" font-size="14" fill="#5E5E70">Theo dõi</text></g>
+</svg>

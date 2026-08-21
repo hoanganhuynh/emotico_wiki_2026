@@ -16,7 +16,7 @@ Sau một lần check-in, Emotico có thể đề xuất một bài thực hành
 
 Lịch sử giúp học sinh nhìn lại các lần check-in theo một khoảng thời gian do các em lựa chọn. Qua đó, các em có thể nhận ra những điều thường đem lại năng lượng, gây áp lực hoặc khiến mình cần nghỉ ngơi nhiều hơn. Với Phụ huynh và Giáo viên, đây là cơ sở để lắng nghe điều học sinh muốn kể thay vì bắt đầu từ một phán đoán có sẵn.
 
-![Sơ đồ ba bước xem lại một tính năng: chọn, thực hiện hướng dẫn, xem bước tiếp theo.](/huong-dan-tinh-nang.svg)
+![Biểu đồ minh họa các lần check-in theo thời gian, giúp học sinh nhìn lại xu hướng cảm xúc của mình.](/lich-su-cam-xuc.svg)
 
 *Minh họa: xem lại theo từng giai đoạn giúp học sinh nhận ra chủ đề cần quan tâm và chọn một bước chăm sóc tiếp theo.*
 
@@ -26,7 +26,7 @@ Từ điển Cảm xúc giải thích các từ chỉ cảm xúc bằng ví dụ
 
 Phụ huynh và Giáo viên cũng có thể dùng từ điển như một ngôn ngữ chung khi trò chuyện, nhất là khi học sinh chưa biết diễn đạt điều mình đang cảm thấy.
 
-![Sơ đồ ba bước dùng từ điển cảm xúc: chọn từ, đọc giải thích, chọn bước tiếp theo.](/huong-dan-tinh-nang.svg)
+![Thẻ từ điển cảm xúc với định nghĩa, ví dụ và các từ gần nghĩa.](/tu-dien-cam-xuc.svg)
 
 *Minh họa: từ điển giúp học sinh gọi tên cảm xúc và tìm ra cách diễn đạt phù hợp.*
 
@@ -36,7 +36,7 @@ Wellness Quiz mời học sinh suy ngẫm về những phần quen thuộc của
 
 Nhà trường và gia đình có thể xem đây là một hoạt động phòng ngừa: nhẹ nhàng, có cấu trúc và đủ gần gũi để học sinh chủ động tham gia.
 
-![Sơ đồ ba bước làm Wellness: chọn chủ đề, trả lời theo trải nghiệm, xem gợi ý hỗ trợ.](/huong-dan-tinh-nang.svg)
+![Bốn mảng Wellness gồm nghỉ ngơi, học tập, mối quan hệ và đời sống số.](/wellness-quiz.svg)
 
 *Minh họa: học sinh khám phá một chủ đề, trả lời theo trải nghiệm và xem gợi ý cho bước tiếp theo.*
 
@@ -46,7 +46,7 @@ Nhà trường và gia đình có thể xem đây là một hoạt động phòn
 
 Hoạt động này không yêu cầu chuyên gia giám sát để tham gia. Nhà trường và gia đình có thể xem đây là một trải nghiệm khởi đầu, từ đó lắng nghe điều học sinh muốn chia sẻ và ghi nhận những góc nhỏ làm nên bản thân các em.
 
-![Sơ đồ ba bước dùng bài Đoán vui: chọn bài, trả lời, xem kết quả khám phá sở thích và thói quen.](/huong-dan-tinh-nang.svg)
+![Hai thẻ Đoán vui minh họa câu hỏi khám phá sở thích và lựa chọn gần gũi với học sinh.](/doan-vui.svg)
 
 *Minh họa: một bài Đoán vui ngắn có thể mở đầu cho cuộc trò chuyện gần gũi về sở thích và trải nghiệm của học sinh.*
 
@@ -56,7 +56,7 @@ CBT là tên viết tắt của một nhóm bài thực hành giúp nhận biế
 
 Các bài tập giúp các em tích lũy kỹ năng tự điều chỉnh trong những tình huống thường ngày. Khi một trải nghiệm kéo dài hoặc cần được quan tâm sâu hơn, người lớn có thể cùng học sinh trao đổi và kết nối với nguồn lực chuyên môn phù hợp.
 
-![Sơ đồ ba bước thực hành bài tập ngắn: chọn bài, làm theo hướng dẫn, tìm hỗ trợ nếu cần.](/huong-dan-tinh-nang.svg)
+![Ba thẻ liên kết tình huống, suy nghĩ và một bước thực hành nhỏ trong bài tập CBT.](/bai-tap-cbt.svg)
 
 *Minh họa: học sinh chọn bài thực hành, làm theo hướng dẫn và suy ngẫm về bước nào hữu ích cho mình.*
 
@@ -66,7 +66,7 @@ Hồ sơ giúp học sinh quản lý những nội dung đã lưu; Danh bạ H�
 
 Phụ huynh và Giáo viên nên cùng học sinh kiểm tra thông tin liên hệ trước khi kết nối. Trong tình huống khẩn cấp, ưu tiên liên hệ dịch vụ khẩn cấp hoặc cơ sở y tế tại địa phương.
 
-![Sơ đồ ba bước tìm hỗ trợ: chọn nhu cầu, xem nguồn phù hợp, liên hệ người lớn hoặc chuyên gia.](/huong-dan-tinh-nang.svg)
+![Lộ trình từ việc xác định nhu cầu đến người lớn tin cậy, tư vấn học đường và nguồn lực chuyên môn.](/danh-ba-ho-tro.svg)
 
 *Minh họa: học sinh và người lớn xác định nhu cầu, tìm nguồn lực phù hợp và thực hiện bước kết nối tiếp theo.*
 
@@ -76,7 +76,7 @@ Báo cáo và dashboard cho Nhà trường góc nhìn tổng hợp về những 
 
 Thông tin tổng hợp được thiết kế để hỗ trợ việc ra quyết định chăm sóc ở cấp cộng đồng, kết hợp cùng quan sát thực tế và chuyên môn của đội ngũ Nhà trường.
 
-![Sơ đồ ba bước dùng thông tin tổng hợp: xem chủ đề, trao đổi với người phụ trách, chuẩn bị hỗ trợ phù hợp.](/huong-dan-tinh-nang.svg)
+![Dashboard minh họa các chủ đề chung mà Nhà trường có thể ưu tiên quan tâm.](/bao-cao-dashboard.svg)
 
 *Minh họa: Nhà trường xem chủ đề chung, trao đổi với đội ngũ phụ trách và chuẩn bị hoạt động nâng đỡ phù hợp.*
 
@@ -86,6 +86,6 @@ Web Chatbot hỗ trợ người lớn chuẩn bị cho một cuộc trò chuyệ
 
 Khi xuất hiện dấu hiệu cần quan tâm sâu hơn, Chatbot giúp người lớn xác định bước kết nối tiếp theo với Nhà trường, cán bộ tư vấn hoặc người có chuyên môn phù hợp.
 
-![Sơ đồ ba bước dùng chatbot: nêu tình huống, nhận gợi ý trao đổi, tìm hỗ trợ chuyên môn khi cần.](/huong-dan-tinh-nang.svg)
+![Hội thoại minh họa Giáo viên hoặc Phụ huynh dùng chatbot để chuẩn bị cách mở đầu cuộc trò chuyện với học sinh.](/chatbot-nguoi-lon.svg)
 
 *Minh họa: gợi ý của chatbot tạo điểm khởi đầu cho cuộc trò chuyện an toàn, tôn trọng và có sự hiện diện của người lớn.*
