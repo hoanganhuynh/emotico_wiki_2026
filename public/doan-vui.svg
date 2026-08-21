@@ -1,9 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="fun-title" aria-describedby="fun-desc" lang="vi">
-  <title id="fun-title">Minh họa Đoán vui</title><desc id="fun-desc">Các thẻ câu hỏi vui, biểu tượng ngôi sao và lựa chọn sở thích, minh họa một trải nghiệm khám phá nhẹ nhàng.</desc>
-  <rect width="960" height="360" rx="28" fill="#F7F7F9"/>
-  <text x="56" y="64" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">Khám phá những góc nhỏ của bản thân</text>
-  <text x="56" y="92" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Một câu hỏi ngắn có thể gợi ra sở thích, thói quen và điều học sinh muốn kể.</text>
-  <g transform="rotate(-8 290 215)"><rect x="144" y="137" width="280" height="166" rx="24" fill="#FFE5A8" stroke="#1A1A2E" stroke-width="3"/><text x="177" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#9A5A00">CÂU HỎI HÔM NAY</text><text x="177" y="220" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A2E">Điều gì làm em</text><text x="177" y="250" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A2E">có thêm năng lượng?</text></g>
-  <g transform="rotate(7 613 208)"><rect x="494" y="128" width="280" height="166" rx="24" fill="#FFFFFF" stroke="#1A1A2E" stroke-width="3"/><path d="m700 158 8 16 18 3-13 13 3 18-16-9-16 9 3-18-13-13 18-3z" fill="#FFB223" stroke="#1A1A2E" stroke-width="2"/><text x="526" y="207" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#1A1A2E">Chọn điều gần với em</text><rect x="526" y="226" width="90" height="34" rx="17" fill="#E8F4FF"/><text x="571" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Âm nhạc</text><rect x="628" y="226" width="102" height="34" rx="17" fill="#E9F8EE"/><text x="679" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Bạn bè</text></g>
-  <text x="480" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Không cần câu trả lời đúng — chỉ cần một điểm bắt đầu để các em chia sẻ.</text>
+  <title id="fun-title">Minh họa Đoán vui</title>
+  <desc id="fun-desc">Một câu hỏi nhỏ dẫn tới ba chủ đề gần gũi: âm nhạc, bạn bè và một khoảnh khắc vui. Minh họa trải nghiệm giúp học sinh bắt đầu chia sẻ.</desc>
+  <rect width="960" height="360" rx="28" fill="#F8F8FA"/>
+  <circle cx="890" cy="56" r="72" fill="#FFF0CE"/>
+  <circle cx="72" cy="318" r="56" fill="#EAF5FF"/>
+
+  <text x="56" y="62" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#1A1A2E">Khám phá những góc nhỏ của bản thân</text>
+  <text x="56" y="91" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Một câu hỏi ngắn có thể gợi ra sở thích, thói quen và điều học sinh muốn kể.</text>
+
+  <rect x="56" y="122" width="354" height="154" rx="20" fill="#FFE7AE"/>
+  <rect x="56" y="122" width="8" height="154" rx="4" fill="#FFB223"/>
+  <text x="88" y="158" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.1" fill="#9A5A00">CÂU HỎI HÔM NAY</text>
+  <text x="88" y="202" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#1A1A2E">Điều gì làm em</text>
+  <text x="88" y="234" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#1A1A2E">có thêm năng lượng?</text>
+
+  <path d="M434 199h40" fill="none" stroke="#B8B8C5" stroke-width="2" stroke-linecap="round"/>
+  <path d="m465 190 9 9-9 9" fill="none" stroke="#B8B8C5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="502" y="122" width="402" height="154" rx="20" fill="#FFFFFF" stroke="#DFDFE6" stroke-width="1.5"/>
+  <text x="534" y="158" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#1A1A2E">Những điều gần với em</text>
+  <text x="534" y="182" font-family="Arial, sans-serif" font-size="14" fill="#5E5E70">Chọn một điều để bắt đầu câu chuyện.</text>
+  <rect x="534" y="205" width="102" height="38" rx="19" fill="#E8F4FF"/>
+  <text x="585" y="229" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Âm nhạc</text>
+  <rect x="648" y="205" width="88" height="38" rx="19" fill="#EAF8EF"/>
+  <text x="692" y="229" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Bạn bè</text>
+  <rect x="748" y="205" width="124" height="38" rx="19" fill="#F2EDFF"/>
+  <text x="810" y="229" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Một niềm vui</text>
+
+  <text x="480" y="323" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Không cần câu trả lời đúng — chỉ cần một điểm bắt đầu để các em chia sẻ.</text>
 </svg>
