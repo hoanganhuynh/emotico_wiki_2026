@@ -39,7 +39,7 @@ function MobileNavControls({
   if (!header) return null;
 
   return createPortal(
-    <div className="absolute left-2 top-1/2 z-10 -translate-y-1/2 md:hidden">
+    <div className="absolute left-2 top-8 z-10 -translate-y-1/2 md:hidden">
       <button
         ref={menuToggleRef}
         type="button"
