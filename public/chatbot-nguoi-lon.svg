@@ -1,9 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="chatbot-title" aria-describedby="chatbot-desc" lang="vi">
-  <title id="chatbot-title">Minh họa Web Chatbot cho người lớn</title><desc id="chatbot-desc">Một cuộc hội thoại minh họa Giáo viên hoặc Phụ huynh chuẩn bị cách mở đầu cuộc trò chuyện với học sinh.</desc>
-  <rect width="960" height="360" rx="28" fill="#F7F7F9"/>
-  <text x="56" y="64" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">Chuẩn bị trước một cuộc trò chuyện quan trọng</text>
-  <text x="56" y="92" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Chatbot giúp người lớn sắp xếp suy nghĩ trước khi gặp và lắng nghe học sinh trực tiếp.</text>
-  <rect x="90" y="138" width="388" height="78" rx="24" fill="#FFFFFF" stroke="#E0E0E6" stroke-width="2"/><path d="M132 216l18-18h-18z" fill="#FFFFFF" stroke="#E0E0E6" stroke-width="2"/><circle cx="122" cy="174" r="17" fill="#FFE5A8"/><text x="154" y="172" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A2E">Mình nên mở lời thế nào</text><text x="154" y="198" font-family="Arial, sans-serif" font-size="16" fill="#4B4B59">khi thấy học sinh ít nói hơn?</text>
-  <rect x="434" y="242" width="432" height="82" rx="24" fill="#1A1A2E"/><path d="M806 242l20 20h-20z" fill="#1A1A2E"/><circle cx="474" cy="282" r="17" fill="#FFB223"/><text x="506" y="278" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Bắt đầu bằng quan sát nhẹ nhàng:</text><text x="506" y="304" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF">“Dạo này cô thấy em có vẻ trầm hơn…”</text>
-  <path d="M490 180c42 4 64 28 79 45" fill="none" stroke="#FFB223" stroke-width="4" stroke-linecap="round"/><path d="m557 211 12 14-17 1" fill="none" stroke="#FFB223" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <title id="chatbot-title">Minh họa Web Chatbot cho người lớn</title>
+  <desc id="chatbot-desc">Một tình huống thường gặp và một gợi ý mở đầu cuộc trò chuyện để Giáo viên hoặc Phụ huynh tham khảo trước khi gặp học sinh.</desc>
+  <rect width="960" height="360" rx="28" fill="#F8F8FA"/>
+  <circle cx="886" cy="58" r="74" fill="#EAF5FF"/>
+  <circle cx="70" cy="316" r="52" fill="#FFF0CE"/>
+
+  <text x="56" y="62" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#1A1A2E">Chuẩn bị trước một cuộc trò chuyện quan trọng</text>
+  <text x="56" y="91" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Chatbot giúp người lớn sắp xếp suy nghĩ trước khi gặp và lắng nghe học sinh trực tiếp.</text>
+
+  <rect x="56" y="124" width="374" height="154" rx="20" fill="#FFFFFF" stroke="#DFDFE6" stroke-width="1.5"/>
+  <rect x="80" y="150" width="86" height="28" rx="14" fill="#FFF0CE"/>
+  <text x="123" y="169" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#9A5A00">TÌNH HUỐNG</text>
+  <text x="80" y="213" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1A1A2E">Mình nên mở lời thế nào</text>
+  <text x="80" y="244" font-family="Arial, sans-serif" font-size="19" fill="#4B4B59">khi thấy học sinh ít nói hơn?</text>
+
+  <path d="M452 201h52" fill="none" stroke="#B8B8C5" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="478" cy="201" r="6" fill="#FFB223"/>
+
+  <rect x="526" y="124" width="378" height="154" rx="20" fill="#1A1A2E"/>
+  <rect x="550" y="150" width="112" height="28" rx="14" fill="#33334A"/>
+  <text x="606" y="169" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#FFE5A8">GỢI Ý MỞ LỜI</text>
+  <text x="550" y="213" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Bắt đầu bằng quan sát nhẹ nhàng</text>
+  <text x="550" y="244" font-family="Arial, sans-serif" font-size="18" fill="#F4F4F7">“Dạo này cô thấy em có vẻ trầm hơn…”</text>
+
+  <text x="480" y="323" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#5E5E70">Đây là một gợi ý để chuẩn bị; cuộc trò chuyện vẫn cần sự lắng nghe trực tiếp.</text>
 </svg>
