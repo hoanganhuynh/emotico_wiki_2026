@@ -1,6 +1,6 @@
 # Bách khoa Tâm lý học — Kiến trúc nội dung & Chuẩn xuất bản (v2)
 
-> Tóm tắt spec **"BÁCH KHOA EMOTICO — KIẾN TRÚC NỘI DUNG & CHUẨN XUẤT BẢN v2"** do sếp gửi 2026-08-23, thay thế định vị "Từ điển v1". Trang này giữ các bảng tham chiếu chính cho đội biên tập/dev, kèm **tình trạng triển khai thực tế** đối chiếu với code tại 2026-08-24.
+> Tóm tắt spec **"BÁCH KHOA EMOTICO — KIẾN TRÚC NỘI DUNG & CHUẨN XUẤT BẢN v2"** (ban hành 2026-08-23), thay thế định vị "Từ điển v1". Trang này giữ các bảng tham chiếu chính cho đội biên tập/dev, kèm **tình trạng triển khai thực tế** đối chiếu với code tại 2026-08-24.
 
 ---
 
@@ -40,7 +40,7 @@ Trang trụ (10, một/lĩnh vực, 2.500–4.000 từ) → Trang chùm (40–60
 
 12 khối bắt buộc theo thứ tự: (1) Định nghĩa chuẩn — một câu 25–40 từ · (2) Tóm tắt — 80–120 từ, không thuật ngữ chưa giải thích · (3) Tên gọi & xuất xứ thuật ngữ · (4) Cơ chế (ghi rõ "được đề xuất" hay "đã xác lập") · (5) Bằng chứng thực nghiệm (≥1 nghiên cứu gốc, có độ lớn hiệu ứng, bắt buộc nêu kết quả lặp lại thất bại nếu có) · (6) Biểu hiện & ví dụ minh hoạ (≥2, có bối cảnh Việt Nam) · (7) Bối cảnh xuất hiện (chỉ ghi khi có dẫn chứng) · (8) Can thiệp có bằng chứng (mỗi biện pháp kèm Nhãn B + nguồn) · (9) Giới hạn & tranh luận · (10) Khái niệm liên quan (Liên quan/Dễ nhầm/Đối lập) · (11) Tài liệu tham khảo (APA 7, ≥4 nguồn, ≥2 nguồn sơ cấp) · (12) Thông tin biên tập (tác giả, thẩm định, ngày xuất bản/cập nhật, kỳ rà soát, nhật ký thay đổi).
 
-Khung B (`THR`), C (`EXP`), D (`MTH`/`INS`), E (`PER`), F (`NEO`) thay thế khối 4–8 bằng bộ khối riêng phù hợp loại mục từ — xem bản gốc PDF/MD sếp gửi để biết chi tiết từng khung.
+Khung B (`THR`), C (`EXP`), D (`MTH`/`INS`), E (`PER`), F (`NEO`) thay thế khối 4–8 bằng bộ khối riêng phù hợp loại mục từ — xem tài liệu spec gốc để biết chi tiết từng khung.
 
 ---
 
@@ -84,7 +84,7 @@ Ranh giới nội dung công khai: được giải thích khái niệm lâm sàn
 | 3 | Khung A — 12 khối cố định | ❌ Chưa có | `sections` là danh sách heading+body tự do, chỉ có gợi ý chung chung trong admin, không có template/validation theo 12 khối |
 | 4 | Khung B/C/D/E/F riêng theo `entry_type_code` | ❌ Chưa có | Admin hiển thị đúng một bộ field cho mọi loại mục từ; trang public chỉ hiển thị `entry_type` như badge, không đổi cấu trúc hiển thị |
 | 5 | Trang trụ / trang chùm / trang thực thể | 🟡 Một phần | `/bach-khoa/chu-de/[domain]` tồn tại nhưng là danh sách lọc + một câu tĩnh, chưa phải bài trụ 2.500–4.000 từ; chưa có trang chùm hay trang thực thể cho `EXP`/`INS`/`PER` (ngoài hồ sơ tác giả) |
-| 6 | Trang "Phương pháp biên soạn" (P0) | 🟡 Đã có, **sắp đổi hướng** | `/bach-khoa/phuong-phap` — trang đầy đủ 185 dòng, có quy trình 3 bước, 4 nguyên tắc, giải thích nhãn A–B. Feedback UX của sếp ngày 2026-08-24 yêu cầu **gỡ trang này khỏi website public**, chuyển nội dung thành tài liệu quy tắc nội bộ — chưa thực hiện (route vẫn public, còn trong sitemap, còn CTA trỏ tới từ trang index) |
+| 6 | Trang "Phương pháp biên soạn" (P0) | 🟡 Đã có, **sắp đổi hướng** | `/bach-khoa/phuong-phap` — trang đầy đủ 185 dòng, có quy trình 3 bước, 4 nguyên tắc, giải thích nhãn A–B. Quyết định định hướng ngày 2026-08-24 yêu cầu **gỡ trang này khỏi website public**, chuyển nội dung thành tài liệu quy tắc nội bộ — chưa thực hiện (route vẫn public, còn trong sitemap, còn CTA trỏ tới từ trang index) |
 | 7 | Kỳ rà soát mặc định theo domain (12/24 tháng) | ❌ Chưa có | `review_due_at` chỉ là ô chọn ngày tự do, không có logic auto-fill theo domain |
 | 8 | Schema.org đầy đủ (`DefinedTermSet`, `FAQPage`, `sameAs`/Wikidata) | 🟡 Một phần | Đã có `DefinedTerm`, `Article` + `author`/`reviewedBy`/`datePublished`/`dateModified`/`citation`; thiếu `DefinedTermSet`, `FAQPage`, `sameAs` |
 | 9 | `llms.txt` / sitemap riêng / RSS làn nhanh | 🟡 Một phần | Có `llms.txt` và bài Bách khoa đã nằm trong sitemap chung; chưa có sitemap riêng hay RSS |
@@ -94,7 +94,7 @@ Ranh giới nội dung công khai: được giải thích khái niệm lâm sàn
 
 ---
 
-## Bảy việc cần quyết (từ spec sếp, chưa có cập nhật quyết định)
+## Bảy việc cần quyết (từ spec v2, chưa có cập nhật quyết định)
 
 1. 🔴 Chốt hai người thẩm định chuyên môn có học vị, đồng ý ký tên công khai — chặn toàn bộ giai đoạn P1
 2. 🔴 Duyệt ranh giới nội dung lâm sàng trên bề mặt công khai (mục "Ranh giới nội dung" ở trên)
@@ -106,4 +106,4 @@ Ranh giới nội dung công khai: được giải thích khái niệm lâm sàn
 
 ---
 
-*Nguồn: "BÁCH KHOA EMOTICO — KIẾN TRÚC NỘI DUNG & CHUẨN XUẤT BẢN v2", sếp gửi 2026-08-23. Xem thêm [Kiến trúc kỹ thuật](/wiki-internal/03-architecture#schema-bch-khoa-encyclopedia_) và [Chuẩn nội dung](/wiki-internal/11-content-standards).*
+*Nguồn: "BÁCH KHOA EMOTICO — KIẾN TRÚC NỘI DUNG & CHUẨN XUẤT BẢN v2", ban hành 2026-08-23. Xem thêm [Kiến trúc kỹ thuật](/wiki-internal/03-architecture#schema-bch-khoa-encyclopedia_) và [Chuẩn nội dung](/wiki-internal/11-content-standards).*

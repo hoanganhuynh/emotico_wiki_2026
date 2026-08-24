@@ -9,9 +9,8 @@ export async function middleware(request: NextRequest) {
   const isAuthenticated = sessionResponse?.ok === true;
 
   if (!isAuthenticated) {
-    const loginUrl = request.nextUrl.clone();
-    loginUrl.pathname = '/login';
-    loginUrl.searchParams.set('from', request.nextUrl.pathname);
+    const loginUrl = new URL('/login', request.url);
+    loginUrl.searchParams.set('from', request.nextUrl.pathname + request.nextUrl.search);
     return NextResponse.redirect(loginUrl);
   }
 

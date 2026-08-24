@@ -16,4 +16,4 @@ Mọi khẳng định khoa học hoặc pháp lý cần dẫn tới nguồn đã
 
 **Ví dụ áp dụng — Bách khoa Tâm lý học:** đây là chuẩn đang được thực thi một phần ở cấp database cho `encyclopedia_articles` — mỗi bài có `evidence_strength` (Nhãn A, A1–A5), ít nhất một nguồn trong `encyclopedia_citations` (loại nguồn, năm xuất bản, đã kiểm tra hay chưa), người biên soạn và người thẩm định riêng biệt, cùng `review_due_at` để nhắc rà soát định kỳ. Mọi thay đổi được ghi vào `encyclopedia_change_log`.
 
-Spec biên tập đầy đủ của sếp (ma trận domain × entry-type, khung bài 12 khối, Nhãn B cho biện pháp can thiệp — **hiện chưa có field trong DB**, chuẩn SEO/AI-citation) đã được tóm tắt tại [Bách khoa — Kiến trúc nội dung](/wiki-internal/12-bach-khoa-editorial), kèm bảng đối chiếu phần nào đã/chưa triển khai so với code thực tế.
+Spec biên tập đầy đủ v2 (ma trận domain × entry-type, khung bài 12 khối, Nhãn B cho biện pháp can thiệp — **hiện chưa có field trong DB**, chuẩn SEO/AI-citation) đã được tóm tắt tại [Bách khoa — Kiến trúc nội dung](/wiki-internal/12-bach-khoa-editorial), kèm bảng đối chiếu phần nào đã/chưa triển khai so với code thực tế.
