@@ -80,15 +80,7 @@ Thông tin tổng hợp được thiết kế để hỗ trợ việc ra quyết
 
 *Minh họa: Nhà trường xem chủ đề chung, trao đổi với đội ngũ phụ trách và chuẩn bị hoạt động nâng đỡ phù hợp.*
 
-## 9. Bách khoa Tâm lý học
-
-Bách khoa Tâm lý học là chuyên mục trên website Emotico giải thích các khái niệm và thuật ngữ tâm lý thường gặp trong đời sống và môi trường học tập của học sinh, bằng ngôn ngữ dễ hiểu và ví dụ gần gũi. Mỗi mục ghi rõ người biên soạn, người thẩm định chuyên môn, nguồn tham khảo và mức độ bằng chứng khoa học, giúp người đọc biết thông tin đến từ đâu và đáng tin đến mức nào.
-
-Phụ huynh và Giáo viên có thể dùng Bách khoa như một nguồn tra cứu chung khi cần hiểu thêm một khái niệm học sinh nhắc tới, hoặc khi chuẩn bị cho một cuộc trò chuyện. Mỗi mục đều nhắc rằng nội dung mang tính giải thích, không dùng để chẩn đoán; những mục có nội dung nhạy cảm sẽ kèm theo thông tin kết nối hỗ trợ.
-
-*Chuyên mục này đang trong giai đoạn hoàn thiện trước khi phát hành chính thức trên website Emotico — xem [Phiên bản cập nhật](11-updates.md).*
-
-## 10. Web Chatbot — Giáo viên & Phụ huynh
+## 9. Web Chatbot — Giáo viên & Phụ huynh
 
 Web Chatbot hỗ trợ người lớn chuẩn bị cho một cuộc trò chuyện nâng đỡ học sinh: có thể mở đầu ra sao, nên lắng nghe điều gì và khi nào nên phối hợp thêm nguồn lực. Người dùng mô tả tình huống với thông tin cần thiết, sau đó đọc các gợi ý như một phần chuẩn bị trước khi trao đổi trực tiếp với học sinh.
 
@@ -97,3 +89,11 @@ Khi xuất hiện dấu hiệu cần quan tâm sâu hơn, Chatbot giúp người
 ![Hội thoại minh họa Giáo viên hoặc Phụ huynh dùng chatbot để chuẩn bị cách mở đầu cuộc trò chuyện với học sinh.](/chatbot-nguoi-lon.svg)
 
 *Minh họa: gợi ý của chatbot tạo điểm khởi đầu cho cuộc trò chuyện an toàn, tôn trọng và có sự hiện diện của người lớn.*
+
+## 10. Bách khoa Tâm lý học
+
+Bách khoa Tâm lý học là chuyên mục trên website Emotico giải thích các khái niệm và thuật ngữ tâm lý thường gặp trong đời sống và môi trường học tập của học sinh, bằng ngôn ngữ dễ hiểu và ví dụ gần gũi. Mỗi mục ghi rõ người biên soạn, người thẩm định chuyên môn, nguồn tham khảo và mức độ bằng chứng khoa học, giúp người đọc biết thông tin đến từ đâu và đáng tin đến mức nào.
+
+Phụ huynh và Giáo viên có thể dùng Bách khoa như một nguồn tra cứu chung khi cần hiểu thêm một khái niệm học sinh nhắc tới, hoặc khi chuẩn bị cho một cuộc trò chuyện. Mỗi mục đều nhắc rằng nội dung mang tính giải thích, không dùng để chẩn đoán; những mục có nội dung nhạy cảm sẽ kèm theo thông tin kết nối hỗ trợ.
+
+*Chuyên mục này đang trong giai đoạn hoàn thiện trước khi phát hành chính thức trên website Emotico — xem [Phiên bản cập nhật](11-updates.md).*

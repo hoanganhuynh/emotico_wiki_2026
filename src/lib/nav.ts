@@ -35,6 +35,7 @@ const FEATURE_CHILDREN: NavChild[] = [
   { slug: 'feature-support', label: 'Hồ sơ & Danh bạ Hỗ trợ', sourceHeading: '## 7. Hồ sơ & Danh bạ Hỗ trợ' },
   { slug: 'feature-dashboard', label: 'Báo cáo & Dashboard', sourceHeading: '## 8. Báo cáo & Dashboard' },
   { slug: 'feature-chatbot', label: 'Web Chatbot', sourceHeading: '## 9. Web Chatbot — Giáo viên & Phụ huynh' },
+  { slug: 'feature-encyclopedia', label: 'Bách khoa Tâm lý học', sourceHeading: '## 10. Bách khoa Tâm lý học' },
 ];
 
 export function flattenNavItems(items: NavItem[]): NavItem[] {
