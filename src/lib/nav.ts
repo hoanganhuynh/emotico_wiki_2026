@@ -81,4 +81,5 @@ export const NAV_INTERNAL_ITEMS: NavItem[] = [
   { slug: '07-dev-guide',        label: 'Hướng dẫn dev',            file: '07-dev-guide.md',        icon: 'Code',       section: 'Vận hành & phát triển', category: 'Phát triển sản phẩm', visibility: 'internal' },
   { slug: '05-business-model',   label: 'Kinh doanh',               file: '05-business-model.md',   icon: 'Chart21',    section: 'Kế hoạch & tài nguyên', category: 'Kinh doanh', visibility: 'internal' },
   { slug: '11-content-standards', label: 'Chuẩn nội dung',          file: '11-content-standards.md', icon: 'FolderOpen', section: 'Kế hoạch & tài nguyên', category: 'Tài nguyên & lịch sử', visibility: 'internal' },
+  { slug: '12-bach-khoa-editorial', label: 'Bách khoa — Kiến trúc nội dung', file: '12-bach-khoa-editorial.md', icon: 'Book1', section: 'Vận hành & phát triển', category: 'Sản phẩm & nội dung', visibility: 'internal' },
 ];

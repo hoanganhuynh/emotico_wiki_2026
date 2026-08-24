@@ -99,12 +99,14 @@ Ngoài Flutter app cho học sinh, monorepo `emotico2026` còn có hai web app N
 
 | App | Vai trò | Route đáng chú ý |
 |---|---|---|
-| `apps/landing` | Website công khai (marketing, chatbot cho GV/PH, Bách khoa Tâm lý học) | `/bach-khoa`, `/bach-khoa/[slug]`, `/bach-khoa/tac-gia`, `/bach-khoa/tac-gia/[slug]` |
+| `apps/landing` | Website công khai (marketing, chatbot cho GV/PH, Bách khoa Tâm lý học) | `/bach-khoa`, `/bach-khoa/[slug]`, `/bach-khoa/tac-gia`, `/bach-khoa/tac-gia/[slug]`, `/bach-khoa/chu-de/[domain]`, `/bach-khoa/phuong-phap` |
 | `apps/admin` | Dashboard nội bộ (school admin + biên tập nội dung) | `/dashboard/encyclopedia` |
 
 Cả hai deploy qua Vercel (`vercel.json` ở root mỗi app).
 
-### Schema Bách khoa (`encyclopedia_*`)
+Chuẩn biên tập/kiến trúc nội dung đầy đủ cho Bách khoa (ma trận domain × entry-type, khung bài, nhãn bằng chứng A/B, và bảng đối chiếu tình trạng triển khai) xem [Bách khoa — Kiến trúc nội dung](/wiki-internal/12-bach-khoa-editorial).
+
+### Schema Bách khoa (encyclopedia_*)
 
 Bổ sung từ các migration `20260823000001_encyclopedia_foundation.sql` → `20260824012026_encyclopedia_admin_workflows.sql` (nhánh `update-landing-page`, chưa merge vào `main` tính đến 2026-08-24):
 

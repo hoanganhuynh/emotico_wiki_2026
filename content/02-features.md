@@ -96,4 +96,4 @@ Bách khoa Tâm lý học là chuyên mục trên website Emotico giải thích 
 
 Phụ huynh và Giáo viên có thể dùng Bách khoa như một nguồn tra cứu chung khi cần hiểu thêm một khái niệm học sinh nhắc tới, hoặc khi chuẩn bị cho một cuộc trò chuyện. Mỗi mục đều nhắc rằng nội dung mang tính giải thích, không dùng để chẩn đoán; những mục có nội dung nhạy cảm sẽ kèm theo thông tin kết nối hỗ trợ.
 
-*Chuyên mục này đang trong giai đoạn hoàn thiện trước khi phát hành chính thức trên website Emotico — xem [Phiên bản cập nhật](11-updates.md).*
+*Chuyên mục này đang trong giai đoạn hoàn thiện trước khi phát hành chính thức trên website Emotico — xem [Phiên bản cập nhật](/wiki/updates).*

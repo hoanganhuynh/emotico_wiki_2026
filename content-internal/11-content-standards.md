@@ -14,4 +14,6 @@ Mỗi hướng dẫn dành cho người dùng cần trả lời: nội dung này
 
 Mọi khẳng định khoa học hoặc pháp lý cần dẫn tới nguồn đã được đội ngũ kiểm tra. Khi lưu một phiên bản, ghi chú thay đổi tối đa 200 ký tự và viết theo điều người đọc cần biết.
 
-**Ví dụ áp dụng — Bách khoa Tâm lý học:** đây là chuẩn đang được thực thi ở cấp database cho `encyclopedia_articles` — mỗi bài có `evidence_strength` (A1–A5), ít nhất một nguồn trong `encyclopedia_citations` (loại nguồn, năm xuất bản, đã kiểm tra hay chưa), người biên soạn và người thẩm định riêng biệt, cùng `review_due_at` để nhắc rà soát định kỳ. Mọi thay đổi được ghi vào `encyclopedia_change_log`. Xem chi tiết schema tại [Kiến trúc kỹ thuật](03-architecture.md#schema-bách-khoa-encyclopedia_).
+**Ví dụ áp dụng — Bách khoa Tâm lý học:** đây là chuẩn đang được thực thi một phần ở cấp database cho `encyclopedia_articles` — mỗi bài có `evidence_strength` (Nhãn A, A1–A5), ít nhất một nguồn trong `encyclopedia_citations` (loại nguồn, năm xuất bản, đã kiểm tra hay chưa), người biên soạn và người thẩm định riêng biệt, cùng `review_due_at` để nhắc rà soát định kỳ. Mọi thay đổi được ghi vào `encyclopedia_change_log`.
+
+Spec biên tập đầy đủ của sếp (ma trận domain × entry-type, khung bài 12 khối, Nhãn B cho biện pháp can thiệp — **hiện chưa có field trong DB**, chuẩn SEO/AI-citation) đã được tóm tắt tại [Bách khoa — Kiến trúc nội dung](/wiki-internal/12-bach-khoa-editorial), kèm bảng đối chiếu phần nào đã/chưa triển khai so với code thực tế.

@@ -17,7 +17,7 @@
 | Backend | supabase_flutter | ^2.9.1 |
 | Monorepo tool | Melos | 7.7.0 |
 
-`apps/landing` và `apps/admin` là hai web app riêng biệt (Next.js + TypeScript, deploy Vercel), dùng chung Supabase project với app Flutter. Xem [Kiến trúc kỹ thuật](03-architecture.md#web-apps--nextjs-appslanding-appsadmin) để biết schema và route chi tiết.
+`apps/landing` và `apps/admin` là hai web app riêng biệt (Next.js + TypeScript, deploy Vercel), dùng chung Supabase project với app Flutter. Xem [Kiến trúc kỹ thuật](/wiki-internal/03-architecture#web-apps-nextjs-appslanding-appsadmin) để biết schema và route chi tiết.
 
 ---
 

@@ -4,7 +4,7 @@ Trang này ghi lại những thay đổi đã được xuất bản trên Wiki. 
 
 ## 2026-08-24 — Bách khoa Tâm lý học
 
-Emotico đang hoàn thiện **Bách khoa Tâm lý học** — chuyên mục giải thích các khái niệm tâm lý học đường bằng ngôn ngữ dễ hiểu, kèm nguồn tham khảo, người biên soạn và người thẩm định rõ ràng cho từng mục. Xem mô tả đầy đủ tại [Tính năng](02-features.md#9-bách-khoa-tâm-lý-học).
+Emotico đang hoàn thiện **Bách khoa Tâm lý học** — chuyên mục giải thích các khái niệm tâm lý học đường bằng ngôn ngữ dễ hiểu, kèm nguồn tham khảo, người biên soạn và người thẩm định rõ ràng cho từng mục. Xem mô tả đầy đủ tại [Tính năng](/wiki/feature-encyclopedia).
 
 Những gì đợt cập nhật này bổ sung:
 
