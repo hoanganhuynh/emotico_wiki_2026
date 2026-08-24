@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
     res.cookies.set('wiki-auth', `${payload}.${signWikiSession(payload, await getWikiSessionSecret())}`, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
+      sameSite: 'lax',
       maxAge: 60 * 60 * 8,
       path: '/',
     });
