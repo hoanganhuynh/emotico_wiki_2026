@@ -267,9 +267,9 @@ export default function WikiEditor() {
               <textarea value={page?.content || ''} onChange={(event) => page && setPage({ ...page, content: event.target.value })} disabled={loading || !page} className="mt-2 min-h-[620px] w-full resize-y rounded-xl border border-[#D9D9E0] bg-[#FCFCFD] p-4 font-mono text-sm leading-6 text-[#1A1A2E] outline-none focus:border-[#1A1A2E]" spellCheck={false} />
             </label>
             <div className="mt-4 flex flex-wrap items-end gap-3">
-              <p className="flex-1 text-xs text-[#777784]">File upload chỉ thay nội dung trong editor; bấm “Lưu phiên bản” để lưu server-side.</p>
+              <p className="flex-1 text-xs text-[#777784]">File upload chỉ thay nội dung trong editor; bấm nút Lưu bên dưới để ghi server-side.</p>
               {page?.visibility === 'public' && <button type="button" onClick={publish} disabled={saving || loading || !page.currentVersionId} className="inline-flex items-center gap-2 rounded-xl border border-[#1A1A2E] px-5 py-3 text-sm font-semibold text-[#1A1A2E] disabled:cursor-not-allowed disabled:opacity-50">Xuất bản public</button>}
-              <button type="button" onClick={save} disabled={saving || loading || !page} className="inline-flex items-center gap-2 rounded-xl bg-[#111111] px-5 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"><SaveIcon />{saving ? 'Đang lưu…' : 'Lưu nháp'}</button>
+              <button type="button" onClick={save} disabled={saving || loading || !page} className="inline-flex items-center gap-2 rounded-xl bg-[#111111] px-5 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"><SaveIcon />{saving ? 'Đang lưu…' : page?.visibility === 'public' ? 'Lưu nháp' : 'Lưu'}</button>
             </div>
           </section>
 
