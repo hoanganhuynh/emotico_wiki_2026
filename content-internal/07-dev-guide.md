@@ -17,6 +17,8 @@
 | Backend | supabase_flutter | ^2.9.1 |
 | Monorepo tool | Melos | 7.7.0 |
 
+`apps/landing` và `apps/admin` là hai web app riêng biệt (Next.js + TypeScript, deploy Vercel), dùng chung Supabase project với app Flutter. Xem [Kiến trúc kỹ thuật](03-architecture.md#web-apps--nextjs-appslanding-appsadmin) để biết schema và route chi tiết.
+
 ---
 
 ## Cấu trúc Monorepo
@@ -31,7 +33,9 @@ emotico-2026/
 ├── apps/
 │   ├── emotico_app/          ← Main student app
 │   ├── design_system/        ← Flutter web catalog (source → builds to emotico.wiki/design-system)
-│   └── white_label_template/ ← Future: school white-label (skeleton)
+│   ├── white_label_template/ ← Future: school white-label (skeleton)
+│   ├── landing/               ← Next.js — public website (marketing, chatbot GV/PH, Bách khoa)
+│   └── admin/                 ← Next.js — internal dashboard (school admin + content editors)
 ├── supabase/
 │   └── migrations/           ← SQL migration files
 └── docs/

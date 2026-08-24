@@ -93,6 +93,37 @@ Khi học sinh tốt nghiệp hoặc hết hạn hợp đồng trường:
 
 ---
 
+## Web apps — Next.js (apps/landing, apps/admin)
+
+Ngoài Flutter app cho học sinh, monorepo `emotico2026` còn có hai web app Next.js dùng chung Supabase project:
+
+| App | Vai trò | Route đáng chú ý |
+|---|---|---|
+| `apps/landing` | Website công khai (marketing, chatbot cho GV/PH, Bách khoa Tâm lý học) | `/bach-khoa`, `/bach-khoa/[slug]`, `/bach-khoa/tac-gia`, `/bach-khoa/tac-gia/[slug]` |
+| `apps/admin` | Dashboard nội bộ (school admin + biên tập nội dung) | `/dashboard/encyclopedia` |
+
+Cả hai deploy qua Vercel (`vercel.json` ở root mỗi app).
+
+### Schema Bách khoa (`encyclopedia_*`)
+
+Bổ sung từ các migration `20260823000001_encyclopedia_foundation.sql` → `20260824012026_encyclopedia_admin_workflows.sql` (nhánh `update-landing-page`, chưa merge vào `main` tính đến 2026-08-24):
+
+| Bảng | Mô tả |
+|---|---|
+| `encyclopedia_people` | Tác giả/thẩm định — `role` (author/reviewer/both), `is_public` |
+| `encyclopedia_articles` | Bài viết — `status` (draft/in_review/published/retired), `domain_code`, `entry_type_code`, `sections` (jsonb, nhiều khối heading+body), `evidence_strength` (A1–A5), `author_id`/`reviewer_id`, `published_at`, `review_due_at` |
+| `encyclopedia_article_aliases` | Slug cũ redirect sang slug hiện tại |
+| `encyclopedia_citations` | Nguồn tham khảo — nay có thêm `doi`, `source_type`, `publication_year`, `is_verified` |
+| `encyclopedia_change_log` | Audit trail nội bộ — nay có thêm `change_type`, `detail` (jsonb) |
+
+CHECK constraint chặn `status = 'published'` nếu thiếu `author_id`/`reviewer_id`/`published_at`/`review_due_at`, hoặc `plain_summary` không nằm trong khoảng 80–120 từ.
+
+RLS: public chỉ đọc được các bảng trên khi bài viết liên quan có `status = 'published'` (và người có `is_public = true`); `is_admin()` có full CRUD trên cả 5 bảng.
+
+**Ghi chú kỹ thuật (2026-08-24):** `apps/landing/lib/encyclopedia/repository.ts` hiện chưa select các cột `doi`/`source_type`/`publication_year`/`is_verified` từ `encyclopedia_citations`. Vì vậy dù Admin đã nhập các trường này, dòng DOI và badge "Đã kiểm tra" trên trang public chưa hiển thị được — cần đối chiếu lại trước khi phát hành.
+
+---
+
 ## Quyết định kỹ thuật
 
 | Quyết định | Lý do |
